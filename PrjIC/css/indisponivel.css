@@ -1,0 +1,51 @@
+/* Relativo ao rodape */
+
+
+.sessoes{
+	position: fixed;
+	margin-top: 1em;
+	font-family: 'runhills';
+	font-size:10vw;;
+	color: #AF9CED;
+	line-height:1em;
+	margin-left: 0;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: none;
+  color: white;
+  text-align: center;
+     font-size: 1.5em;
+   margin-bottom: 1em;
+}
+
+
+#link-rodape{
+	color: #EBEDEF;
+	outline: none;
+	background: none;
+	border: none;
+	text-decoration: none;
+	font-family: 'runhills';
+	margin-left: 0.2em;
+}
+
+#link-rodape:hover{
+	color: #BDC2CC;
+	outline: none;
+	background: none;
+	border: none;
+	text-decoration: none;
+	font-family: 'runhills';
+	margin-left: 0.2em;
+}
+
+#copyright-rodape{
+	color: #AF9CED;
+	font-family: 'palanquin';
+}

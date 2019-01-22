@@ -1,0 +1,23 @@
+/*Fonte Valentine*/ 
+@font-face {
+    font-family: 'valentine';
+    src: url('fonts/valentine.ttf') /*Para os demais navegadores*/;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Fonte Palanquin*/ 
+@font-face {
+    font-family: 'palanquin';
+    src: url('fonts/palanquin/palanquin-medium.ttf') /*Para os demais navegadores*/;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Fonte Runhills*/ 
+@font-face {
+    font-family: 'runhills';
+    src: url('fonts/runhills.ttf') /*Para os demais navegadores*/;
+    font-weight: normal;
+    font-style: normal;
+}

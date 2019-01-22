@@ -1,0 +1,78 @@
+
+
+
+/* Centralizar na pagina */
+.outer {
+
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.sessoes{
+
+	font-family: 'runhills';
+	font-size: 7.5vw;
+	color: #AF9CED;
+	background-color: white;
+	margin-top: 2em;
+
+
+}
+
+
+
+/* Relativo ao rodape */
+
+/* Relativo ao rodape */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: none;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+
+#link-rodape{
+	color: #EBEDEF;
+	outline: none;
+	background: none;
+	border: none;
+	text-decoration: none;
+	font-family: 'runhills';
+	margin-left: 0.2em;
+}
+
+#link-rodape:hover{
+	color: #BDC2CC;
+	outline: none;
+	background: none;
+	border: none;
+	text-decoration: none;
+	font-family: 'runhills';
+	margin-left: 0.2em;
+}
+
+#copyright-rodape{
+	color: #AF9CED;
+	font-family: 'palanquin';
+}

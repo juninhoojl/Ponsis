@@ -21,6 +21,17 @@ Cor titulos = #AF9CED
 }
 
 
+.label-periodo{
+	margin-top: 1em;
+	font-family: 'palanquin';
+	font-size: 2.5em;
+	color: #AF9CED;
+	line-height:1em;
+	
+}
+
+
+
 /* barra de progresso */
 
 

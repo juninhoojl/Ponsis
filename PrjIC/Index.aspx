@@ -82,7 +82,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                        <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
+
+                        <asp:Label class="label-periodo text-center" ID="lbAno" runat="server" Text=""></asp:Label>
+
                         <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Perfil do pós-graduando
                             
                         </div>

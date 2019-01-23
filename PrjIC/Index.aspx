@@ -82,8 +82,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                        <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
                         <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Perfil do pós-graduando
-                            <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
+                            
                         </div>
 
                         <!-- 1-Pergunta-Inicio -->
@@ -260,7 +261,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <asp:TextBox runat="server"  id="q7" placeholder="Escreva aqui quais recomendaria!" class="form-control" rows="5" ></asp:TextBox>
+                                    <asp:TextBox runat="server"  id="q7" placeholder="Escreva aqui quais recomendaria!" class="form-control" TextMode="MultiLine" Rows="5" ></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +274,7 @@
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <asp:TextBox runat="server"  id="q8" placeholder="Escreva aqui quais não recomendaria!" class="form-control" rows="5"></asp:TextBox>
+                                    <asp:TextBox runat="server"  id="q8" placeholder="Escreva aqui quais não recomendaria!" class="form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +306,7 @@
                             </div>
                         </div>
                         <!-- 9-Pergunta-Fim -->
-
+                        
                         <!-- 10-Pergunta-Inicio -->
                         <div class="panel center">
                             <div class="panel-heading">

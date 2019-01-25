@@ -244,7 +244,9 @@
                         <!-- 6-Pergunta-Inicio -->
                         <div class="panel center">
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">6</span>Que nota você daria para as disciplinas de maneira geral?</div>
+                                <div class="titulo-painel text-left"><span class="badge">6</span>
+                                    <asp:Label ID="lbq6" runat="server" Text="Que nota você daria para as disciplinas de maneira geral?"></asp:Label>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">
@@ -269,8 +271,11 @@
 
                         <!-- 7-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">7</span>Que disciplinas você recomendaria?</div>
+                                <div class="titulo-painel text-left"><span class="badge">7</span>
+                                    <asp:Label ID="lbq7" runat="server" Text="Que disciplinas você recomendaria?"></asp:Label>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">
@@ -282,8 +287,11 @@
 
                         <!-- 8-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">8</span>Que disciplinas você não recomendaria?</div>
+                                <div class="titulo-painel text-left"><span class="badge">8</span>
+                                    <asp:Label ID="lbq8" runat="server" Text="Que disciplinas você não recomendaria?"></asp:Label>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">

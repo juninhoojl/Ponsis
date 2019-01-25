@@ -121,6 +121,15 @@ namespace ProjetoIC {
         protected global::System.Web.UI.HtmlControls.HtmlSelect q5;
         
         /// <summary>
+        /// lbq6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbq6;
+        
+        /// <summary>
         /// q6 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +139,15 @@ namespace ProjetoIC {
         protected global::System.Web.UI.HtmlControls.HtmlSelect q6;
         
         /// <summary>
+        /// lbq7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbq7;
+        
+        /// <summary>
         /// q7 control.
         /// </summary>
         /// <remarks>
@@ -137,6 +155,15 @@ namespace ProjetoIC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox q7;
+        
+        /// <summary>
+        /// lbq8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbq8;
         
         /// <summary>
         /// q8 control.

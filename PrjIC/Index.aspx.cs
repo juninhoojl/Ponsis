@@ -114,15 +114,12 @@ namespace ProjetoIC
             else if (String.IsNullOrWhiteSpace(this.q5.Value))
                 this.MostraMensagem(this.lbq5, this.q5);
             else if (String.IsNullOrWhiteSpace(this.q6.Value))
-            {
-                this.ShowAlert(this, "Questão número 6 não respondida!");
-                this.q6.Focus();
-            }
+                this.MostraMensagem(this.lbq6, this.q6);
             else if (String.IsNullOrWhiteSpace(this.q7.Text))
-            {
-                this.ShowAlert(this, "Questão número 7 não respondida!");
-                this.q7.Focus();
-            }
+                this.MostraMensagem(this.lbq7, this.q7);
+            else if (String.IsNullOrWhiteSpace(this.q8.Text))
+                this.MostraMensagem(this.lbq8, this.q8);
+
 
 
 

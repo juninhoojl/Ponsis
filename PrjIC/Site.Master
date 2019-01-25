@@ -2,10 +2,11 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-br">
     <head runat="server">
+        <!-- Conferir se vou usar isso ou nao -->
         <%--<title><%: Page.Title %> - Projeto IC</title>--%>
-        <meta charset="utf-8" />
+
         <!-- Normalize stylesheet-->
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <!-- Bootstrap stylesheet -->
@@ -37,18 +38,18 @@
     <body>
         <form runat="server">
             <nav class="navbar navbar-expand-md navbar-light navbar-custom">
-                <!-- Brand -->
+                <!-- Logo -->
                 <a class="navbar-brand" href="/Apresentacao.aspx">
                     <img src="img/icons/icon_64x64.png" width="30" height="30" class="d-inline-block align-top" alt="">
                     Avaliador
                 </a>
 
-                <!-- Toggler/collapsibe Button -->
+                <!-- Collapsibe Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Navbar links -->
+                <!-- Links -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <!-- Esquerda -->
                     <ul class="navbar-nav">
@@ -65,30 +66,24 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Login.aspx"><i class="fas fa-user"></i> Login</a>
                         </li>
-<%--                        <li class="nav-item">
-                            <a class="nav-link" href="/config.html"> <i class="fas fa-wrench"></i> Admin</a>
-                        </li>--%>
                     </ul>
+
                 </div>
             </nav>
-
-
-
-
-
-
-
 
 
             <div class="container body-content">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
                 <hr />
-                <footer>
-                    <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-                </footer>
+                  <!-- Footer -->
+                  <footer class="footer font-small pt-4">
+                      <div id="copyright-rodape" class="text-center">© <%: DateTime.Now.Year %> Copyright:
+                        <a id="link-rodape" href="https://github.com/juninhoojl"> </i><i class="fab fa-github"></i></i> Juninhoojl</i></a>
+                      </div>
+                  </footer>
+                  <!-- Footer -->
             </div>
-
         </form>
     </body>
 

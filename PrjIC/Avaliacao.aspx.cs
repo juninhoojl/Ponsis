@@ -8,7 +8,7 @@ using ProjetoIC.Classes;
 
 namespace ProjetoIC
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class Avaliacao : System.Web.UI.Page
     {
         private string _cmdSql = "INSERT INTO Resposta (id_Curso, id_Questao, id_Periodo, nu_Resposta, tx_Resposta) VALUES ({0}, {1}, {2}, {3}, {4});";
         private DataRow _rowPeriodo;
@@ -82,7 +82,7 @@ namespace ProjetoIC
                         this.GravaDado(conn, 26, int.Parse(this.q26.Value));
                         this.GravaDado(conn, 27, this.q16.Text as string);
 
-                        Response.Redirect("respondido.html");
+                        Response.Redirect("Respondido.aspx");
                     }
                     conn.FechaConexao();
                 }

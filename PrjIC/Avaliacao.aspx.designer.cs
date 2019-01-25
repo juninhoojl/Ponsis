@@ -10,7 +10,7 @@
 namespace ProjetoIC {
     
     
-    public partial class Index {
+    public partial class Avaliacao {
         
         /// <summary>
         /// form1 control.

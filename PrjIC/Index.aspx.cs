@@ -51,7 +51,8 @@ namespace ProjetoIC
                 if (conn.AbrirConexao())
                 {
                     if (this._idPeriodo <= 0)
-                        this.ShowAlert(this, "Nao existe um periodo disponivel para avaliacao!");
+                        //Aqui poderia redirencionar para a pagina de indisponivel
+                        this.ShowAlert(this, "Nenhuma avaliaçao esta disponível no momento!");
                     else
                     {
                         this.GravaDado(conn, 2, int.Parse(this.q2.Value));

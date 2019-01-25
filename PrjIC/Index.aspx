@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ProjetoIC.Index" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
@@ -82,8 +82,9 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-
-                        <asp:Label class="label-periodo text-center" ID="lbAno" runat="server" Text=""></asp:Label>
+                        <div class="text-center">
+                             <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
+                        </div>
 
                         <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Perfil do pós-graduando
                             

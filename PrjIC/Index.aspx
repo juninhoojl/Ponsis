@@ -525,14 +525,16 @@
 
                         <!-- 17-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">17</span>  Como você avalia as instalações dos ambientes de estudo (Grupos de Pesquisa)?
+                                <div class="titulo-painel text-left"><span class="badge">17</span>
+                                    <asp:Label ID="lbq17" runat="server" Text="Como você avalia as instalações dos ambientes de estudo (Grupos de Pesquisa)?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q17" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimas</option>
@@ -553,14 +555,16 @@
 
                         <!-- 18-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">18</span>  Como você avalia as instalações das salas de aula?
+                                <div class="titulo-painel text-left"><span class="badge">18</span>
+                                    <asp:Label ID="lbq18" runat="server" Text="Como você avalia as instalações das salas de aula?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q18" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimas</option>
@@ -582,14 +586,16 @@
 
                         <!-- 19-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">19</span>  Como você avalia as instalações, disponibilidade e atendimento dos laboratórios da UNIFEI utilizados em sua dissertação ou tese?
+                                <div class="titulo-painel text-left"><span class="badge">19</span>
+                                    <asp:Label ID="lbq19" runat="server" Text="Como você avalia as instalações, disponibilidade e atendimento dos laboratórios da UNIFEI utilizados em sua dissertação ou tese?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q19" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimas</option>
@@ -611,14 +617,16 @@
 
                         <!-- 20-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">20</span>   Como você avalia o atendimento do Financeiro da PRPPG (bolsas e auxílios)?
+                                <div class="titulo-painel text-left"><span class="badge">20</span>
+                                    <asp:Label ID="lbq20" runat="server" Text="Como você avalia o atendimento do Financeiro da PRPPG (bolsas e auxílios)?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q20" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimo</option>
@@ -640,14 +648,16 @@
 
                         <!-- 21-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">21</span>   Como você avalia o atendimento da Direção da Pró-Reitora (Pró-Reitor e Diretora de Pós-Graduação)?
+                                <div class="titulo-painel text-left"><span class="badge">21</span>
+                                    <asp:Label ID="lbq21" runat="server" Text="Como você avalia o atendimento da Direção da Pró-Reitora (Pró-Reitor e Diretora de Pós-Graduação)?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q21" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimo</option>
@@ -669,14 +679,16 @@
 
                         <!-- 22-Pergunta-Inicio -->
                         <div class="panel center">
+                            
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">22</span>  Como você avalia o acesso e uso do Sistema SIGAA?
+                                <div class="titulo-painel text-left"><span class="badge">22</span>
+                                    <asp:Label ID="lbq22" runat="server" Text="Como você avalia o acesso e uso do Sistema SIGAA?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q22" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimo</option>
@@ -698,14 +710,16 @@
 
                         <!-- 23-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">23</span> Como você avalia as ações da Pró-Reitoria de maneira geral?
+                                <div class="titulo-painel text-left"><span class="badge">23</span>
+                                    <asp:Label ID="lbq23" runat="server" Text="Como você avalia as ações da Pró-Reitoria de maneira geral?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q23" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimas</option>
@@ -727,14 +741,16 @@
 
                         <!-- 24-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">24</span> Como você avalia o atendimento da Biblioteca (BIM)?
+                                <div class="titulo-painel text-left"><span class="badge">24</span>
+                                    <asp:Label ID="lbq24" runat="server" Text="Como você avalia o atendimento da Biblioteca (BIM)?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q24" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimo</option>
@@ -756,14 +772,16 @@
 
                         <!-- 25-Pergunta-Inicio -->
                         <div class="panel center">
+       
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">25</span> Como você avalia o acervo da Biblioteca (BIM)?
+                                <div class="titulo-painel text-left"><span class="badge">25</span>
+                                    <asp:Label ID="lbq25" runat="server" Text="Como você avalia o acervo da Biblioteca (BIM)?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q25" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimo</option>
@@ -785,14 +803,16 @@
 
                         <!-- 26-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">26</span> Como você avalia a disponibilidade e velocidades da internet da UNIFEI?
+                                <div class="titulo-painel text-left"><span class="badge">26</span>
+                                    <asp:Label ID="lbq26" runat="server" Text="Como você avalia a disponibilidade e velocidades da internet da UNIFEI?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <select class="form-control">
+                                    <select runat="server"  id="q26" class="form-control">
                                         <option value="" selected="selected" disabled="disabled">Selecionar...</option>
                                         <option value="-1">Não posso avaliar!</option>
                                         <option value="0">0 - Péssimas</option>
@@ -815,15 +835,17 @@
                         <div class="sessoes text-center"><i class="fas fa-brain"></i> Espaço criativo!</div>
 
                         <!-- 27-Pergunta-Inicio -->
-                        <div class="panel center">
+
+                       <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">27</span>Caso queira apresentar comentários complementares as questões, utilize o espaço abaixo:
+                                <div class="titulo-painel text-left"><span class="badge">27</span>
+                                    <asp:Label ID="lbq27" runat="server" Text="Caso queira apresentar comentários complementares as questões, utilize o espaço abaixo:"></asp:Label>
                                 </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">
-                                    <textarea runat="server" id="q27" placeholder="Expresse-se aqui como quiser, se quiser!" class="form-control" rows="5" ></textarea>
+                                    <asp:TextBox runat="server"  id="q27" placeholder="Expresse-se aqui como quiser, se quiser!" class="form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
                                 </div>
                             </div>
                         </div>

@@ -70,17 +70,17 @@ namespace ProjetoIC
                         this.GravaDado(conn, 14, int.Parse(this.q14.Value));
                         this.GravaDado(conn, 15, this.q15.Text as string);
                         this.GravaDado(conn, 16, this.q16.Text as string);
-                        //this.GravaDado(conn, 17, int.Parse(this.q17.Value));
-                        //this.GravaDado(conn, 18, int.Parse(this.q18.Value));
-                        //this.GravaDado(conn, 19, int.Parse(this.q19.Value));
-                        //this.GravaDado(conn, 20, int.Parse(this.q20.Value));
-                        //this.GravaDado(conn, 21, int.Parse(this.q21.Value));
-                        //this.GravaDado(conn, 22, int.Parse(this.q22.Value));
-                        //this.GravaDado(conn, 23, int.Parse(this.q23.Value));
-                        //this.GravaDado(conn, 24, int.Parse(this.q24.Value));
-                        //this.GravaDado(conn, 25, int.Parse(this.q25.Value));
-                        //this.GravaDado(conn, 26, int.Parse(this.q26.Value));
-                        //this.GravaDado(conn, 27, int.Parse(this.q27.Value));
+                        this.GravaDado(conn, 17, int.Parse(this.q17.Value));
+                        this.GravaDado(conn, 18, int.Parse(this.q18.Value));
+                        this.GravaDado(conn, 19, int.Parse(this.q19.Value));
+                        this.GravaDado(conn, 20, int.Parse(this.q20.Value));
+                        this.GravaDado(conn, 21, int.Parse(this.q21.Value));
+                        this.GravaDado(conn, 22, int.Parse(this.q22.Value));
+                        this.GravaDado(conn, 23, int.Parse(this.q23.Value));
+                        this.GravaDado(conn, 24, int.Parse(this.q24.Value));
+                        this.GravaDado(conn, 25, int.Parse(this.q25.Value));
+                        this.GravaDado(conn, 26, int.Parse(this.q26.Value));
+                        this.GravaDado(conn, 27, this.q16.Text as string);
 
                         conn.FechaConexao();
 
@@ -119,31 +119,56 @@ namespace ProjetoIC
                 this.MostraMensagem(this.lbq7, this.q7);
             else if (String.IsNullOrWhiteSpace(this.q8.Text))
                 this.MostraMensagem(this.lbq8, this.q8);
-
             else if (String.IsNullOrWhiteSpace(this.q9.Value))
                 this.MostraMensagem(this.lbq9, this.q9);
-
             else if (String.IsNullOrWhiteSpace(this.q10.Value))
                 this.MostraMensagem(this.lbq10, this.q10);
-
             else if (String.IsNullOrWhiteSpace(this.q11.Value))
                 this.MostraMensagem(this.lbq11, this.q11);
-
             else if (String.IsNullOrWhiteSpace(this.q12.Value))
                 this.MostraMensagem(this.lbq12, this.q12);
-
             else if (String.IsNullOrWhiteSpace(this.q13.Value))
                 this.MostraMensagem(this.lbq13, this.q13);
-
             else if (String.IsNullOrWhiteSpace(this.q14.Value))
                 this.MostraMensagem(this.lbq14, this.q14);
-
             else if (String.IsNullOrWhiteSpace(this.q15.Text))
                 this.MostraMensagem(this.lbq15, this.q15);
-
             else if (String.IsNullOrWhiteSpace(this.q16.Text))
-                this.MostraMensagem(this.lbq15, this.q16);
+                this.MostraMensagem(this.lbq16, this.q16);
 
+            else if (String.IsNullOrWhiteSpace(this.q17.Value))
+                this.MostraMensagem(this.lbq17, this.q17);
+
+            else if (String.IsNullOrWhiteSpace(this.q18.Value))
+                this.MostraMensagem(this.lbq18, this.q18);
+
+            else if (String.IsNullOrWhiteSpace(this.q19.Value))
+                this.MostraMensagem(this.lbq19, this.q19);
+
+            else if (String.IsNullOrWhiteSpace(this.q20.Value))
+                this.MostraMensagem(this.lbq20, this.q20);
+
+            else if (String.IsNullOrWhiteSpace(this.q21.Value))
+                this.MostraMensagem(this.lbq21, this.q21);
+
+            else if (String.IsNullOrWhiteSpace(this.q22.Value))
+                this.MostraMensagem(this.lbq22, this.q22);
+
+            else if (String.IsNullOrWhiteSpace(this.q23.Value))
+                this.MostraMensagem(this.lbq23, this.q23);
+
+            else if (String.IsNullOrWhiteSpace(this.q24.Value))
+                this.MostraMensagem(this.lbq24, this.q24);
+
+            else if (String.IsNullOrWhiteSpace(this.q25.Value))
+                this.MostraMensagem(this.lbq25, this.q25);
+
+            else if (String.IsNullOrWhiteSpace(this.q26.Value))
+                this.MostraMensagem(this.lbq26, this.q26);
+
+            // Questao 27 eh opcional
+            //else if (String.IsNullOrWhiteSpace(this.q27.Text))
+            //    this.MostraMensagem(this.lbq27, this.q27);
 
 
             else

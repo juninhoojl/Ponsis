@@ -145,9 +145,13 @@
 
                         <!-- 3-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">3</span>A quanto tempo que cursa o Programa de Pós-Graduação?</div>
+                                <div class="titulo-painel text-left"><span class="badge">3</span>
+                                    <asp:Label ID="lbq3" runat="server" Text="A quanto tempo que cursa o Programa de Pós-Graduação?"></asp:Label>
+                                </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
                                     <select runat="server"  id="q3" class="form-control">

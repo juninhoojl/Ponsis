@@ -67,6 +67,15 @@ namespace ProjetoIC {
         protected global::System.Web.UI.HtmlControls.HtmlSelect q2;
         
         /// <summary>
+        /// lbq3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbq3;
+        
+        /// <summary>
         /// q3 control.
         /// </summary>
         /// <remarks>

@@ -62,13 +62,13 @@ namespace ProjetoIC
                         this.GravaDado(conn, 6, int.Parse(this.q6.Value));
                         this.GravaDado(conn, 7, this.q7.Text as string);
                         this.GravaDado(conn, 8, this.q8.Text as string);
-                        //this.GravaDado(conn,  9, int.Parse(this.q9.Value));
-                        //this.GravaDado(conn, 10, int.Parse(this.q10.Value));
-                        //this.GravaDado(conn, 11, int.Parse(this.q11.Value));
-                        //this.GravaDado(conn, 12, int.Parse(this.q12.Value));
-                        //this.GravaDado(conn, 13, int.Parse(this.q13.Value));
-                        //this.GravaDado(conn, 14, int.Parse(this.q14.Value));
-                        //this.GravaDado(conn, 15, int.Parse(this.q15.Value));
+                        this.GravaDado(conn,  9, int.Parse(this.q9.Value));
+                        this.GravaDado(conn, 10, int.Parse(this.q10.Value));
+                        this.GravaDado(conn, 11, int.Parse(this.q11.Value));
+                        this.GravaDado(conn, 12, int.Parse(this.q12.Value));
+                        this.GravaDado(conn, 13, int.Parse(this.q13.Value));
+                        this.GravaDado(conn, 14, int.Parse(this.q14.Value));
+                        this.GravaDado(conn, 15, this.q15.Text as string);
                         //this.GravaDado(conn, 16, int.Parse(this.q16.Value));
                         //this.GravaDado(conn, 17, int.Parse(this.q17.Value));
                         //this.GravaDado(conn, 18, int.Parse(this.q18.Value));
@@ -120,6 +120,26 @@ namespace ProjetoIC
             else if (String.IsNullOrWhiteSpace(this.q8.Text))
                 this.MostraMensagem(this.lbq8, this.q8);
 
+            else if (String.IsNullOrWhiteSpace(this.q9.Value))
+                this.MostraMensagem(this.lbq9, this.q9);
+
+            else if (String.IsNullOrWhiteSpace(this.q10.Value))
+                this.MostraMensagem(this.lbq10, this.q10);
+
+            else if (String.IsNullOrWhiteSpace(this.q11.Value))
+                this.MostraMensagem(this.lbq11, this.q11);
+
+            else if (String.IsNullOrWhiteSpace(this.q12.Value))
+                this.MostraMensagem(this.lbq12, this.q12);
+
+            else if (String.IsNullOrWhiteSpace(this.q13.Value))
+                this.MostraMensagem(this.lbq13, this.q13);
+
+            else if (String.IsNullOrWhiteSpace(this.q14.Value))
+                this.MostraMensagem(this.lbq14, this.q14);
+
+            else if (String.IsNullOrWhiteSpace(this.q15.Text))
+                this.MostraMensagem(this.lbq15, this.q15);
 
 
 

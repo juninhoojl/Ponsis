@@ -303,8 +303,11 @@
 
                         <!-- 9-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">9</span> Como você avalia o atendimento de seu orientador?</div>
+                                <div class="titulo-painel text-left"><span class="badge">9</span>
+                                    <asp:Label ID="lbq9" runat="server" Text="Como você avalia o atendimento de seu orientador?"></asp:Label>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">
@@ -330,9 +333,10 @@
                         
                         <!-- 10-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">10</span> Como você avalia o atendimento do Coordenador do Programa de Pós-Graduação?
+                                <div class="titulo-painel text-left"><span class="badge">10</span>
+                                    <asp:Label ID="lbq10" runat="server" Text="Como você avalia o atendimento do Coordenador do Programa de Pós-Graduação?"></asp:Label>
                                 </div>
                             </div>
                             <div class="panel-body">
@@ -359,11 +363,13 @@
 
                         <!-- 11-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">11</span> Como você avalia o acesso as informações no site da Pós-graduação e do Programa (formulários, resoluções, normas, critérios de bolsas, ...)?
+                                <div class="titulo-painel text-left"><span class="badge">11</span>
+                                    <asp:Label ID="lbq11" runat="server" Text="Como você avalia o acesso as informações no site da Pós-graduação e do Programa (formulários, resoluções, normas, critérios de bolsas, ...)?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
                                     <select runat="server"  id="q11" class="form-control">
@@ -388,11 +394,13 @@
 
                         <!-- 12-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">12</span> Que nota você daria para o Programa de Pós-Graduação de maneira geral?
+                                <div class="titulo-painel text-left"><span class="badge">12</span>
+                                    <asp:Label ID="lbq12" runat="server" Text="Que nota você daria para o Programa de Pós-Graduação de maneira geral?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
                                     <select runat="server"  id="q12" class="form-control">
@@ -416,9 +424,10 @@
 
                         <!-- 13-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">13</span>  Você recomendaria este Programa de Pós-Graduação?
+                                <div class="titulo-painel text-left"><span class="badge">13</span>
+                                    <asp:Label ID="lbq13" runat="server" Text="Você recomendaria este Programa de Pós-Graduação?"></asp:Label>
                                 </div>
                             </div>
                             <div class="panel-body">
@@ -444,11 +453,13 @@
 
                         <!-- 14-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left">
-                                    <span class="badge">14</span> Como você avalia o atendimento da Secretaria da PRPPG?
+                                <div class="titulo-painel text-left"><span class="badge">14</span>
+                                    <asp:Label ID="lbq14" runat="server" Text="Como você avalia o atendimento da Secretaria da PRPPG?"></asp:Label>
                                 </div>
                             </div>
+
                             <div class="panel-body">
                                 <div class="col-12">
                                     <select runat="server" id="q14" class="form-control">
@@ -473,14 +484,20 @@
 
                         <!-- 15-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">15</span>O que você gostou no Programa de Pós-Graduação (PPG)?</div>
-                            </div>
-                            <div class="panel-body">
-                                <div class="col-12">
-                                    <textarea runat="server" id="q15" placeholder="Escreva aqui o que gostou!" class="form-control" rows="5"></textarea>
+                                <div class="titulo-painel text-left"><span class="badge">15</span>
+                                    <asp:Label ID="lbq15" runat="server" Text="O que você gostou no Programa de Pós-Graduação (PPG)?"></asp:Label>
                                 </div>
                             </div>
+
+                            <div class="panel-body">
+                                <div class="col-12">
+                                    <asp:TextBox runat="server"  id="q15" placeholder="Escreva aqui o que gostou!" class="form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                                </div>
+                            </div>
+
+
                         </div>
                         <!-- 15-Pergunta-Fim -->
 

@@ -204,8 +204,11 @@
 
                         <!-- 5-Pergunta-Inicio -->
                         <div class="panel center">
-                            <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">5</span>Quantas publicações em Periódicos? (Resultantes ou não da pesquisa)</div>
+
+                           <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">5</span>
+                                    <asp:Label ID="lbq5" runat="server" Text="Quantas publicações em Periódicos? (Resultantes ou não da pesquisa)"></asp:Label>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">

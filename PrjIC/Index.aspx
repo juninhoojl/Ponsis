@@ -503,14 +503,19 @@
 
                         <!-- 16-Pergunta-Inicio -->
                         <div class="panel center">
+
                             <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">16</span>O que você não gostou no Programa de Pós-Graduação (PPG)?</div>
-                            </div>
-                            <div class="panel-body">
-                                <div class="col-12">
-                                    <textarea runat="server" id="q16" placeholder="Escreva aqui o que não gostou!" class="form-control" rows="5" ></textarea>
+                                <div class="titulo-painel text-left"><span class="badge">16</span>
+                                    <asp:Label ID="lbq16" runat="server" Text="O que você não gostou no Programa de Pós-Graduação (PPG)?"></asp:Label>
                                 </div>
                             </div>
+
+                            <div class="panel-body">
+                                <div class="col-12">
+                                    <asp:TextBox runat="server"  id="q16" placeholder="Escreva aqui o que não gostou!" class="form-control" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                                </div>
+                            </div>
+
                         </div>
 
                         <!-- 16-Pergunta-Fim -->

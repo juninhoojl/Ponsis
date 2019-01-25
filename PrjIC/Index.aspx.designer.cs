@@ -301,13 +301,22 @@ namespace ProjetoIC {
         protected global::System.Web.UI.WebControls.TextBox q15;
         
         /// <summary>
+        /// lbq16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbq16;
+        
+        /// <summary>
         /// q16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea q16;
+        protected global::System.Web.UI.WebControls.TextBox q16;
         
         /// <summary>
         /// q27 control.

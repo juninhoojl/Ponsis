@@ -31,7 +31,7 @@ namespace ProjetoIC
                 {
                     this._rowPeriodo = tabPeriodo.Rows[0];
 
-                    this.lbAno.Text = " - Ano referencia " + this._rowPeriodo["nu_Ano_Referencia"];
+                    this.lbAno.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
                     this._idPeriodo = (long)this._rowPeriodo["id_Periodo"];
 
                     conn.FechaConexao();
@@ -69,7 +69,7 @@ namespace ProjetoIC
                         this.GravaDado(conn, 13, int.Parse(this.q13.Value));
                         this.GravaDado(conn, 14, int.Parse(this.q14.Value));
                         this.GravaDado(conn, 15, this.q15.Text as string);
-                        //this.GravaDado(conn, 16, int.Parse(this.q16.Value));
+                        this.GravaDado(conn, 16, this.q16.Text as string);
                         //this.GravaDado(conn, 17, int.Parse(this.q17.Value));
                         //this.GravaDado(conn, 18, int.Parse(this.q18.Value));
                         //this.GravaDado(conn, 19, int.Parse(this.q19.Value));
@@ -140,6 +140,9 @@ namespace ProjetoIC
 
             else if (String.IsNullOrWhiteSpace(this.q15.Text))
                 this.MostraMensagem(this.lbq15, this.q15);
+
+            else if (String.IsNullOrWhiteSpace(this.q16.Text))
+                this.MostraMensagem(this.lbq15, this.q16);
 
 
 

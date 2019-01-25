@@ -14,166 +14,172 @@ Cor titulos = #AF9CED
 
 /* campo senha escondido */
 
-.olho{
-  color: #42444E ;
-  float: right;
-  margin-right: 0.4em;
-  margin-top: -1.8em;
-  position: relative;
-  z-index: 2;
+.olho {
+    color: #42444E;
+    float: right;
+    margin-right: 0.4em;
+    margin-top: -1.8em;
+    position: relative;
+    z-index: 2;
 }
 
-.olho:hover{
-  color: #000 ;
+    .olho:hover {
+        color: #000;
+    }
+
+
+
+.form-control::-webkit-input-placeholder {
+    opacity: 0.5;
 }
+/* WebKit, Blink, Edge */
+.form-control:-moz-placeholder {
+    opacity: 0.5;
+}
+/* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder {
+    opacity: 0.5;
+}
+/* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder {
+    opacity: 0.5;
+}
+/* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder {
+    opacity: 0.5;
+}
+/* Microsoft Edge */
 
-
-
-.form-control::-webkit-input-placeholder { opacity: 0.5; }  /* WebKit, Blink, Edge */
-.form-control:-moz-placeholder { opacity: 0.5; }  /* Mozilla Firefox 4 to 18 */
-.form-control::-moz-placeholder { opacity: 0.5; }  /* Mozilla Firefox 19+ */
-.form-control:-ms-input-placeholder { opacity: 0.5; }  /* Internet Explorer 10-11 */
-.form-control::-ms-input-placeholder { opacity: 0.5; }  /* Microsoft Edge */
-
-#login .login-box{
-  z-index: 2;
-  margin: 1.5em 0em 1.5em 0em;
-  padding: 0em;
-  background: #AF9CED;
-  background: -webkit-linear-gradient(to bottom right, #AF9CED, #69658C);
-  background: -o-linear-gradient(to bottom right, #AF9CED, #69658C);
-  background: -moz-linear-gradient(to bottom right, #AF9CED, #69658C);
-  background: linear-gradient(to bottom right, #AF9CED, #69658C); height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  border-radius: 1em;
-
+#login .login-box {
+    z-index: 2;
+    margin: 1.5em 0em 1.5em 0em;
+    padding: 0em;
+    background: #AF9CED;
+    background: -webkit-linear-gradient(to bottom right, #AF9CED, #69658C);
+    background: -o-linear-gradient(to bottom right, #AF9CED, #69658C);
+    background: -moz-linear-gradient(to bottom right, #AF9CED, #69658C);
+    background: linear-gradient(to bottom right, #AF9CED, #69658C);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 1em;
 }
 
 #login .container #login-form {
-  padding: 1em 1.5em 1em 1.5em;
-
-  margin: 0em 0em 0em 0em;
-
+    padding: 1em 1.5em 1em 1.5em;
+    margin: 0em 0em 0em 0em;
 }
 
 /*Caixas de texto do form-control */
 
-input.form-control{
-	font-family: palanquin;
-	background-color: #EBEDEF;
-	border-radius: 0.3em 0.3em 0.3em 0.3em;
-	padding-right: 1.5em;
+input.form-control {
+    font-family: palanquin;
+    background-color: #EBEDEF;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    padding-right: 1.5em;
 }
 /* Relativo ao texto dos nomes */
 
-.campo-login{
-	margin-top: 1em;
-	font-family: 'runhills';
-	font-size: 1em;
-	color: #42444E;
-	line-height:1em;
-
+.campo-login {
+    margin-top: 1em;
+    font-family: 'runhills';
+    font-size: 1em;
+    color: #42444E;
+    line-height: 1em;
 }
 
-.campo-login-titulo{
-	margin-top: 1em;
-	font-family: 'runhills';
-	font-size: 1.5em;
-	color: #42444E;
-	line-height:1em;
+.campo-login-titulo {
+    margin-top: 1em;
+    font-family: 'runhills';
+    font-size: 1.5em;
+    color: #42444E;
+    line-height: 1em;
 }
 
-.campo-login-cadastrar{
-  color: #FFF;
+.campo-login-cadastrar {
+    color: #FFF;
 }
-.campo-login-cadastrar:hover{
-  color: #000;
-}
+
+    .campo-login-cadastrar:hover {
+        color: #000;
+    }
 
 
 /* Relativo aos botoes */
 
-.btn, .btn:visited{
-	border-radius: 0.3em;
+.btn, .btn:visited {
+    border-radius: 0.3em;
     background-color: #EBEDEF;
     border: none;
 }
 
 
-.btn:hover, .btn:focus, .btn:active{
-	border-radius: 0.3em;
-    background-color: #FFFFFF;
-    border: none;
-
-
-}
+    .btn:hover, .btn:focus, .btn:active {
+        border-radius: 0.3em;
+        background-color: #FFFFFF;
+        border: none;
+    }
 
 /* Relativo ao box de opcoes */
 
-.enviar-botao{
-
-	font-family: 'palanquin';
-	font-size: 1.2em;
-	color: #42444E;
-	text-align: center;
-
+.enviar-botao {
+    font-family: 'palanquin';
+    font-size: 1.2em;
+    color: #42444E;
+    text-align: center;
 }
 
 
-.form-control{
-	font-size: 1em;
-	color: #42444E;
+.form-control {
+    font-size: 1em;
+    color: #42444E;
 }
 
-.form-control:focus {
-    border-color: #42444E;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
-}
+    .form-control:focus {
+        border-color: #42444E;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
+    }
 
 
 
 /* Relativo ao rodape */
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: none;
-  color: white;
-  text-align: center;
-  font-size: 1em;
-  margin-bottom: 1em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: none;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
 
 
 
-#link-rodape{
-	color: #EBEDEF;
-	outline: none;
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-family: 'runhills';
-	margin-left: 0.2em;
+#link-rodape {
+    color: #EBEDEF;
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'runhills';
+    margin-left: 0.2em;
 }
 
-#link-rodape:hover{
-	color: #BDC2CC;
-	outline: none;
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-family: 'runhills';
-	margin-left: 0.2em;
+    #link-rodape:hover {
+        color: #BDC2CC;
+        outline: none;
+        background: none;
+        border: none;
+        text-decoration: none;
+        font-family: 'runhills';
+        margin-left: 0.2em;
+    }
+
+#copyright-rodape {
+    color: #AF9CED;
+    font-family: 'palanquin';
 }
-
-#copyright-rodape{
-	color: #AF9CED;
-	font-family: 'palanquin';
-}
-
-
-

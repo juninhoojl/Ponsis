@@ -38,47 +38,64 @@
         <title>Avaliador</title>
     </head>
 
-    <!-- NAVBAR - INICIO -->
-    <nav class="navbar navbar-expand-md navbar-light navbar-custom">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-            <img src="img/icons/icon_64x64.png" width="30" height="30" class="d-inline-block align-top" alt=""/>
-            Avaliador
-        </a>
+<!-- NAVBAR - INICIO -->
+<nav class="navbar navbar-expand-md navbar-light navbar-custom">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">
+  	 <img  src="img/icons/icon_64x64.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  	 Avaliador
+  </a>
 
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  </a>
 
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <!-- Esquerda -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-poll-h"></i> Resultados</a>
-                </li>
-            </ul>
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-            <!-- Direita -->
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"> <i class="fas fa-wrench"></i> Admin</a>
-                </li>
-            </ul>
-        </div>
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-    </nav>
+ <!-- Esquerda -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="sobre.html"><i class="fas fa-question-circle"></i> Sobre</a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="resultados.html"><i class="fas fa-poll-h"></i> Resultados</a>
+      </li>
+
+
+
+    </ul>
+
+
+<!-- Direita -->
+  <ul class="navbar-nav ml-auto">
+
+
+  	  <li class="nav-item">
+        <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login</a>
+
+      </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="sobre.html"> <i class="fas fa-wrench"></i> Admin</a>
+  	</li>
+
+
+
+</ul>
+  </div> 
+</nav>
+
+<!-- NAVBAR - FIM -->
 
     <body>
         <form id="form1" runat="server">
-            <!-- NAVBAR - FIM -->
+            
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">

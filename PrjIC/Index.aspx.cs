@@ -33,11 +33,11 @@ namespace ProjetoIC
 
                     this.lbAno.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
                     this._idPeriodo = (long)this._rowPeriodo["id_Periodo"];
-
-                    conn.FechaConexao();
                 }
                 else
                     Response.Redirect("indisponivel.html");
+
+                conn.FechaConexao();
             }
         }
 
@@ -55,13 +55,13 @@ namespace ProjetoIC
                         this.ShowAlert(this, "Nenhuma avaliaçao esta disponível no momento!");
                     else
                     {
-                        this.GravaDado(conn, 2, int.Parse(this.q2.Value));
-                        this.GravaDado(conn, 3, int.Parse(this.q3.Value));
-                        this.GravaDado(conn, 4, int.Parse(this.q4.Value));
-                        this.GravaDado(conn, 5, int.Parse(this.q5.Value));
-                        this.GravaDado(conn, 6, int.Parse(this.q6.Value));
-                        this.GravaDado(conn, 7, this.q7.Text as string);
-                        this.GravaDado(conn, 8, this.q8.Text as string);
+                        this.GravaDado(conn,  2, int.Parse(this.q2.Value));
+                        this.GravaDado(conn,  3, int.Parse(this.q3.Value));
+                        this.GravaDado(conn,  4, int.Parse(this.q4.Value));
+                        this.GravaDado(conn,  5, int.Parse(this.q5.Value));
+                        this.GravaDado(conn,  6, int.Parse(this.q6.Value));
+                        this.GravaDado(conn,  7, this.q7.Text as string);
+                        this.GravaDado(conn,  8, this.q8.Text as string);
                         this.GravaDado(conn,  9, int.Parse(this.q9.Value));
                         this.GravaDado(conn, 10, int.Parse(this.q10.Value));
                         this.GravaDado(conn, 11, int.Parse(this.q11.Value));
@@ -82,10 +82,9 @@ namespace ProjetoIC
                         this.GravaDado(conn, 26, int.Parse(this.q26.Value));
                         this.GravaDado(conn, 27, this.q16.Text as string);
 
-                        conn.FechaConexao();
-
                         Response.Redirect("respondido.html");
                     }
+                    conn.FechaConexao();
                 }
             }
         }

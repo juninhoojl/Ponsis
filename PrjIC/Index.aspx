@@ -96,12 +96,20 @@
     <body>
         <form id="form1" runat="server">
             
-            <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="meio col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="text-center">
+                        <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
+                    </div>
+                    
+                </div>
+            </div>
+
                 <div class="row">
                     <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                        <div class="text-center">
-                             <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
-                        </div>
 
                         <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Perfil do pós-graduando
                             

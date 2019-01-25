@@ -198,15 +198,27 @@ label {
 }
 
 
+/* Meio */
+
+.meio {
+    padding: 1em;
+    background-color: #AF9CED;
+    color: #3E4554;
+    margin: 0em;
+    font-family: 'palanquin';
+    font-size: 1.5em;
+    line-height: 1em;
+}
 
 /*indicador de periodo*/
 #lbAno {
     margin-top: 1em;
     font-family: 'palanquin';
-    font-size: 2.5em;
-    color: #AF9CED;
-    line-height: 1em;
+    color: #3E4554;
+
 }
+    
+
 
 
 

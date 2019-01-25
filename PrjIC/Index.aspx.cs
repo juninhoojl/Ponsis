@@ -92,7 +92,7 @@ namespace ProjetoIC
 
         private void MostraMensagem(Label label, object control)
         {
-            this.ShowAlert(this, "O campo \"" + label.Text + "\" náo foi informado!");
+            this.ShowAlert(this, "A pergunta: \"" + label.Text + "\" não foi respondida!");
             if (control is HtmlSelect)
                 ((HtmlSelect)control).Focus();
             if (control is TextBox)
@@ -110,10 +110,7 @@ namespace ProjetoIC
             else if (String.IsNullOrWhiteSpace(this.q3.Value))
                 this.MostraMensagem(this.lbq3, this.q3);
             else if (String.IsNullOrWhiteSpace(this.q4.Value))
-            {
-                this.ShowAlert(this, "Questão número 4 não respondida!");
-                this.q4.Focus();
-            }
+                this.MostraMensagem(this.lbq4, this.q4);
             else if (String.IsNullOrWhiteSpace(this.q5.Value))
             {
                 this.ShowAlert(this, "Questão número 5 não respondida!");

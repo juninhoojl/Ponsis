@@ -169,8 +169,11 @@
 
                         <!-- 4-Pergunta-Inicio -->
                         <div class="panel center">
-                            <div class="panel-heading">
-                                <div class="titulo-painel text-left"><span class="badge">4</span>Quantas publicações em Congressos? (Resultantes ou não da pesquisa)</div>
+
+                           <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">4</span>
+                                    <asp:Label ID="lbq4" runat="server" Text="Quantas publicações em Congressos? (Resultantes ou não da pesquisa)"></asp:Label>
+                                </div>
                             </div>
                             <div class="panel-body">
                                 <div class="col-12">

@@ -17,8 +17,8 @@ Cor titulos = #AF9CED
 .olho {
     color: #42444E;
     float: right;
-    margin-right: 0.4em;
-    margin-top: -1.8em;
+    margin-right: 0.5em;
+    margin-top: -1.7em;
     position: relative;
     z-index: 2;
 }
@@ -53,7 +53,7 @@ Cor titulos = #AF9CED
 #login .login-box {
     z-index: 2;
     margin: 1.5em 0em 1.5em 0em;
-    padding: 0em;
+    padding: 1em;
     background: #AF9CED;
     background: -webkit-linear-gradient(to bottom right, #AF9CED, #69658C);
     background: -o-linear-gradient(to bottom right, #AF9CED, #69658C);

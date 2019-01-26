@@ -10,7 +10,6 @@
 namespace PrjIC {
     
     
-    public partial class Apresentacao
-    {
+    public partial class Apresentacao {
     }
 }

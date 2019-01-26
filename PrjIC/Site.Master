@@ -70,12 +70,12 @@
 
                 </div>
             </nav>
+            
 
-
-            <div class="container body-content">
+                <!-- Content sera carregado aqui -->
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
-                <hr />
+
                   <!-- Footer -->
                   <footer class="footer font-small pt-4">
                       <div id="copyright-rodape" class="text-center">© <%: DateTime.Now.Year %> Copyright:
@@ -83,7 +83,7 @@
                       </div>
                   </footer>
                   <!-- Footer -->
-            </div>
+            
         </form>
     </body>
 

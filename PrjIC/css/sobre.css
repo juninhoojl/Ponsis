@@ -14,116 +14,111 @@ Cor titulos = #AF9CED
 
 /* Cores icones */
 
-.feliz{
-	color: #BCD67F;
-	font-size: 1.5em;
-
+.feliz {
+    color: #BCD67F;
+    font-size: 1.5em;
 }
 
-.diamante{
-	color: #7ABEE9;
-	font-size: 1.5em;
-
+.diamante {
+    color: #7ABEE9;
+    font-size: 1.5em;
 }
 
-.normal{
-	color: #FDEE51;
-	font-size: 1.5em;
-
+.normal {
+    color: #FDEE51;
+    font-size: 1.5em;
 }
 
-.triste{
-	color: #D4624A;
-	font-size: 1.5em;
-
+.triste {
+    color: #D4624A;
+    font-size: 1.5em;
 }
 
 
 /* Nomes dos tipos */
 
-.nomefeliz{
-	color: #BCD67F;
-	font-size: 1em;
-	font-family: 'palanquin';
-	padding: 0.25em 0em 0.25em 0em;
-	text-align: center;
+.nomefeliz {
+    color: #BCD67F;
+    font-size: 1em;
+    font-family: 'palanquin';
+    padding: 0.25em 0em 0.25em 0em;
+    text-align: center;
 }
 
-.nomediamante{
-	color: #7ABEE9;
-	font-size: 1em;
-	font-family: 'palanquin';
-		padding: 0.25em 0em 0.25em 0em;
-		text-align: center;
+.nomediamante {
+    color: #7ABEE9;
+    font-size: 1em;
+    font-family: 'palanquin';
+    padding: 0.25em 0em 0.25em 0em;
+    text-align: center;
 }
 
-.nomenormal{
-	color: #FDEE51;
-	font-size: 1em;
-	font-family: 'palanquin';
-		padding: 0.25em 0em 0.25em 0em;
-		text-align: center;
+.nomenormal {
+    color: #FDEE51;
+    font-size: 1em;
+    font-family: 'palanquin';
+    padding: 0.25em 0em 0.25em 0em;
+    text-align: center;
 }
 
 
-.nometriste{
-	color: #D4624A;
-	font-size: 1em;
-	font-family: 'palanquin';
-	padding: 0.25em 0em 0.25em 0em;
+.nometriste {
+    color: #D4624A;
+    font-size: 1em;
+    font-family: 'palanquin';
+    padding: 0.25em 0em 0.25em 0em;
 }
 
 
 
 /* Meio */
 
-.meio{
-	padding: 1.5em;
-	background-color: transparent;
-	color: #F5F5F5;
-	margin: 0em;
-	font-family: 'palanquin';
-	font-size: 1.8em;
+.meio {
+    padding: 1.5em;
+    background-color: transparent;
+    color: #F5F5F5;
+    margin: 0em;
+    font-family: 'palanquin';
+    font-size: 1.8em;
 }
 
 
-.maior{
-	padding: 1em;
-	background-color: #EBEDEF;
-	margin: 0em;
-	color: #42444E;
-	font-family: 'palanquin';
-	font-size: 1.2em;
+.maior {
+    padding: 1em;
+    background-color: #EBEDEF;
+    margin: 0em;
+    color: #42444E;
+    font-family: 'palanquin';
+    font-size: 1.2em;
 }
 
 
 
-.direita{
-	padding: 0em;
-	background-color: transparent;
-	margin: 0em;
-	color: #F5F5F5;
-	font-family: 'palanquin';
-	font-size: 1.2em;
+.direita {
+    padding: 0em;
+    background-color: transparent;
+    margin: 0em;
+    color: #F5F5F5;
+    font-family: 'palanquin';
+    font-size: 1.2em;
 }
 
-.esquerda{
-	padding: 1em;
-	background-color: #AF9CED;
-	margin: 0em;
-	color: #F5F5F5;
-	font-family: 'palanquin';
-	font-size: 1.2em;
+.esquerda {
+    padding: 1em;
+    background-color: #AF9CED;
+    margin: 0em;
+    color: #F5F5F5;
+    font-family: 'palanquin';
+    font-size: 1.2em;
 }
 
 
 /*titulo dos blocos */
-.nomebloco{
-
-	font-family: 'runhills';
-	font-size: 2em;
-	color: #F5F5F5;
-	line-height:1.2em;
+.nomebloco {
+    font-family: 'runhills';
+    font-size: 2em;
+    color: #F5F5F5;
+    line-height: 1.2em;
 }
 
 
@@ -134,34 +129,34 @@ Cor titulos = #AF9CED
 
 /* Relativo ao rodape */
 .footer {
-   position: none;
-   background-color: none;
-   text-align: center;
-   font-size: 1em;
-   margin-bottom: 1em;
+    position: none;
+    background-color: none;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
 
-#link-rodape{
-	color: #EBEDEF;
-	outline: none;
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-family: 'runhills';
-	margin-left: 0.2em;
+#link-rodape {
+    color: #EBEDEF;
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'runhills';
+    margin-left: 0.2em;
 }
 
-#link-rodape:hover{
-	color: #BDC2CC;
-	outline: none;
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-family: 'runhills';
-	margin-left: 0.2em;
-}
+    #link-rodape:hover {
+        color: #BDC2CC;
+        outline: none;
+        background: none;
+        border: none;
+        text-decoration: none;
+        font-family: 'runhills';
+        margin-left: 0.2em;
+    }
 
-#copyright-rodape{
-	color: #AF9CED;
-	font-family: 'palanquin';
+#copyright-rodape {
+    color: #AF9CED;
+    font-family: 'palanquin';
 }

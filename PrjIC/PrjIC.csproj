@@ -75,7 +75,6 @@
     <Content Include="css\informacao.css" />
     <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />
-    <Content Include="css\topo.css" />
     <Content Include="Global.asax" />
     <Content Include="img\icons\icon_114x114.png" />
     <Content Include="img\icons\icon_128x128.png" />

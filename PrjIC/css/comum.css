@@ -82,7 +82,7 @@ body {
 
 .cd-top.cd-top--show,
 .cd-top.cd-top--fade-out,
-.cd-top:hover {
+.cd-top:hover{
   -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
   transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
 }
@@ -119,6 +119,8 @@ body {
   }
 }
 
+
+/*Botao collapse*/
 #botaocollapse{
     outline: none;
 }

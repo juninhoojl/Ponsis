@@ -71,7 +71,7 @@
     <Content Include="css\fonts.css" />
     <Content Include="css\login.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="css\questionario.css" />
+    <Content Include="css\avaliacao.css" />
     <Content Include="css\informacao.css" />
     <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />

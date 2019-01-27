@@ -8,12 +8,10 @@
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <!-- Bootstrap stylesheet -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-        <!-- Comum stylesheet -->
-        <link rel="stylesheet" type="text/css" href="css/comum.css" />
         <!-- Fontes stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
         <!-- Questionario stylesheet -->
-        <link rel="stylesheet" type="text/css" href="css/questionario.css" />
+        <link rel="stylesheet" type="text/css" href="css/avaliacao.css" />
         <!-- Renderiza IE = Edge -->
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
         <!-- Para proporcao tamanhos de tela -->
@@ -63,7 +61,7 @@
             
         <div class="container-fluid">
             <div class="row">
-              <div class="faixa col-sm-12 col-md-12 col-lg-12"> 
+              <div class="faixa-ano col-sm-12 col-md-12 col-lg-12"> 
                   <div class="text-center">
                             <i data-toggle="modal" data-target="#myModal" class="fas fa-question-circle btnmodal"/></i>
                             <asp:Label ID="lbAno" runat="server" Text=""></asp:Label> 
@@ -76,7 +74,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
-                        <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Perfil do pós-graduando
+                        <div class="titulo-secao text-center"><i class="fas fa-user-graduate"></i> Perfil do pós-graduando
                             
                         </div>
 
@@ -227,7 +225,7 @@
                         </div>
 
                         <!-- 5-Pergunta-Fim -->
-                        <div class="sessoes text-center">
+                        <div class="titulo-secao text-center">
                             <i class="fas fa-graduation-cap"></i> Avaliação da pós-graduação
                         </div>
 
@@ -509,7 +507,7 @@
                         </div>
 
                         <!-- 16-Pergunta-Fim -->
-                        <div class="sessoes text-center">
+                        <div class="titulo-secao text-center">
                             <i class="fas fa-university"></i> Avaliação da infraestrutura
                         </div>
 
@@ -822,7 +820,7 @@
                         </div>
                         <!-- 26-Pergunta-Fim -->
 
-                        <div class="sessoes text-center"><i class="fas fa-brain"></i> Espaço criativo!</div>
+                        <div class="titulo-secao text-center"><i class="fas fa-brain"></i> Espaço criativo!</div>
 
                         <!-- 27-Pergunta-Inicio -->
 

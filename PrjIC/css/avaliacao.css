@@ -1,31 +1,95 @@
-/**/
-/*
-CORES
-
-Background = #3E4554
+/*--------- CORES ---------
+Background-Gradient = #3E4554 -> #242830
+Navbar-Gradient = #EBEDEF -> #DCDEE0
 Parte de cima do painel = #BEC2CB
 Parte do corpo do painel = #EBEDEF
 Letra branca dentro do label = #F5F5F5
 Cores letras escuras(texto) e badge = #42444E
-Cor titulos = #AF9CED
+Cor Titulos = #AF9CED
+-------------------------*/
 
-*/
 
+/* Retirados do comum */
 
-/* Apenas onde tem a progress bar */
-
-.navbar-custom {
-    /*background-color: #EBEDEF; */
-    background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0); 
-
+body {
+    /*background-color: #3E4554;*/
+    font: 100% runhills, palanquin;
+    margin: 0;
+    background: #3E4554;
+    background: -webkit-linear-gradient(to bottom right, #3E4554, #242830);
+    background: -o-linear-gradient(to bottom right, #3E4554, #242830);
+    background: -moz-linear-gradient(to bottom right, #3E4554, #242830);
+    background: linear-gradient(to bottom right, #3E4554, #242830);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
-/* barra de progresso */
+/* Botao scroll topo */
+.cd-top {
+    border-radius: 2em 0em 0em 2em;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: #AF9CED url(/img/vectors/top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+    transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s;
+}
+
+    .cd-top.cd-top--show,
+    .cd-top.cd-top--fade-out,
+    .cd-top:hover {
+        -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+        transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+    }
+
+    .cd-top.cd-top--show {
+        /* the button becomes visible */
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .cd-top.cd-top--fade-out {
+        /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+        opacity: .5;
+    }
+
+    .cd-top:hover {
+        background-color: #AF9CED;
+        opacity: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .cd-top {
+            right: 0px;
+            bottom: 20px;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .cd-top {
+            height: 60px;
+            width: 60px;
+            right: 0px;
+            bottom: 30px;
+        }
+    }
 
 
+/* Barra de Progresso */
 .progress {
-
   position: fixed;
   top: 0px;
   border: none;
@@ -34,11 +98,9 @@ Cor titulos = #AF9CED
   border-radius: 0px;
 }
 
-
-
 progress::-webkit-progress-value {
   background: #AF9CED;
-  color: #fff; /* For IE10 */
+  color: #fff; /* Para IE10 */
   -webkit-appearance: none;
 }
 
@@ -52,18 +114,14 @@ progress::-moz-progress-bar {
   background: #AF9CED;
 }
 
-progress::-moz-progress-value{
-  background: #69658C;
-}
 
-
-
-.sessoes{
-	margin-top: 1em;
-	font-family: 'runhills';
-	font-size: 2.5em;
-	color: #AF9CED;
-	line-height:1em;
+/*Titulo-Sessoes*/
+.titulo-secao{
+    margin-top: 1em;
+    font-family: 'runhills';
+    font-size: 2.5em;
+    color: #AF9CED;
+    line-height: 1em;
 }
 
 /* Relativo aos paineis */
@@ -102,7 +160,6 @@ progress::-moz-progress-value{
 
 }
 
-
 .panel > .panel-body {
 background-color: #EBEDEF;
 padding:0.9em 0px 0.9em 0px;
@@ -110,10 +167,11 @@ border-color: blue;
 border-radius: 0px 0px 5px 5px;
 }
 
-/* Relativo aos botoes */
 
+/* Relativo aos botoes */
 .btn, .btn:visited {
-    font-size: 1.2em;
+    color: #42444E;
+    font-size: 1.4em;
     font-family: 'palanquin';
     border-radius: 0.3em;
     background-color: #EBEDEF;
@@ -124,7 +182,8 @@ border-radius: 0px 0px 5px 5px;
 
 
     .btn:hover, .btn:focus, .btn:active {
-        font-size: 1.2em;
+        color: #42444E;
+        font-size: 1.4em;
         font-family: 'palanquin';
         border-radius: 0.3em;
         background-color: #BDC2CC;
@@ -134,16 +193,6 @@ border-radius: 0px 0px 5px 5px;
     }
 
 /* Relativo ao box de opcoes */
-
-.enviar-botao{
-
-	font-family: 'palanquin';
-	font-size: 1.2em;
-	color: #42444E;
-	text-align: center;
-
-}
-
 .form-control{
 	font-size: 1em;
 	color: #42444E;
@@ -161,8 +210,7 @@ label {
   display: block;
 }
 
-/* Relativo ao rodape */
-
+/* Rodape */
 .footer {
    position: none;
    background-color: none;
@@ -197,8 +245,8 @@ label {
 }
 
 
-/* Faixa lbano */
-.faixa {
+/* Faixa ano de avaliacao */
+.faixa-ano {
     padding: 0.5em;
     background-color: #AF9CED;
     color: #3E4554;
@@ -208,6 +256,7 @@ label {
     line-height: 1em;
     z-index: 2;
 }
+
 
 /*indicador de periodo*/
 #lbAno {

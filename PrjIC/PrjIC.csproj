@@ -69,11 +69,10 @@
   <ItemGroup>
     <Content Include="css\comum.css" />
     <Content Include="css\fonts.css" />
-    <Content Include="css\indisponivel.css" />
     <Content Include="css\login.css" />
     <Content Include="css\normalize.css" />
     <Content Include="css\questionario.css" />
-    <Content Include="css\respondido.css" />
+    <Content Include="css\informacao.css" />
     <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />
     <Content Include="css\topo.css" />
@@ -98,6 +97,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Respondido.aspx" />
     <Content Include="Apresentacao.aspx" />
+    <Content Include="Indisponivel.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Conexao.cs" />
@@ -140,27 +140,18 @@
     <Compile Include="Apresentacao.aspx.designer.cs">
       <DependentUpon>Apresentacao.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Indisponivel.aspx.cs">
+      <DependentUpon>Indisponivel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indisponivel.aspx.designer.cs">
+      <DependentUpon>Indisponivel.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\fonts\palanquin\palanquin-bold.ttf" />
-    <Content Include="css\fonts\palanquin\palanquin-extralight.ttf" />
-    <Content Include="css\fonts\palanquin\palanquin-light.ttf" />
-    <Content Include="css\fonts\palanquin\palanquin-medium.ttf" />
-    <Content Include="css\fonts\palanquin\palanquin-regular.ttf" />
-    <Content Include="css\fonts\palanquin\palanquin-semibold.ttf" />
-    <Content Include="css\fonts\palanquin\palanquin-thin.ttf" />
-    <Content Include="css\fonts\palanquin\palanquindark-bold.ttf" />
-    <Content Include="css\fonts\palanquin\palanquindark-medium.ttf" />
-    <Content Include="css\fonts\palanquin\palanquindark-regular.ttf" />
-    <Content Include="css\fonts\palanquin\palanquindark-semibold.ttf" />
-    <Content Include="css\fonts\pratiwi\Pratiwi Sans Typeface.otf" />
-    <Content Include="css\fonts\pratiwi\Pratiwi Sans Typeface.ttf" />
-    <Content Include="css\fonts\pratiwi\Pratiwi Typeface.otf" />
-    <Content Include="css\fonts\pratiwi\Pratiwi Typeface.ttf" />
-    <Content Include="css\fonts\pratiwi\Pratiwi Vintage Typeface.otf" />
-    <Content Include="css\fonts\pratiwi\Pratiwi Vintage Typeface.ttf" />
+    <Content Include="css\fonts\palanquin-bold.ttf" />
+    <Content Include="css\fonts\palanquin-extralight.ttf" />
     <Content Include="css\fonts\RunHills.ttf" />
-    <Content Include="css\fonts\valentine.ttf" />
     <Content Include="img\aseprite\icon_114x114.aseprite" />
     <Content Include="img\aseprite\icon_128x128.aseprite" />
     <Content Include="img\aseprite\icon_16x16.aseprite" />

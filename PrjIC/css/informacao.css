@@ -1,19 +1,32 @@
-/* Relativo ao rodape */
-
-
-.sessoes{
-	position: fixed;
-	margin-top: 1em;
-	font-family: 'runhills';
-	font-size:10vw;
-	color: #AF9CED;
-	line-height:1em;
-	margin-left: 0;
-
+/* Centralizar na pagina */
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
 
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.aviso{
+	font-family: 'runhills';
+	font-size: 6.5vw;
+	color: #AF9CED;
+	background-color: transparent;
+	margin-top: 1em;
+}
+
+/* Relativo ao rodape */
 .footer {
   position: fixed;
   left: 0;
@@ -22,8 +35,8 @@
   background-color: none;
   color: white;
   text-align: center;
-     font-size: 1.5em;
-   margin-bottom: 1em;
+  font-size: 1em;
+  margin-bottom: 1em;
 }
 
 

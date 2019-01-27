@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Avaliacao.aspx.cs" Inherits="ProjetoIC.Avaliacao" %>
 
-<!DOCTYPE html
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
         <!-- Normalize stylesheet-->
@@ -38,74 +38,39 @@
         <title>Avaliador</title>
     </head>
 
-<!-- NAVBAR - INICIO -->
-<nav class="navbar navbar-expand-md navbar-light navbar-custom">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">
-  	 <img  src="img/icons/icon_64x64.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  	 Avaliador
-  </a>
-
-  </a>
-
-  <!-- Toggler/collapsibe Button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <!-- Navbar links -->
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-
- <!-- Esquerda -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="sobre.html"><i class="fas fa-question-circle"></i> Sobre</a>
-      </li>
-
-
-      <li class="nav-item">
-        <a class="nav-link" href="resultados.html"><i class="fas fa-poll-h"></i> Resultados</a>
-      </li>
-
-
-
-    </ul>
-
-
-<!-- Direita -->
-  <ul class="navbar-nav ml-auto">
-
-
-  	  <li class="nav-item">
-        <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login</a>
-
-      </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="sobre.html"> <i class="fas fa-wrench"></i> Admin</a>
-  	</li>
-
-
-
-</ul>
-  </div> 
-</nav>
-
-<!-- NAVBAR - FIM -->
-
     <body>
+
+ 
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>This is a large modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
         <form id="form1" runat="server">
             
         <div class="container-fluid">
             <div class="row">
-
-                <div class="meio col-sm-12 col-md-12 col-lg-12">
-
-                    <div class="text-center">
-                        <asp:Label ID="lbAno" runat="server" Text=""></asp:Label>
-                    </div>
-                    
-                </div>
+              <div class="faixa col-sm-12 col-md-12 col-lg-12"> 
+                  <div class="text-center">
+                            <i data-toggle="modal" data-target="#myModal" class="fas fa-question-circle btnmodal"/></i>
+                            <asp:Label ID="lbAno" runat="server" Text=""></asp:Label> 
+                            
+                  </div>
+                      
+              </div>
             </div>
 
                 <div class="row">
@@ -878,8 +843,7 @@
 
                         <!-- Botao submit-->
                         <asp:button runat="server" id="btnEnviar" type="submit" class="btn btn-block" Text="Enviar" OnClick="btEnviar_Click"/>
-                        <%--<asp:Button runat="server" class="btn btn-block" Text="Enviar" id="btEnviar" OnClick="btEnviar_Click" />
-                        <i class="btn far fa-paper-plane">asdfasdf</i>--%>
+                    
                     </div>
                 </div>
             </div>
@@ -893,17 +857,15 @@
     <!-- Barra progress scroll -->
     <progress class="progress" id="progressbar" value="0" max="100"></progress>
 
-    <!-- Footer -->
-    <footer class="footer font-small pt-4">
-        <!-- Copyright -->
-        <div id="copyright-rodape" class="text-center">
-            © 2019 Copyright:
-            <a id="link-rodape" href="https://github.com/juninhoojl"> </i><i class="fab fa-github"></i></i> Juninhoojl</i></a>
-        </div>
-        <!-- Copyright -->
-    </footer>
 
     <!-- Footer -->
+    <footer class="footer font-small pt-4">
+        <div id="copyright-rodape" class="text-center">© <%: DateTime.Now.Year %> Copyright:
+        <a id="link-rodape" href="https://github.com/juninhoojl"> </i><i class="fab fa-github"></i></i> Juninhoojl</i></a>
+        </div>
+    </footer>
+    <!-- Footer -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

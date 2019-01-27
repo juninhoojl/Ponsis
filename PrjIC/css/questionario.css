@@ -21,9 +21,6 @@ Cor titulos = #AF9CED
 }
 
 
-
-
-
 /* barra de progresso */
 
 
@@ -70,14 +67,15 @@ progress::-moz-progress-value{
 }
 
 /* Relativo aos paineis */
-.panel{
-	background-color: transparent;
-	border-color: transparent;
-	border-radius: 0.3em;
-	border: 0em;
-	margin: 1.5em 0em 0em 0em;
-	font-family: 'palanquin';
-	color: red;
+.panel {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0.3em;
+    border: 0em;
+    margin: 1.5em 0em 0em 0em;
+    font-family: 'palanquin';
+    color: red;
+    font-size: 1em;
 }
 
 .badge {
@@ -85,7 +83,6 @@ progress::-moz-progress-value{
   background-color: #42444E;
   padding: 0.25em 0.5em 0.25em 0.5em;
   border-radius: 0.3em;
-
   margin-right: 1em;
 }
 
@@ -111,28 +108,30 @@ background-color: #EBEDEF;
 padding:0.9em 0px 0.9em 0px;
 border-color: blue;
 border-radius: 0px 0px 5px 5px;
-
 }
 
 /* Relativo aos botoes */
 
-.btn, .btn:visited{
-	border-radius: 0.3em;
+.btn, .btn:visited {
+    font-size: 1.2em;
+    font-family: 'palanquin';
+    border-radius: 0.3em;
     background-color: #EBEDEF;
     border: none;
     padding: 1em;
-	margin: 2em 0em 1em 0em;
+    margin: 2em 0em 1em 0em;
 }
 
 
-.btn:hover, .btn:focus, .btn:active{
-	border-radius: 0.3em;
-    background-color: #BDC2CC;
-    border: none;
-    padding: 1em;
-	margin: 2em 0em 1em 0em;
-
-}
+    .btn:hover, .btn:focus, .btn:active {
+        font-size: 1.2em;
+        font-family: 'palanquin';
+        border-radius: 0.3em;
+        background-color: #BDC2CC;
+        border: none;
+        padding: 1em;
+        margin: 2em 0em 1em 0em;
+    }
 
 /* Relativo ao box de opcoes */
 
@@ -145,10 +144,10 @@ border-radius: 0px 0px 5px 5px;
 
 }
 
-
 .form-control{
 	font-size: 1em;
 	color: #42444E;
+    padding: 0.3em;
 }
 
 .form-control:focus {
@@ -198,16 +197,16 @@ label {
 }
 
 
-/* Meio */
-
-.meio {
-    padding: 1em;
+/* Faixa lbano */
+.faixa {
+    padding: 0.5em;
     background-color: #AF9CED;
     color: #3E4554;
     margin: 0em;
     font-family: 'palanquin';
     font-size: 1.5em;
     line-height: 1em;
+    z-index: 2;
 }
 
 /*indicador de periodo*/
@@ -217,11 +216,13 @@ label {
     color: #3E4554;
 
 }
-    
 
+.btnmodal{
+    margin-left: 0em;
+}
 
-
-
-
+.btnmodal:hover{
+    color: #000;
+}
 
 

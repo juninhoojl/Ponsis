@@ -1,61 +1,12 @@
-/**/
-/*
-CORES
-
-Background = #3E4554
+/*--------- CORES ---------
+Background-Gradient = #3E4554 -> #242830
+Navbar-Gradient = #EBEDEF -> #DCDEE0
 Parte de cima do painel = #BEC2CB
 Parte do corpo do painel = #EBEDEF
 Letra branca dentro do label = #F5F5F5
 Cores letras escuras(texto) e badge = #42444E
-Cor titulos = #AF9CED
-
-*/
-
-
-/* Apenas onde tem a progress bar */
-
-.navbar-custom {
-    /*background-color: #EBEDEF; */
-    background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0); 
-
-}
-
-
-/* barra de progresso */
-
-
-.progress {
-
-  position: fixed;
-  top: 0px;
-  border: none;
-  width: 100%;
-  height: 0.5em;
-  border-radius: 0px;
-}
-
-
-
-progress::-webkit-progress-value {
-  background: #AF9CED;
-  color: #fff; /* For IE10 */
-  -webkit-appearance: none;
-}
-
-
-progress::-webkit-progress-bar {
-  background: #69658C;
-}
-
-
-progress::-moz-progress-bar {
-  background: #AF9CED;
-}
-
-progress::-moz-progress-value{
-  background: #69658C;
-}
-
+Cor Titulos = #AF9CED
+-------------------------*/
 
 
 .sessoes{
@@ -112,7 +63,6 @@ border-radius: 0px 0px 5px 5px;
 }
 
 /* Relativo aos botoes */
-
 .btn, .btn:visited{
 	border-radius: 0.3em;
     background-color: #EBEDEF;
@@ -132,7 +82,6 @@ border-radius: 0px 0px 5px 5px;
 }
 
 /* Relativo ao box de opcoes */
-
 .enviar-botao{
 
 	font-family: 'palanquin';
@@ -154,48 +103,6 @@ border-radius: 0px 0px 5px 5px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
 }
-
-label {
-  display: block;
-}
-
-/* Relativo ao rodape */
-
-.footer {
-   position: none;
-   background-color: none;
-   text-align: center;
-   font-size: 1em;
-   margin-bottom: 1em;
-}
-
-#link-rodape{
-	color: #EBEDEF;
-	outline: none;
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-family: 'runhills';
-	margin-left: 0.2em;
-}
-
-#link-rodape:hover{
-	color: #BDC2CC;
-	outline: none;
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-family: 'runhills';
-	margin-left: 0.2em;
-}
-
-#copyright-rodape{
-	color: #AF9CED;
-	font-family: 'palanquin';
-}
-
-
-
 
 
 

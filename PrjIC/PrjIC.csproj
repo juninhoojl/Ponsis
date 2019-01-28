@@ -75,6 +75,7 @@
     <Content Include="css\informacao.css" />
     <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />
+    <Content Include="css\teste.css" />
     <Content Include="Global.asax" />
     <Content Include="img\icons\icon_114x114.png" />
     <Content Include="img\icons\icon_128x128.png" />
@@ -97,6 +98,7 @@
     <Content Include="Respondido.aspx" />
     <Content Include="Apresentacao.aspx" />
     <Content Include="Indisponivel.aspx" />
+    <Content Include="Resultados.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Conexao.cs" />
@@ -145,6 +147,13 @@
     </Compile>
     <Compile Include="Indisponivel.aspx.designer.cs">
       <DependentUpon>Indisponivel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resultados.aspx.cs">
+      <DependentUpon>Resultados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Resultados.aspx.designer.cs">
+      <DependentUpon>Resultados.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

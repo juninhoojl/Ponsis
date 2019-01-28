@@ -19,11 +19,13 @@ body {
   background: linear-gradient(to bottom right, #3E4554, #242830); height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: 'palanquin';
 }
 
 /* Navbar-Gradient */
 .navbar-custom {
     background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0);
+    font-family: 'runhills';
 }
 
 /* change the brand and text color */
@@ -46,4 +48,40 @@ body {
 /*Botao collapse*/
 #botaocollapse{
     outline: none;
+}
+
+
+/* Relativo ao rodape */
+
+.footer {
+    position: none;
+    background-color: none;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+#link-rodape {
+    color: #EBEDEF;
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'runhills';
+    margin-left: 0.2em;
+}
+
+    #link-rodape:hover {
+        color: #BDC2CC;
+        outline: none;
+        background: none;
+        border: none;
+        text-decoration: none;
+        font-family: 'runhills';
+        margin-left: 0.2em;
+    }
+
+#copyright-rodape {
+    color: #AF9CED;
+    font-family: 'palanquin';
 }

@@ -1,10 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Resultados.aspx.cs" Inherits="PrjIC.Resultados" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
       <!-- REsultados stylesheet -->
- <link rel = "stylesheet" type = "text/css" href="css/resultados.css"/>
-  
+ <link rel = "stylesheet" title="escuro" type = "text/css" href="css/resultados.css"/>
+  <link rel="alternate stylesheet" type="text/css" title="claro" href="css/teste.css">
 
- 
+ <button type="button" onclick="switch_style('escuro');return false;" name="theme" value="Blue Theme" id="blue">Escuro</button>
+<button type="button" onclick="switch_style('claro');return false;" name="theme" value="Pink Theme" id="pink">Claro</button>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">

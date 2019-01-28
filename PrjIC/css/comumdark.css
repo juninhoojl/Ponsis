@@ -98,3 +98,118 @@ body {
 .icone-tema {
     margin-top: .5em;
 }
+
+
+
+
+.sessoes {
+    margin-top: 1em;
+    font-family: 'runhills';
+    font-size: 2.5em;
+    color: #42444E;
+    line-height: 1em;
+}
+
+/* Relativo aos paineis */
+.panel {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0.3em;
+    border: 0em;
+    margin: 1.5em 0em 0em 0em;
+    font-family: 'palanquin';
+    color: red;
+}
+
+.badge {
+    color: #EBEDEF;
+    background-color: #42444E;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    border-radius: 0.3em;
+    margin-right: 1em;
+}
+
+.panel > .panel-heading {
+    background-color: #BDC2CC;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-color: transparent;
+    border-radius: 0.3em 0.3em 0em 0em;
+}
+
+.titulo-painel {
+    font-size: 1.2em;
+    color: #42444E;
+    line-height: 1em;
+}
+
+
+.panel > .panel-body {
+    background-color: #EBEDEF;
+    padding: 0.9em 0px 0.9em 0px;
+    border-color: blue;
+    border-radius: 0px 0px 5px 5px;
+}
+
+/* Relativo aos botoes */
+.btn, .btn:visited {
+    border-radius: 0.3em;
+    background-color: #EBEDEF;
+    border: none;
+    padding: 1em;
+    margin: 2em 0em 1em 0em;
+}
+
+
+    .btn:hover, .btn:focus, .btn:active {
+        border-radius: 0.3em;
+        background-color: #BDC2CC;
+        border: none;
+        padding: 1em;
+        margin: 2em 0em 1em 0em;
+    }
+
+/* Relativo ao box de opcoes */
+.enviar-botao {
+    font-family: 'palanquin';
+    font-size: 1.2em;
+    color: #42444E;
+    text-align: center;
+}
+
+
+.form-control {
+    font-size: 1em;
+    color: #42444E;
+}
+
+    .form-control:focus {
+        border-color: #42444E;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
+    }
+
+
+
+/* Cores dos icones indicadores*/
+.icone-feliz {
+    color: #BCD67F;
+}
+
+.icone-diamante {
+    color: #7ABEE9;
+}
+
+.icone-normal {
+    color: #FDEE51;
+}
+
+.icone-triste {
+    color: #D4624A;
+}
+
+/* Estilo geral dos icones*/
+.icone-indicador {
+    font-size: 1.5em;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+}

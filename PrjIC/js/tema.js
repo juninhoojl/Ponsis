@@ -4,7 +4,7 @@
 // *** TO BE CUSTOMISED ***
 
 var style_cookie_name = "style";
-var style_cookie_duration = 20000;
+var style_cookie_duration = 20;
 var style_domain = "http://localhost:50225";
 
 // *** END OF CUSTOMISABLE SECTION ***

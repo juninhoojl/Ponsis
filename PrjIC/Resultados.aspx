@@ -9,9 +9,75 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Resultados - Curso x</div>
+            <div class="sessoes text-center"><i class="fas fa-user-graduate"></i> Curso X</div>
 
+<div class="table-responsive table-hover table-bordered table-striped">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Questão</th>
+      <th scope="col">2017</th>
+      <th scope="col">2018</th>
+      <th scope="col">2019</th>
+      <th scope="col">2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Como você avalia o atendimento de seu orientador?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
+    <tr>
+      <th scope="row">Como você avalia o atendimento do Coordenador do Programa de Pós-Graduação?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
+    <tr>
+      <th scope="row">Que nota você daria para o Programa de Pós-Graduação de maneira geral?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
+    <tr>
+      <th scope="row">Você recomendaria este Programa de Pós-Graduação?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
 
+    <tr>
+      <th scope="row">Como você avalia as instalações dos ambientes de estudo (Grupos de Pesquisa)?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
+
+          <tr>
+      <th scope="row">Como você avalia as instalações das salas de aula?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
+
+          <tr>
+      <th scope="row">Como você avalia as instalações, disponibilidade e atendimento dos laboratórios da UNIFEI utilizados em sua dissertação ou tese?</th>
+      <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td>
+      <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td>
+      <td><i class="fas fa-meh icone-indicador icone-normal"></i></td>
+      <td><i class="fas fa-frown icone-indicador icone-triste"></i></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
  
 
 

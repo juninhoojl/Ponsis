@@ -1,4 +1,4 @@
-/*--------- CORES ---------
+﻿/*--------- CORES ---------
 Background-Gradient = #3E4554 -> #242830
 Navbar-Gradient = #EBEDEF -> #DCDEE0
 Parte de cima do painel = #BEC2CB
@@ -9,42 +9,43 @@ Cor Titulos = #AF9CED
 -------------------------*/
 
 body {
-  /*background-color: #3E4554;*/
-  font: 100% runhills, palanquin;
-  margin: 0;
-  background: #3E4554;
-  background: -webkit-linear-gradient(to bottom right, #3E4554, #242830);
-  background: -o-linear-gradient(to bottom right, #3E4554, #242830);
-  background: -moz-linear-gradient(to bottom right, #3E4554, #242830);
-  background: linear-gradient(to bottom right, #3E4554, #242830); height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'palanquin';
+    /*background-color: #3E4554;*/
+    font: 100% runhills, palanquin;
+    margin: 0;
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(to bottom right, #FFFFFF, #F8F9FA);
+    background: -o-linear-gradient(to bottom right, #FFFFFF, #F8F9FA);
+    background: -moz-linear-gradient(to bottom right, #FFFFFF, #F8F9FA);
+    background: linear-gradient(to bottom right, #FFFFFF, #F8F9FA);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'palanquin';
 }
 
 /* Navbar-Gradient */
 .navbar-custom {
-    background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0);
+    background-image: linear-gradient(to top right, #3E4554, #242830);
     font-family: 'runhills';
 }
 
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: #42444E;
-}
+    /* change the brand and text color */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: #F5F5F5;
+    }
 
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: #42444E;
+    /* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+        color: #F5F5F5;
+    }
 
-}
+    /* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: #FFF;
+    }
 
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #000;
-}
 
 /*Botao collapse*/
 #botaocollapse {
@@ -52,13 +53,11 @@ body {
     outline: none;
     background-color: transparent;
     border-color: transparent;
-    color: #42444E;
+    color: #F5F5F5;
     margin: 0em;
 }
 
-
 /* Relativo ao rodape */
-
 .footer {
     position: none;
     background-color: none;
@@ -68,7 +67,7 @@ body {
 }
 
 #link-rodape {
-    color: #EBEDEF;
+    color: #BDC2CC;
     outline: none;
     background: none;
     border: none;
@@ -78,7 +77,7 @@ body {
 }
 
     #link-rodape:hover {
-        color: #BDC2CC;
+        color: #42444E;
         outline: none;
         background: none;
         border: none;

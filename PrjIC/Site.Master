@@ -12,7 +12,10 @@
         <!-- Bootstrap stylesheet -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Comum stylesheet -->
-        <link rel="stylesheet" type="text/css" href="css/comum.css" />
+        <link rel="stylesheet" title="escuro" type="text/css" href="css/comum.css" />
+        <link rel="alternate stylesheet" type="text/css" title="claro" href="css/comumdark.css">
+
+
         <!-- Fontes stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />
         <!-- Renderiza IE = Edge -->
@@ -46,7 +49,7 @@
 
                 <!-- Collapsibe Button -->
                 <button  id="botaocollapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                 </button>
 
                 <!-- Links -->
@@ -66,6 +69,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Login.aspx"><i class="fas fa-user"></i> Login</a>
                         </li>
+                         <li class="nav-item">
+                           <i class="nav-link fas fa-moon" onclick="switch_style('escuro');return false;" name="theme" value="Blue Theme" id="blue" ></i>
+                 
+                            <i class="nav-link fas fa-sun" onclick="switch_style('claro');return false;" name="theme" value="Pink Theme" id="pink"></i>
+                        </li>
+
+                        
+
+                        
+
                     </ul>
 
                 </div>
@@ -86,7 +99,10 @@
             
         </form>
     </body>
+    
 
+    <!-- Botao topo -->
+    <script src="js/tema.js"></script> 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

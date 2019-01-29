@@ -240,6 +240,62 @@
 
 </table>
     </div>
+<div class="sessoes-tabela text-center">Quetões Abertas</div>
+
+    <div class="sessoes-tabela text-center">2017</div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">Que disciplinas você recomendaria?</div>
+                  <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                  </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Que disciplinas você não recomendaria?</div>
+                  <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                  </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">O que você gostou no Programa de Pós-Graduação (PPG)?</div>
+                  <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                  </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">O que você não gostou no Programa de Pós-Graduação (PPG)?</div>
+                  <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                  </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Caso queira apresentar comentários complementares as questões, utilize o espaço abaixo:</div>
+                  <div class="panel-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                  </div>
+            </div>
+        </div>
+
+        <div class="sessoes-tabela text-center">2018</div>
+
+
+        <div class="sessoes-tabela text-center">2019</div>
+
+
+        <div class="sessoes-tabela text-center">2020</div>
+
+
 
 
 

@@ -213,3 +213,31 @@ body {
     font-size: 1.5em;
     text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
+
+/* Estilo das tabelas*/
+
+.table{
+    margin: 1em 0em 1em 0em;
+    background: white;
+    border-radius: 0.3em;
+}
+
+.tabela-externa {
+    background: transparent;
+    border-color: transparent;
+    margin: 0em;
+}
+
+
+.sessoes-tabela {
+    margin-top: 1em;
+    font-family: 'palanquin';
+    font-size: 2.5em;
+    color: #42444E;
+    line-height: 1em;
+}
+
+.questao-tabela {
+    word-wrap: break-word;
+    max-width: 10em;
+}

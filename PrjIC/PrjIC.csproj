@@ -94,7 +94,6 @@
     <Content Include="js\comum.js" />
     <Content Include="js\login.js" />
     <Content Include="js\tema.js" />
-    <Content Include="resultados.html" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
     <Content Include="Respondido.aspx" />

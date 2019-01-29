@@ -92,6 +92,4 @@ $(window).scroll(function () {
 })();
 
 
-// Botao para topo - fim
-
-
+// Tentativa exportar tabelass

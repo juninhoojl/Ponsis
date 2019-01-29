@@ -113,15 +113,15 @@ body {
 /* Relativo aos paineis */
 .panel {
     background-color: transparent;
-    border-color: transparent;
     border-radius: 0.3em;
-    border: 0em;
+    border-width: 1em;
     margin: 1.5em 0em 0em 0em;
     font-family: 'palanquin';
     color: red;
 }
 
 .badge {
+
     color: #EBEDEF;
     background-color: #42444E;
     padding: 0.25em 0.5em 0.25em 0.5em;
@@ -132,8 +132,11 @@ body {
 .panel > .panel-heading {
     background-color: #BDC2CC;
     padding: 0.5em 0.5em 0.5em 0.5em;
-    border-color: transparent;
     border-radius: 0.3em 0.3em 0em 0em;
+    border-width: 1em;
+    border-color: blue;
+    margin: 0em;
+    outline: red;
 }
 
 .titulo-painel {
@@ -144,10 +147,11 @@ body {
 
 
 .panel > .panel-body {
-    background-color: #EBEDEF;
+    background-color: #FFF;
     padding: 0.9em 0px 0.9em 0px;
-    border-color: blue;
     border-radius: 0px 0px 5px 5px;
+    border-width: 1em;
+    border-color: blue;
 }
 
 /* Relativo aos botoes */
@@ -216,10 +220,10 @@ body {
 
 /* Estilo das tabelas*/
 
-.table{
+.table {
     margin: 1em 0em 1em 0em;
     background: white;
-    border-radius: 0.3em;
+
 }
 
 .tabela-externa {

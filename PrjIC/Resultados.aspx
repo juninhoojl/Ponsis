@@ -244,45 +244,68 @@
 
     <div class="sessoes-tabela text-center">2017</div>
 
+        <div class="tabela-externa table-responsive table-hover table-bordered table-striped">
+  <table class="table">
+  <thead>
+    <tr align="center">
+      <th scope="col">Que disciplinas você recomendaria?o</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</th>
+        <th scope="row">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</th>
+        <th scope="row">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</th>
+        <th scope="row">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</th>
+
+    </tr>
+    
+  </tbody>
+
+</table>
+    </div>
+
+
         <div class="panel-group">
             <div class="panel panel-default">
-                <div class="panel-heading">Que disciplinas você recomendaria?</div>
-                  <div class="panel-body">
+                <div class="text-center titulo-questao panel-heading"></div>
+                  <div class="respostas-abertas panel-body">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Que disciplinas você não recomendaria?</div>
-                  <div class="panel-body">
+                  <div class="respostas-abertas panel-body">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">O que você gostou no Programa de Pós-Graduação (PPG)?</div>
-                  <div class="panel-body">
+                  <div class="respostas-abertas panel-body">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">O que você não gostou no Programa de Pós-Graduação (PPG)?</div>
-                  <div class="panel-body">
+                  <div class="respostas-abertas panel-body">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading">Caso queira apresentar comentários complementares as questões, utilize o espaço abaixo:</div>
-                  <div class="panel-body">
+                  <div class="respostas-abertas panel-body">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<hr>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   </div>
             </div>
         </div>

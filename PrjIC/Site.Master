@@ -12,9 +12,9 @@
         <!-- Bootstrap stylesheet -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Comum stylesheet -->
-        <link rel="stylesheet" title="escuro" type="text/css" href="css/comum.css" />
+        
         <link rel="alternate stylesheet" type="text/css" title="claro" href="css/comumdark.css">
-
+        <link rel="stylesheet" title="escuro" type="text/css" href="css/comum.css" />
 
         <!-- Fontes stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/fonts.css" />

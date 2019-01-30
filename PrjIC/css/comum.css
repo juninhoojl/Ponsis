@@ -24,6 +24,7 @@ body {
 
 /* Navbar-Gradient */
 .navbar-custom {
+    z-index: 1000;
     background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0);
     font-family: 'runhills';
 }

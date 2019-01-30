@@ -328,13 +328,8 @@
     </div>
 </div>
 
-
-
  <!-- Botao scroll top -->
   <a href="#0" class="cd-top js-cd-top"></a>
-
-<!-- Botao topo -->
-<script src="js/comum.js"></script> 
 
 
 </asp:Content>

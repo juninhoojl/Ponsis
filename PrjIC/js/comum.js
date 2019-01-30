@@ -1,19 +1,4 @@
-// Barra de progresso scroll - Inicio
-$(window).scroll(function () {
-  var s = $(window).scrollTop(),
-        d = $(document).height(),
-        c = $(window).height();
-        scrollPercent = (s / (d-c)) * 100;
-        var position = scrollPercent;
-
-   $("#progressbar").attr('value', position);
-
-});
-// Barra de progresso scroll - Fim
-
-
-
-// Botao para topo - inicio
+// Botao para topo
 (function(){
     // Back to Top - by CodyHouse.co
     var backTop = document.getElementsByClassName('js-cd-top')[0],
@@ -91,5 +76,12 @@ $(window).scroll(function () {
     }
 })();
 
-
-// Tentativa exportar tabelass
+// Mostrar senha
+function mouseoverPass(obj) {
+    var obj = document.getElementById('myPassword');
+    obj.type = "text";
+}
+function mouseoutPass(obj) {
+    var obj = document.getElementById('myPassword');
+    obj.type = "password";
+}

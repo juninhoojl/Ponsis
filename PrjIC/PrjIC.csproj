@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\comum.css" />
-    <Content Include="css\comumdark.css" />
     <Content Include="css\fonts.css" />
     <Content Include="css\login.css" />
     <Content Include="css\normalize.css" />
@@ -92,8 +91,6 @@
     <Content Include="Avaliacao.aspx" />
     <Content Include="indisponivel.html" />
     <Content Include="js\comum.js" />
-    <Content Include="js\login.js" />
-    <Content Include="js\tema.js" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
     <Content Include="Respondido.aspx" />

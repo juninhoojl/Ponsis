@@ -852,13 +852,13 @@
         </form>
     </body>
 
-    <!-- Footer -->
-    <footer class="footer font-small pt-4">
-        <div id="copyright-rodape" class="text-center">© <%: DateTime.Now.Year %> Copyright:
-        <a id="link-rodape" href="https://github.com/juninhoojl"> </i><i class="fab fa-github"></i></i> Juninhoojl</i></a>
-        </div>
-    </footer>
-    <!-- Footer -->
+ <!-- Footer -->
+                  <footer class="footer font-small pt-4">
+                      <div id="copyright-rodape" class="text-center">Copyright © 2018-<%: DateTime.Now.Year %>
+                        <a id="link-rodape" href="https://github.com/juninhoojl"> </i><i class="fab fa-github"></i></i> Juninhoojl</i></a>
+                      </div>
+                  </footer>
+                  <!-- Footer -->
 
     <!-- Botao topo -->
     <script src="js/comum.js"></script>

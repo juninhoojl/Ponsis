@@ -40,8 +40,7 @@
             <nav class="navbar navbar-expand-md navbar-light navbar-custom">
                 <!-- Logo -->
                 <a class="navbar-brand" href="/Apresentacao.aspx">
-                    <img src="img/icons/icon_64x64.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Avaliador
+                    <img src="img/icons/icon_64x320.png" width="160" height="32" class="d-inline-block align-top" alt="">
                 </a>
 
                 <!-- Collapsibe Button -->
@@ -67,7 +66,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/Login.aspx"><i class="fas fa-user"></i> Login</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Login.aspx"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </li>
 
                     </ul>
 

@@ -34,6 +34,7 @@ Cor titulos = #AF9CED
 }
 
 
+
 /* Nomes dos tipos */
 
 .nomefeliz {
@@ -73,7 +74,7 @@ Cor titulos = #AF9CED
 /* Meio */
 
 .meio {
-    padding: 1.5em;
+    padding: 1em;
     background-color: transparent;
     color: #F5F5F5;
     margin: 0em;
@@ -153,4 +154,18 @@ Cor titulos = #AF9CED
 #copyright-rodape {
     color: #AF9CED;
     font-family: 'palanquin';
+}
+
+
+/* Texto explicando*/
+
+.texto-exp {
+    padding: 1em;
+    background-color: transparent;
+    margin: 0em;
+    color: #F5F5F5;
+    font-family: 'palanquin';
+    font-size: 1.2em;
+    text-align: justify;
+    text-justify: inter-word;
 }

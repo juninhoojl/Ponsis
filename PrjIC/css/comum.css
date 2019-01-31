@@ -213,3 +213,74 @@ body {
     font-size: 1.5em;
     text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
+
+
+/* Login */
+
+
+/* campo senha escondido */
+.olho {
+    color: #42444E;
+    float: right;
+    margin-right: 0.5em;
+    margin-top: -1.7em;
+    position: relative;
+    z-index: 2;
+}
+
+    .olho:hover {
+        color: #000;
+    }
+
+.form-control::-webkit-input-placeholder {
+    opacity: 0.5;
+}
+/* WebKit, Blink, Edge */
+.form-control:-moz-placeholder {
+    opacity: 0.5;
+}
+/* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder {
+    opacity: 0.5;
+}
+/* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder {
+    opacity: 0.5;
+}
+/* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder {
+    opacity: 0.5;
+}
+
+.form-box {
+    margin: 3em 1em 2em 1em;
+    padding: 1em;
+    background: #AF9CED;
+    background: -webkit-linear-gradient(to bottom right, #AF9CED, #69658C);
+    background: -o-linear-gradient(to bottom right, #AF9CED, #69658C);
+    background: -moz-linear-gradient(to bottom right, #AF9CED, #69658C);
+    background: linear-gradient(to bottom right, #AF9CED, #69658C);
+    border-radius: 1em;
+}
+
+#login-form {
+    padding: 1em 1.5em 1em 1.5em;
+    margin: 0em 0em 0em 0em;
+}
+
+/* Texto-form */
+input.form-control {
+    font-family: palanquin;
+    background-color: #EBEDEF;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    padding-right: 1.5em;
+}
+
+/* Relativo ao texto dos nomes */
+.titulo-form {
+    margin-top: 1em;
+    font-family: 'runhills';
+    font-size: 1.5em;
+    color: #42444E;
+    line-height: 1em;
+}

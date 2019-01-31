@@ -11,11 +11,8 @@
     <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="sessoes-tabela text-center"></i> Curso X</div>
 
-
-
-
-
 <div class="sessoes-tabela text-center">Disciplinas</div>
+
 
 <div class="tabela-externa table-responsive table-hover table-bordered table-striped">
   <table class="table">

@@ -72,3 +72,8 @@ Cor titulos = #AF9CED
 .trasparente {
     background-color: transparent;
 }
+
+.grupos {
+    font-family: 'palanquin-bold';
+    color: #AF9CED;
+}

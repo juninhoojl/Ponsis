@@ -73,7 +73,11 @@ Cor titulos = #AF9CED
     background-color: transparent;
 }
 
-.grupos {
+.gruposs {
     font-family: 'palanquin-bold';
     color: #AF9CED;
+}
+
+.intervalos {
+    min-width: 10em;
 }

@@ -11,12 +11,12 @@
             <div class="titulo-bloco text-center">Net Promoter Score</div>
         </div>
 
-         <div class="transparente texto-exp col-lg-8 col-md-12 col-sm-12">
+        <div class="transparente texto-exp col-lg-8 col-md-6 col-sm-12">
 
              <div class="titulo-parte text-center">Teoria</div>
-
+             <br />
            A avaliação é feita com base na teoria do Net Promoter Score (REICHHELD, 2006), amplamente utilizada na avaliação da satisfação e lealdade do cliente. Baseia-se em uma escala inteira de 0 (zero) a 10 (dez), onde a nota dos clientes os classifica em três grupos: 
-                <br><br>
+                <br />
          
                  
                          <span class="grupos">
@@ -40,51 +40,40 @@
 
          </div>
 
-           <div class="transparente texto-exp col-lg-4 col-md-6 col-sm-12">
-               <div class="titulo-parte text-center">Cálculo</div>
-               Como é calculado o Net Promoter Score (NPS)?
-               <br>
-NPS = % CLIENTES PROMOTORES – % CLIENTES DETRADORES
+        <div class="transparente texto-exp col-lg-4 col-md-6 col-sm-12">
+                <div class="titulo-parte text-center">Cálculo</div>
+                <br/>
+                NPS = % CLIENTES PROMOTORES – % CLIENTES DETRADORES
+                <br/>
+                <div class="titulo-parte text-center">Resultados</div>
+                <table style="width:100%">
+                  <tr>
+                    <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td> 
+                    <td class="intervalos"> 75 ≤ NPS </td>
+                    <td>Excelência</td>
+                  </tr>
 
-          <div class="titulo-parte text-center">Resultados</div>
-<table style="width:100%">
-  <tr>
-    <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td> 
-    <td> • 75 ≤ NPS • </td>
-    <td>Excelência</td>
-  </tr>
+                  <tr>
+                    <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td> 
+                    <td class="intervalos"> 50 ≤ NPS < 75 </td>
+                    <td>Qualidade</td>
+                  </tr>
 
-  <tr>
-    <td><i class="fas fa-smile icone-indicador icone-feliz"></i></td> 
-    <td> • 50 ≤ NPS < 75 • </td>
-    <td>Qualidade</td>
-  </tr>
+                  <tr>
+                    <td><i class="fas fa-meh icone-indicador icone-normal"></i></td> 
+                    <td class="intervalos"> 25 ≤ NPS < 50 </td>
+                    <td>Ações de Melhoria</td>
+                  </tr>
 
-  <tr>
-    <td><i class="fas fa-meh icone-indicador icone-normal"></i></td> 
-    <td> • 25 ≤ NPS < 50 • </td>
-    <td>Ações de Melhoria</td>
-  </tr>
+                  <tr>
+                    <td><i class="fas fa-frown icone-indicador icone-triste"></i></td> 
+                    <td class="intervalos"> 25 > NPS </td>
+                    <td>Ações Prioritárias de Melhoria</td>
+                  </tr>
 
-  <tr>
-    <td><i class="fas fa-frown icone-indicador icone-triste"></i></td> 
-    <td> • 25 > NPS • </td>
-    <td>Ações Prioritárias de Melhoria</td>
-  </tr>
-
-</table>
-
-
-
-        </div>
-
-
- 
-
-
-
-
-    </div>
+                </table>
+          </div>
+     </div>
   </div>
 
 

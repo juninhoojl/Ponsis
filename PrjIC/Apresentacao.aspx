@@ -11,7 +11,14 @@
             <div class="titulo-bloco text-center">Net Promoter Score</div>
         </div>
 
-        <div class="transparente texto-exp col-lg-8 col-md-6 col-sm-12">
+        <div class="transparente texto-exp col-lg-8 col-md-6
+            
+            
+            
+            
+            
+            
+            col-sm-12">
 
              <div class="titulo-parte text-center">Teoria</div>
              <br />

@@ -87,11 +87,12 @@
                       </div>
                   </footer>
                   <!-- Footer -->
-            
+
+                 <!-- Botao scroll top -->
+            <a href="#0" class="cd-top js-cd-top"></a>
         </form>
     </body>
     
-
     <!-- Botao topo e mostrar senha -->
     <script src="js/comum.js"></script>
 

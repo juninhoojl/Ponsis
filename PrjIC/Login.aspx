@@ -13,7 +13,7 @@
                                 <br>
                                 <input type="password" name="password" id="myPassword" class="form-control" placeholder="Senha" />
                                 <i class="fas fa-eye olho" onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
-                                <br>
+              
                                 <button type="submit" class="btn btn-block"><div class="enviar-botao">Login <i class="fas fa-sign-in-alt"></i></div></button>
                                 <br>
                             </form>

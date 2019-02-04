@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1 {
+namespace PrjIC.Adm {
     
     
-    public partial class SiteMaster {
+    public partial class Site1 {
         
         /// <summary>
         /// btnEntrar control.

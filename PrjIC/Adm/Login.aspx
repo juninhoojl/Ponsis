@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="PrjIC.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="PrjIC.Adm.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
@@ -14,7 +14,8 @@
                                 <input type="password" name="password" id="myPassword" class="form-control" placeholder="Senha" />
                                 <i class="fas fa-eye olho" onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
               
-                                <button type="submit" class="btn btn-block"><div class="enviar-botao">Login <i class="fas fa-sign-in-alt"></i></div></button>
+                                <asp:button runat="server" id="btnEnviar" type="submit" class="btn btn-block" Text="Enviar" OnClick="btLogar_Click"/>
+
                                 <br>
                             </form>
                       

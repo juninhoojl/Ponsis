@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -89,6 +90,31 @@ namespace ProjetoIC.Classes
             SqlCommand command = new SqlCommand();
             command.Connection = this._con;
             command.CommandText = sql;
+            int result = command.ExecuteNonQuery();
+
+            return result;
+        }
+
+
+        /// <summary>
+        /// Executa comando
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns>Retorna o total de linhas afetadas</returns>
+        public int ExecutaComando(string sql, Dictionary<string,object> sqlParam)
+        {
+            if (string.IsNullOrEmpty(sql))
+                throw new Exception("Não foi informado a query SQL.");
+
+            if (this._con == null || this._con.State == ConnectionState.Closed)
+                throw new Exception("A conexão fechada. Execute o comando AbrirConexao e não se esqueça de FecharConexao no final.");
+
+            SqlCommand command = new SqlCommand();
+            command.Connection = this._con;
+            command.CommandText = sql;
+            foreach (KeyValuePair<string, object> item in sqlParam)
+                command.Parameters.AddWithValue(item.Key,item.Value);
+
             int result = command.ExecuteNonQuery();
 
             return result;

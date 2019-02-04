@@ -53,6 +53,7 @@
                 NPS = % CLIENTES PROMOTORES – % CLIENTES DETRADORES
                 <br/>
                 <div class="titulo-parte text-center">Resultados</div>
+
                 <table style="width:100%">
                   <tr>
                     <td><i class="fas fa-gem icone-indicador icone-diamante"></i></td> 

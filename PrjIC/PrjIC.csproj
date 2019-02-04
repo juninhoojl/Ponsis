@@ -173,6 +173,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Adm\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>

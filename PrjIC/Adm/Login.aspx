@@ -14,7 +14,7 @@
                                 <input type="password" name="password" id="myPassword" class="form-control" placeholder="Senha" />
                                 <i class="fas fa-eye olho" onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
               
-                                <asp:button runat="server" id="btnEnviar" type="submit" class="btn btn-block" Text="Enviar" OnClick="btLogar_Click"/>
+                                <asp:button runat="server" class="btn btn-block" id="btnEnviar" type="submit" Text="Enviar" OnClick="btLogar_Click"/>
 
                                 <br>
                             </form>

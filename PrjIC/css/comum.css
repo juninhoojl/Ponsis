@@ -346,6 +346,7 @@ input.form-control {
     font-size: 1.5em;
     color: #42444E;
     line-height: 1em;
+    margin-bottom: 1em;
 }
 
 
@@ -358,7 +359,7 @@ input.form-control {
     background: transparent;
     padding: 0em 0em 0.2em 0em;
     margin: 0em;
-    outline: transparent;
+    outline: 0;
     border-color: transparent;
 }
 
@@ -371,7 +372,7 @@ input.form-control {
         background: transparent;
         padding: 0em 0em 0.2em 0em;
         margin: 0em;
-        outline: transparent;
+        outline: 0;
         border-color: transparent;
         cursor: pointer;
     }
@@ -379,3 +380,30 @@ input.form-control {
    .icone-nav-bar{
        margin-right: 0.2em;
    }
+
+#btnLinkUsuario, #btnLinkAluno, #btnLinkPeriodo, #btnEnviar {
+    font-family: 'palanquin';
+    background-color: #EBEDEF;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    padding: 0em;
+    color: #42444E;
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    padding: 0.5em;
+}
+
+    #btnLinkUsuario:hover, #btnLinkAluno:hover, #btnLinkPeriodo:hover,
+    #btnEnviar:hover, #btnLinkUsuario:active, #btnLinkAluno:active,
+    #btnLinkPeriodo:active, #btnEnviar:active#btnLinkUsuario:focus,
+    #btnLinkAluno:focus, #btnLinkPeriodo:focus, #btnEnviar:focus {
+        font-family: 'palanquin';
+        background-color: #BDC2CC;
+        border-radius: 0.3em 0.3em 0.3em 0.3em;
+        padding: 0em;
+        color: #42444E;
+        outline: none !important;
+        box-shadow: none;
+        margin-top: 1.5em;
+        font-size: 1.3em;
+        padding: 0.5em;
+    }

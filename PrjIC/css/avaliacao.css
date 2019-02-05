@@ -248,3 +248,7 @@ label {
 }
 
 
+#btnEnviar:hover, #btnEnviar:hover, #btnEnviar:active {
+    outline: none !important;
+    box-shadow: none;
+}

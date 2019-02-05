@@ -12,6 +12,7 @@
                             <form id="login-form" class="form" action="" method="post">
                                 <div class="text-center titulo-form"> Cadastrar </div>
                                 
+
                                   <a class="btn btn-block" href="/Adm/Periodo.aspx">Período</a><br />
                                   <a class="btn btn-block" href="/Adm/AlunosCurso.aspx">Alunos/Período</a><br />
                                   <a class="btn btn-block" href="/Adm/Usuario.aspx">Usuários</a><br />

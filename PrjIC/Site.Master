@@ -40,7 +40,7 @@
             <nav class="navbar navbar-expand-md navbar-light navbar-custom">
                 <!-- Logo -->
                 <a class="navbar-brand" href="/Apresentacao.aspx">
-                    <img src="img/icons/icon_64x320.png" width="160" height="32" class="d-inline-block align-top" alt="">
+                    <img src="/img/icons/icon_64x320.png" width="160" height="32" class="d-inline-block align-top" alt="">
                 </a>
 
                 <!-- Collapsibe Button -->
@@ -68,7 +68,9 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <!--<a class="nav-link" href="/../Login.aspx"><i class="fas fa-user"></i> Login</a>-->
-                            <asp:button class="btn btn-primary fas" runat="server" id="btnEntrar" type="submit"  Text="Login" OnClick="btnEntrar_Click"/>
+                            <asp:button class="btn btn-block" runat="server" id="btnEntrar" type="submit" Text="Login" OnClick="btnEntrar_Click"/>
+
+                 
 
                         </li>
                         <li class="nav-item">

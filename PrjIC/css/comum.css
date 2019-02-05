@@ -346,3 +346,14 @@ input.form-control {
     color: #42444E;
     line-height: 1em;
 }
+
+
+#btnEntrar {
+    font-family: 'palanquin';
+    font-size: 1.2em;
+    color: #42444E;
+    text-align: center;
+    background: transparent;
+    padding: 0em;
+    margin: 0em;
+}

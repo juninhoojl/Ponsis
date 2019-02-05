@@ -243,3 +243,31 @@ body {
     word-wrap: break-word;
     max-width: 10em;
 }
+
+
+
+#btnEntrar, #btnSair {
+    font-family: 'runhills';
+    font-size: 1.2em;
+    color: #F2F2F2;
+    text-align: center;
+    background: transparent;
+    padding: 0em 0em 0.2em 0em;
+    margin: 0em;
+    outline: transparent;
+    border-color: transparent;
+}
+
+
+    #btnEntrar:hover, #btnEntrar:active, #btnEntrar:focus, #btnSair:hover, #btnSair:focus, #btnSair:active {
+        font-family: 'runhills';
+        font-size: 1.2em;
+        color: #FFF;
+        text-align: center;
+        background: transparent;
+        padding: 0em 0em 0.2em 0em;
+        margin: 0em;
+        outline: transparent;
+        border-color: transparent;
+        cursor: pointer;
+    }

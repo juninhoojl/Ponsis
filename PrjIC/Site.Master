@@ -5,16 +5,16 @@
 <html lang="pt-br">
     <head runat="server">
         <!-- Conferir se vou usar isso ou nao -->
-        <%--<title><%: Page.Title %> - Projeto IC</title>--%>
+        <title> Site </title>
 
         <!-- Normalize stylesheet-->
-        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
         <!-- Bootstrap stylesheet -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Comum stylesheet -->
-        <link rel="stylesheet" title="escuro" type="text/css" href="css/comum.css" />
+        <link rel="stylesheet" title="escuro" type="text/css" href="/css/comum.css" />
         <!-- Fontes stylesheet -->
-        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
         <!-- Renderiza IE = Edge -->
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
         <!-- Para proporcao tamanhos de tela -->
@@ -24,15 +24,14 @@
         <!-- Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <!-- Icones para favoritos e abas android e geral-->
-        <link rel="icon" href="img/icons/icon_16x16.png" sizes="16x16" type="image/png">
-        <link rel="icon" href="img/icons/icon_32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="img/icons/icon_64x64.png" sizes="64x64" type="image/png">
-        <link rel="icon" href="img/icons/icon_128x128.png" sizes="128x128" type="image/png">
-
+        <link rel="icon" href="/img/icons/icon_16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="/img/icons/icon_32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="/img/icons/icon_64x64.png" sizes="64x64" type="image/png">
+        <link rel="icon" href="/img/icons/icon_128x128.png" sizes="128x128" type="image/png">
         <!-- Icones para favoritos e abas iPhone e home screen -->
-        <link rel="apple-touch-icon-precomposed" href="img/icons/icon_128x128.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/icon_72x72.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/icon_114x114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/img/icons/icon_128x128.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/icons/icon_72x72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/icons/icon_114x114.png">
     </head>
 
     <body>

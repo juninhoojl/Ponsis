@@ -95,6 +95,7 @@ body {
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
     color: #42444E;
+     
 }
 
 /* change the link color */
@@ -375,3 +376,6 @@ input.form-control {
         cursor: pointer;
     }
 
+   .icone-nav-bar{
+       margin-right: 0.2em;
+   }

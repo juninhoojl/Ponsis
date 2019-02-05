@@ -271,3 +271,7 @@ body {
         border-color: transparent;
         cursor: pointer;
     }
+
+.icone-nav-bar {
+    margin-right: 0.2em;
+}

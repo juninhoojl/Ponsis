@@ -143,7 +143,7 @@
                             <div class="panel-body">
                                 <div class="col-12">
                                     <select runat="server"  id="q3" class="form-control">
-                                        <option value="" selected="selected" disabled="disabled">Selecionar...</option>
+                                        <option value="" selected="selected" disabled="disabled">Selecione o Curso!</option>
                                         <option value="1">Até 12 meses</option>
                                         <option value="2">13 a 24 meses</option>
                                         <option value="2">25 a 36 meses</option>

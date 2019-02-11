@@ -80,6 +80,9 @@
     <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />
     <Content Include="Global.asax" />
+    <Content Include="img\icons\icone_mais.png" />
+    <Content Include="img\icons\icone_mais_hover.png" />
+    <Content Include="img\icons\icone_menos_hover.png" />
     <Content Include="img\icons\icon_114x114.png" />
     <Content Include="img\icons\icon_128x128.png" />
     <Content Include="img\icons\icon_16x16.png" />
@@ -87,6 +90,7 @@
     <Content Include="img\icons\icon_64x320.png" />
     <Content Include="img\icons\icon_64x64.png" />
     <Content Include="img\icons\icon_72x72.png" />
+    <Content Include="img\icons\icone_menos.png" />
     <Content Include="img\pics\graph.png" />
     <Content Include="img\pics\img1.jpg" />
     <Content Include="img\pics\llama.gif" />

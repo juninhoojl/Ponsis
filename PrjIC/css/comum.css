@@ -241,17 +241,6 @@ body {
 }
 
 
-.form-control {
-    font-size: 1em;
-    color: #42444E;
-}
-
-    .form-control:focus {
-        border-color: #42444E;
-        outline: 0;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
-    }
 
 
 /* Cores dos icones indicadores*/
@@ -330,6 +319,7 @@ body {
     padding: 1em 1.5em 1em 1.5em;
     margin: 0em 0em 0em 0em;
 }
+
 
 /* Texto-form */
 input.form-control {
@@ -439,3 +429,19 @@ input.form-control {
         background-color: #BDC2CC;
 
     }
+
+
+/* Relativo ao box de opcoes */
+.form-control {
+    font-size: 1em;
+    color: #42444E;
+    padding: 0.3em;
+}
+
+    .form-control:focus {
+        border-color: #42444E;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
+    }
+

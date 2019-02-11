@@ -10,7 +10,7 @@
                             
                         </div>
 
-                <div class="table-responsive ">
+                <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvUsuario" runat="server" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="id_Usuario"
                         OnRowCommand="dgvUsuario_RowCommand"
@@ -26,7 +26,7 @@
                                     <asp:TextBox id="txtds_Email" Text='<%# Eval("ds_Email") %>' runat="server" />
                                 </EditItemTemplate>                
                                 <FooterTemplate>
-                                    <asp:TextBox runat="server" id="txtds_EmailFooter" placeholder="Digite o email!" CssClass="form-control " />
+                                    <asp:TextBox runat="server" id="txtds_EmailFooter" placeholder="Digite o email!" CssClass="form-control" />
 
                                 </FooterTemplate>
                             </asp:TemplateField>
@@ -43,7 +43,7 @@
                                 <FooterTemplate>
 
                                     <select runat="server" id="txtid_CursoFooter" class="form-control">
-                                        <option value="" selected="selected" disabled="disabled">Selecionar...</option>
+                                        <option value="" selected="selected" disabled="disabled">Selecionar Curso...</option>
                                         <option value="0">Todos</option>
                                         <option value="1">Eng. Elétrica (mestrado ou doutorado)</option>
                                         <option value="2">Mecânica (mestrado ou doutorado)</option>

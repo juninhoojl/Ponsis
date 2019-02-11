@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using ProjetoIC.Classes;
 
@@ -83,6 +79,8 @@ namespace PrjIC.Adm
             {
                 try
                 {
+                    System.Web.UI.HtmlControls.HtmlSelect ctrlSelect = this.dgvUsuario.FooterRow.FindControl("txtid_CursoFooter") as System.Web.UI.HtmlControls.HtmlSelect;
+                    
                     Conexao conn = new Conexao();
                     conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
 
@@ -95,7 +93,7 @@ namespace PrjIC.Adm
                         var xx = this.dgvUsuario.FooterRow.FindControl("txtds_EmailFooter") as TextBox;
                         sqlParam.Add("@dsEmail", xx.Text.Trim());
                         sqlParam.Add("@dsSenha", "" );
-                        sqlParam.Add("@idCurso", 1);
+                        sqlParam.Add("@idCurso", int.Parse(ctrlSelect.Value));
                         conn.ExecutaComando(cmd, sqlParam);
                         this.PopulateGridView();
 

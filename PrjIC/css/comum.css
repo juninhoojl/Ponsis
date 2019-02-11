@@ -407,3 +407,35 @@ input.form-control {
         font-size: 1.3em;
         padding: 0.5em;
     }
+
+/* Relativo ao gridview */
+
+.gridview {
+    font-family: 'palanquin';
+    font-size: 1.1em;
+    color: #42444E;
+    width: 100%;
+    /*this will be the color of the odd row*/
+    background-color: #BDC2CC;
+    margin: 2em 0em 1em 0em;
+    -moz-border-radius: 1em;
+    border-radius: 15em;
+    border: solid 1px #BDC2CC;
+    /*border-collapse: collapse;*/
+}
+
+    /*data elements*/
+    .gridview td {
+        background-color: #EBEDEF;
+        padding: 0.4em 0.4em 0.4em 0.4em;
+        /*border: solid 1px #c1c1c1;*/
+
+    }
+
+
+    /*header elements*/
+    .gridview th {
+        padding: 0.4em 0.4em 0.4em 0.4em;
+        background-color: #BDC2CC;
+
+    }

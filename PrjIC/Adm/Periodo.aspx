@@ -17,7 +17,10 @@
                                       OnRowDeleting="dgvPeriodo_RowDeleting"
                                       OnRowCancelingEdit="dgvPeriodo_RowCancelingEdit">
                         <Columns>
-                            <asp:TemplateField HeaderText="Descrição">
+                            
+                                <asp:TemplateField HeaderText="Descrição">
+                            
+
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("ds_Periodo") %>' runat="server"/>
                                 </ItemTemplate>
@@ -29,17 +32,19 @@
                                 </FooterTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Início">
-                                <ItemTemplate>
-                                    <asp:label Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server"/>
-                                </ItemTemplate>
-                                <EditItemTemplate>
-                                    <asp:TextBox id="txtdt_Inicio" Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server" />
-                                </EditItemTemplate>                
-                                <FooterTemplate>
-                                    <asp:TextBox runat="server" id="txtdt_InicioFooter" placeholder="Digite o início do período!" CssClass="form-control" />
-                                </FooterTemplate>
-                            </asp:TemplateField>
+                            
+                                <asp:TemplateField HeaderText="Início">
+                         
+                                    <ItemTemplate>
+                                        <asp:label Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server"/>
+                                    </ItemTemplate>
+                                    <EditItemTemplate>
+                                        <asp:TextBox id="txtdt_Inicio" Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server" />
+                                    </EditItemTemplate>                
+                                    <FooterTemplate>
+                                        <asp:TextBox runat="server" id="txtdt_InicioFooter" placeholder="Digite o início do período!" CssClass="form-control" />
+                                    </FooterTemplate>
+                                </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="Fim">
                                 <ItemTemplate>
@@ -67,22 +72,27 @@
 
                             <asp:TemplateField HeaderText="Ação">
                                 <ItemTemplate>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_editar.png" runat="server" CommandName="Edit" ToolTip="Alterar Período" Width="16px" Height="16px"/>
-                                    <!--
-                                        <asp:ImageButton ImageUrl="~/img/icons/icone_menos.png" runat="server" CommandName="Delete" ToolTip="Excluir Período" Width="16px" Height="16px"/>
-                                    -->
+                                    <div class="text-center">
+                                        <asp:ImageButton ImageUrl="~/img/icons/icone_editar.png" runat="server" CommandName="Edit" ToolTip="Alterar Período" Width="1em" Height="1em"/>
+                                   
+                                    </div>
                                 </ItemTemplate>   
                                 <EditItemTemplate>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_confirmar.png" runat="server" CommandName="Update" ToolTip="Salvar Alterações" Width="16px" Height="16px"/>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_cancelar.png" runat="server" CommandName="Cancel" ToolTip="Cancelar Alterações" Width="16px" Height="16px"/>
+                                    <div class="text-center">
+                                        <asp:ImageButton ImageUrl="~/img/icons/icone_confirmar.png" runat="server" CommandName="Update" ToolTip="Salvar Alterações" Width="1em" Height="1em"/>
+                                        
+                                        <asp:ImageButton ImageUrl="~/img/icons/icone_cancelar.png" runat="server" CommandName="Cancel" ToolTip="Cancelar Alterações" Width="1em" Height="1em"/>
+                                    </div>
                                 </EditItemTemplate>  
                                 <FooterTemplate>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_mais.png" runat="server" CommandName="AddNew" ToolTip="Inserir novo período" Width="16px" Height="16px"/>
+                                    <div class="text-center">
+                                        <asp:ImageButton ImageUrl="~/img/icons/icone_mais.png" runat="server" CommandName="AddNew" ToolTip="Inserir novo período" Width="1em" Height="1em"/>
+                                    </div>
                                 </FooterTemplate>
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-                    <asp:Label runat="server" ID="lbErro" ForeColor="White" Text=""></asp:Label>
+                    <asp:Label runat="server" ID="lbErro" ForeColor="#AF9CED" Text=""></asp:Label>
                 </div>
             </div>
         </div>

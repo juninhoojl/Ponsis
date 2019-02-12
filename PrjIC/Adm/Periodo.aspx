@@ -10,14 +10,13 @@
                         </div>
 
                 <div class="table-responsive">
-
                         <asp:GridView CssClass="gridview" ID="dgvPeriodo" runat="server" AutoGenerateColumns="false" ShowFooter="true" DataKeyNames="id_Periodo"
-                                        OnRowCommand="dgvPeriodo_RowCommand"
-                                        OnRowUpdating="dgvPeriodo_RowUpdating"
-                                        OnRowDeleting="dgvPeriodo_RowDeleting">
-
+                                      OnRowCommand="dgvPeriodo_RowCommand"
+                                      OnRowUpdating="dgvPeriodo_RowUpdating"
+                                      OnRowEditing="dgvPeriodo_RowEditing"
+                                      OnRowDeleting="dgvPeriodo_RowDeleting"
+                                      OnRowCancelingEdit="dgvPeriodo_RowCancelingEdit">
                         <Columns>
-
                             <asp:TemplateField HeaderText="Descrição">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("ds_Periodo") %>' runat="server"/>
@@ -60,29 +59,30 @@
                                 </ItemTemplate>
                                 <EditItemTemplate>
                                     <asp:TextBox id="txtnu_Ano_Referencia" Text='<%# Eval("nu_Ano_Referencia") %>' runat="server" />
-                                </EditItemTemplate>                
+                                </EditItemTemplate>  
                                 <FooterTemplate>
                                     <asp:TextBox runat="server" id="txtnu_Ano_ReferenciaFooter" placeholder="Digite o ano de referência!" CssClass="form-control" />
                                 </FooterTemplate>
                             </asp:TemplateField>
 
-
                             <asp:TemplateField HeaderText="Ação">
                                 <ItemTemplate>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_menos.png" runat="server" CommandName="Delete" ToolTip="Excluir Usuário" Width="16px" Height="16px"/>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icon_32x32.png" runat="server" CommandName="Update" ToolTip="Alterar Período" Width="16px" Height="16px"/>
+                                    <asp:ImageButton ImageUrl="~/img/icons/icone_editar.png" runat="server" CommandName="Edit" ToolTip="Alterar Período" Width="16px" Height="16px"/>
+                                    <!--
+                                        <asp:ImageButton ImageUrl="~/img/icons/icone_menos.png" runat="server" CommandName="Delete" ToolTip="Excluir Período" Width="16px" Height="16px"/>
+                                    -->
                                 </ItemTemplate>   
                                 <EditItemTemplate>
-                                    <asp:TextBox id="txtnu_Ano_Referencia" Text='<%# Eval("nu_Ano_Referencia") %>' runat="server" />
-                                </EditItemTemplate>                
+                                    <asp:ImageButton ImageUrl="~/img/icons/icone_confirmar.png" runat="server" CommandName="Update" ToolTip="Salvar Alterações" Width="16px" Height="16px"/>
+                                    <asp:ImageButton ImageUrl="~/img/icons/icone_cancelar.png" runat="server" CommandName="Cancel" ToolTip="Cancelar Alterações" Width="16px" Height="16px"/>
+                                </EditItemTemplate>  
                                 <FooterTemplate>
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_mais.png" runat="server" CommandName="AddNew" ToolTip="Inserir Usuário" Width="16px" Height="16px"/>
+                                    <asp:ImageButton ImageUrl="~/img/icons/icone_mais.png" runat="server" CommandName="AddNew" ToolTip="Inserir novo período" Width="16px" Height="16px"/>
                                 </FooterTemplate>
                             </asp:TemplateField>
-
                         </Columns>
                     </asp:GridView>
-
+                    <asp:Label runat="server" ID="lbErro" ForeColor="White" Text=""></asp:Label>
                 </div>
             </div>
         </div>

@@ -9,6 +9,8 @@ namespace PrjIC.Adm
 {
     public partial class Periodo : System.Web.UI.Page
     {
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
@@ -19,8 +21,10 @@ namespace PrjIC.Adm
 
         private void PopulateGridView()
         {
-            Conexao conn = new Conexao();
-            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
 
             if (conn.AbrirConexao())
             {
@@ -43,7 +47,6 @@ namespace PrjIC.Adm
                     this.dgvPeriodo.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
 
                 }
-
                 conn.FechaConexao();
             }
         }
@@ -52,24 +55,31 @@ namespace PrjIC.Adm
         {
             try
             {
-                Conexao conn = new Conexao();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+                Conexao conn = new Conexao
+                {
+                    ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+                };
 
                 if (conn.AbrirConexao())
                 {
                     string cmd = "delete from Periodo where id_Periodo = @id";
 
-                    Dictionary<string, object> sqlParam = new Dictionary<string, object>();
-                    sqlParam.Add("@id", Convert.ToInt32(this.dgvPeriodo.DataKeys[e.RowIndex].Value.ToString()));
+                    Dictionary<string, object> sqlParam = new Dictionary<string, object>
+                    {
+                        { "@id", Convert.ToInt32(this.dgvPeriodo.DataKeys[e.RowIndex].Value.ToString()) }
+                    };
                     conn.ExecutaComando(cmd, sqlParam);
                     this.PopulateGridView();
 
                     conn.FechaConexao();
+
+                    this.lbErro.Visible = false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                this.lbErro.Visible = true;
+                this.lbErro.Text = "Falha na exclusão dos dados: " + ex.Message;
             }
         }
 
@@ -79,8 +89,10 @@ namespace PrjIC.Adm
             {
                 try
                 {
-                    Conexao conn = new Conexao();
-                    conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+                    Conexao conn = new Conexao
+                    {
+                        ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+                    };
 
                     int idPeriodo = -1;
 
@@ -108,24 +120,46 @@ namespace PrjIC.Adm
                         {
                             cmd = "insert into AlunoCurso (id_Curso, id_Periodo, nu_Alunos) values (@idCurso, @idPeriodo, @nuAlunos);";
 
-                            sqlParam = new Dictionary<string, object>();
-                            sqlParam.Add("@idCurso",   (long)row["id_Curso"]);
-                            sqlParam.Add("@idPeriodo", idPeriodo);
-                            sqlParam.Add("@nuAlunos",  0);
+                            sqlParam = new Dictionary<string, object>
+                            {
+                                { "@idCurso", (long)row["id_Curso"] },
+                                { "@idPeriodo", idPeriodo },
+                                { "@nuAlunos", 0 }
+                            };
                             conn.ExecutaComando(cmd, sqlParam);
                         }
 
                         this.PopulateGridView();
 
                         conn.FechaConexao();
+
+                        this.lbErro.Visible = false;
                     }
                 }
                 catch (Exception ex)
                 {
-
+                    this.lbErro.Visible = true;
+                    this.lbErro.Text = "Falha na inclusão dos dados: " + ex.Message;
                 }
             }
         }
+
+        protected void dgvPeriodo_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            dgvPeriodo.EditIndex = e.NewEditIndex;
+            PopulateGridView();
+
+            this.lbErro.Visible = false;
+        }
+
+        protected void dgvPeriodo_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            dgvPeriodo.EditIndex = -1;
+            PopulateGridView();
+
+            this.lbErro.Visible = false;
+        }
+
 
         protected void dgvPeriodo_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
@@ -136,30 +170,35 @@ namespace PrjIC.Adm
 
                 if (conn.AbrirConexao())
                 {
-                    string cmd = "update Periodo set ds_Periodo = @dsPeriodo, dt_Inicio = @dtInicio, dt_Fim = @dtFim, nu_Ano_Referencia = @nuAnoReferencia where id_Periodo = @id";
+                    string cmd = "UPDATE Periodo SET ds_Periodo = @dsPeriodo, dt_Inicio = @dtInicio, dt_Fim = @dtFim, nu_Ano_Referencia = @nuAnoReferencia WHERE id_Periodo = @id";
 
                     Dictionary<string, object> sqlParam = new Dictionary<string, object>();
                     sqlParam.Add("@id", Convert.ToInt32(this.dgvPeriodo.DataKeys[e.RowIndex].Value.ToString()));
 
-                    var x1 = this.dgvPeriodo.SelectedRow.FindControl("txtds_PeriodoFooter") as TextBox;
-                    var x2 = this.dgvPeriodo.SelectedRow.FindControl("txtdt_InicioFooter") as TextBox;
-                    var x3 = this.dgvPeriodo.SelectedRow.FindControl("txtdt_FimFooter") as TextBox;
-                    var x4 = this.dgvPeriodo.SelectedRow.FindControl("txtnu_Ano_ReferenciaFooter") as TextBox;
+                    var x1 = this.dgvPeriodo.Rows[e.RowIndex].FindControl("txtds_Periodo") as TextBox;
+                    var x2 = this.dgvPeriodo.Rows[e.RowIndex].FindControl("txtdt_Inicio") as TextBox;
+                    var x3 = this.dgvPeriodo.Rows[e.RowIndex].FindControl("txtdt_Fim") as TextBox;
+                    var x4 = this.dgvPeriodo.Rows[e.RowIndex].FindControl("txtnu_Ano_Referencia") as TextBox;
 
                     sqlParam.Add("@dsPeriodo", x1.Text.Trim());
                     sqlParam.Add("@dtInicio", DateTime.Parse(x2.Text));
                     sqlParam.Add("@dtFim", DateTime.Parse(x3.Text));
                     sqlParam.Add("@nuAnoReferencia", int.Parse(x4.Text.Trim()));
 
+                    //Executa o comando
                     conn.ExecutaComando(cmd, sqlParam);
+                    dgvPeriodo.EditIndex = -1;
                     this.PopulateGridView();
 
                     conn.FechaConexao();
+
+                    this.lbErro.Visible = false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                this.lbErro.Visible = true;
+                this.lbErro.Text = "Falha na gravação dos dados: " + ex.Message;
             }
         }
     }

@@ -80,6 +80,12 @@
     <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />
     <Content Include="Global.asax" />
+    <Content Include="img\icons\icone_cancelar.png" />
+    <Content Include="img\icons\icone_cancelar_hover.png" />
+    <Content Include="img\icons\icone_confirmar.png" />
+    <Content Include="img\icons\icone_confirmar_hover.png" />
+    <Content Include="img\icons\icone_editar.png" />
+    <Content Include="img\icons\icone_editar_hover.png" />
     <Content Include="img\icons\icone_mais.png" />
     <Content Include="img\icons\icone_mais_hover.png" />
     <Content Include="img\icons\icone_menos_hover.png" />

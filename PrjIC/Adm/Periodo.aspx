@@ -25,7 +25,7 @@
                                     <asp:label Text='<%# Eval("ds_Periodo") %>' runat="server"/>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox id="txtds_Periodo" Text='<%# Eval("ds_Periodo") %>' runat="server" />
+                                    <asp:TextBox id="txtds_Periodo" Text='<%# Eval("ds_Periodo") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>                
                                 <FooterTemplate>
                                     <asp:TextBox runat="server" id="txtds_PeriodoFooter" placeholder="Digite a descrição!" CssClass="form-control" />
@@ -39,7 +39,7 @@
                                         <asp:label Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server"/>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox id="txtdt_Inicio" Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server" />
+                                        <asp:TextBox id="txtdt_Inicio" Text='<%# Eval("dt_Inicio", "{0:dd/MM/yyyy}") %>' runat="server" CssClass="form-control" />
                                     </EditItemTemplate>                
                                     <FooterTemplate>
                                         <asp:TextBox runat="server" id="txtdt_InicioFooter" placeholder="Digite o início do período!" CssClass="form-control" />
@@ -51,7 +51,7 @@
                                     <asp:label Text='<%# Eval("dt_Fim", "{0:dd/MM/yyyy}") %>' runat="server"/>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox id="txtdt_Fim" Text='<%# Eval("dt_Fim", "{0:dd/MM/yyyy}") %>' runat="server" />
+                                    <asp:TextBox id="txtdt_Fim" Text='<%# Eval("dt_Fim", "{0:dd/MM/yyyy}") %>' runat="server" CssClass="form-control"/>
                                 </EditItemTemplate>                
                                 <FooterTemplate>
                                     <asp:TextBox runat="server" id="txtdt_FimFooter" placeholder="Digite o final do período!" CssClass="form-control" />
@@ -63,7 +63,7 @@
                                     <asp:label Text='<%# Eval("nu_Ano_Referencia") %>' runat="server"/>
                                 </ItemTemplate>
                                 <EditItemTemplate>
-                                    <asp:TextBox id="txtnu_Ano_Referencia" Text='<%# Eval("nu_Ano_Referencia") %>' runat="server" />
+                                    <asp:TextBox id="txtnu_Ano_Referencia" Text='<%# Eval("nu_Ano_Referencia") %>' runat="server" CssClass="form-control" />
                                 </EditItemTemplate>  
                                 <FooterTemplate>
                                     <asp:TextBox runat="server" id="txtnu_Ano_ReferenciaFooter" placeholder="Digite o ano de referência!" CssClass="form-control" />
@@ -73,26 +73,24 @@
                             <asp:TemplateField HeaderText="Ação">
                                 <ItemTemplate>
                                     <div class="text-center">
-                                        <asp:ImageButton ImageUrl="~/img/icons/icone_editar.png" runat="server" CommandName="Edit" ToolTip="Alterar Período" Width="1em" Height="1em"/>
-                                   
+                                        <asp:ImageButton runat="server" CommandName="Edit" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_editar.png" onmouseover="this.src='/img/icons/icone_editar_hover.png'" onmouseout="this.src='/img/icons/icone_editar.png'" CssClass="iconecrud"/>
                                     </div>
                                 </ItemTemplate>   
                                 <EditItemTemplate>
                                     <div class="text-center">
-                                        <asp:ImageButton ImageUrl="~/img/icons/icone_confirmar.png" runat="server" CommandName="Update" ToolTip="Salvar Alterações" Width="1em" Height="1em"/>
-                                        
-                                        <asp:ImageButton ImageUrl="~/img/icons/icone_cancelar.png" runat="server" CommandName="Cancel" ToolTip="Cancelar Alterações" Width="1em" Height="1em"/>
+                                        <asp:ImageButton runat="server" CommandName="Update" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_confirmar.png" onmouseover="this.src='/img/icons/icone_confirmar_hover.png'" onmouseout="this.src='/img/icons/icone_confirmar.png'" CssClass="iconecrud"/>
+                                        <asp:ImageButton runat="server" CommandName="Cancel" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_cancelar.png" onmouseover="this.src='/img/icons/icone_cancelar_hover.png'" onmouseout="this.src='/img/icons/icone_cancelar.png'" CssClass="iconecrud"/>
                                     </div>
                                 </EditItemTemplate>  
                                 <FooterTemplate>
                                     <div class="text-center">
-                                        <asp:ImageButton ImageUrl="~/img/icons/icone_mais.png" runat="server" CommandName="AddNew" ToolTip="Inserir novo período" Width="1em" Height="1em"/>
+                                        <asp:ImageButton runat="server" CommandName="AddNew" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_mais.png" onmouseover="this.src='/img/icons/icone_mais_hover.png'" onmouseout="this.src='/img/icons/icone_mais.png'" CssClass="iconecrud"/>
                                     </div>
                                 </FooterTemplate>
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
-                    <asp:Label runat="server" ID="lbErro" ForeColor="#AF9CED" Text=""></asp:Label>
+                    <asp:Label runat="server" ID="lbErro" CssClass="notificaerro" Text=""></asp:Label>
                 </div>
             </div>
         </div>

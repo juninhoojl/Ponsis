@@ -45,6 +45,7 @@ namespace PrjIC.Adm
                 }
 
                 conn.FechaConexao();
+                this.lbErro.Visible = false;
             }
         }
 
@@ -65,11 +66,13 @@ namespace PrjIC.Adm
                     this.PopulateGridView();
 
                     conn.FechaConexao();
+                    this.lbErro.Visible = false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                this.lbErro.Visible = true;
+                this.lbErro.Text = "Falha na exclusão de usuário: " + ex.Message;
             }
         }
 
@@ -98,11 +101,13 @@ namespace PrjIC.Adm
                         this.PopulateGridView();
 
                         conn.FechaConexao();
+                        this.lbErro.Visible = false;
                     }
                 }
                 catch (Exception ex)
                 {
-
+                    this.lbErro.Visible = true;
+                    this.lbErro.Text = "Falha na inserção de usuário: " + ex.Message;
                 }
             }
         }

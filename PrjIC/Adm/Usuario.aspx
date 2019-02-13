@@ -73,20 +73,22 @@
                             <asp:TemplateField HeaderText="Ação">
                                 <ItemTemplate>
                                     
+                                    <div class="text-center">
+                                        <asp:ImageButton runat="server" CommandName="Delete" ToolTip="Excluir Usuário" ImageUrl="/img/icons/icone_menos.png" onmouseover="this.src='/img/icons/icone_menos_hover.png'" onmouseout="this.src='/img/icons/icone_menos.png'" CssClass="iconecrud"/>
 
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_menos.png" runat="server" CommandName="Delete" ToolTip="Excluir Usuário" Width="16px" Height="16px"/>
-
+                                    </div>
                                     
                                 </ItemTemplate>   
                                 <FooterTemplate>
-                                    
-                                    <asp:ImageButton ImageUrl="~/img/icons/icone_mais.png" runat="server" CommandName="AddNew" ToolTip="Inserir Usuário" Width="16px" Height="16px"/>
-                                </FooterTemplate>
+                                    <div class="text-center">
+                                        <asp:ImageButton runat="server" CommandName="AddNew" ToolTip="Inserir Usuário" ImageUrl="/img/icons/icone_mais.png" onmouseover="this.src='/img/icons/icone_mais_hover.png'" onmouseout="this.src='/img/icons/icone_mais.png'" CssClass="iconecrud"/>
+                                    </div>
+                                        </FooterTemplate>
                             </asp:TemplateField>
 
                         </Columns>
                     </asp:GridView>
-
+                    <asp:Label runat="server" ID="lbErro" CssClass="notificaerro" Text=""></asp:Label>
                 </div>
             </div>
         </div>

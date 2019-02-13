@@ -304,6 +304,22 @@ body {
     opacity: 0.5;
 }
 
+/* Relativo ao box de opcoes */
+.form-control {
+    font-size: 1em;
+    color: #42444E;
+    padding: 0em;
+}
+
+    .form-control:focus {
+        border-color: #42444E;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
+    }
+
+
+
 .form-box {
     margin: 3em 1em 2em 1em;
     padding: 1em;
@@ -324,9 +340,10 @@ body {
 /* Texto-form */
 input.form-control {
     font-family: palanquin;
-    background-color: #EBEDEF;
+    background-color: #FFF;
     border-radius: 0.3em 0.3em 0.3em 0.3em;
-    padding-right: 1.5em;
+    padding: 0.25em;
+
 }
 
 /* Relativo ao texto dos nomes */
@@ -335,8 +352,8 @@ input.form-control {
     font-family: 'runhills';
     font-size: 1.5em;
     color: #42444E;
-    line-height: 1em;
-    margin-bottom: 1em;
+    line-height: 0em;
+    margin-bottom: 0em;
 }
 
 
@@ -354,7 +371,7 @@ input.form-control {
 }
 
 
-    #btnEntrar:hover, #btnEntrar:active, #btnEntrar:focus, #btnSair:hover, #btnSair:focus, #btnSair:active {
+    #btnEntrar:hover, #btnEntrar:active, #btnEntrar:focus, #btnSair:hover, #btnSair:focus, #btnSair:active{
         font-family: 'runhills';
         font-size: 1.2em;
         color: #000;
@@ -365,8 +382,11 @@ input.form-control {
         outline: 0;
         border-color: transparent;
         cursor: pointer;
+        outline: none !important;
+        box-shadow: none;
     }
 
+    
    .icone-nav-bar{
        margin-right: 0.2em;
    }
@@ -384,7 +404,7 @@ input.form-control {
 
     #btnLinkUsuario:hover, #btnLinkAluno:hover, #btnLinkPeriodo:hover,
     #btnEnviar:hover, #btnLinkUsuario:active, #btnLinkAluno:active,
-    #btnLinkPeriodo:active, #btnEnviar:active#btnLinkUsuario:focus,
+    #btnLinkPeriodo:active, #btnEnviar:active, #btnLinkUsuario:focus,
     #btnLinkAluno:focus, #btnLinkPeriodo:focus, #btnEnviar:focus {
         font-family: 'palanquin';
         background-color: #BDC2CC;
@@ -431,16 +451,16 @@ input.form-control {
     }
 
 
-/* Relativo ao box de opcoes */
-.form-control {
-    font-size: 1em;
-    color: #42444E;
-    padding: 0.3em;
+.iconecrud {
+    width: 1.1em;
+    height: 1.1em;
+    outline: none !important;
+    box-shadow: none;
+    margin: 0.1em;
 }
 
-    .form-control:focus {
-        border-color: #42444E;
-        outline: 0;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(66,68,77,.4);
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.4);
-    }
+.notificaerro {
+    color: #AF9CED;
+    font-family: 'palanquin';
+    font-size: 1.1em;
+}

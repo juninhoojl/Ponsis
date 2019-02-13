@@ -32,7 +32,8 @@ namespace ProjetoIC
                     this._rowPeriodo = tabPeriodo.Rows[0];
 
                     this.lbAno.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
-                    this._idPeriodo = (long)this._rowPeriodo["id_Periodo"];
+                   // this._idPeriodo = (long)this._rowPeriodo["id_Periodo"];
+                    
                 }
                 else
                     Response.Redirect("indisponivel.html");

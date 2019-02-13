@@ -169,7 +169,7 @@ border-radius: 0px 0px 5px 5px;
 .form-control{
 	font-size: 1em;
 	color: #42444E;
-    padding: 0.3em;
+    padding: 0.1em 0.5em 0.5em 0.5em;
 }
 
 .form-control:focus {

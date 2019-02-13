@@ -6,7 +6,8 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="form-box col-sm-12 col-md-7 col-lg-5">
                        
-                            <form id="login-form" class="form" action="" method="post">
+                            <form id="login-form" class="form" method="post">
+
                                 <div class="text-center titulo-form"> Login</div>
                                 <br>
                                 <input type="text" name="username" id="username" class="form-control" placeholder="Usuario">
@@ -14,7 +15,7 @@
                                 <input type="password" name="password" id="myPassword" class="form-control" placeholder="Senha" />
                                 <i class="fas fa-eye olho" onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
               
-                                <asp:button runat="server" class="btn btn-block" id="btnEnviar" type="submit" Text="Enviar" OnClick="btLogar_Click"/>
+                                <asp:button runat="server" class="btn btn-block" id="btnEnviar" type="" Text="Enviar" OnClick="btLogar_Click"/>
 
                                 <br>
                             </form>

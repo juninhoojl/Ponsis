@@ -96,7 +96,10 @@ namespace PrjIC.Adm
                         var xx = this.dgvUsuario.FooterRow.FindControl("txtds_EmailFooter") as TextBox;
                         sqlParam.Add("@dsEmail", xx.Text.Trim());
                         sqlParam.Add("@dsSenha", "" );
-                        sqlParam.Add("@idCurso", int.Parse(ctrlSelect.Value));
+                        if (int.Parse(ctrlSelect.Value) >0)
+                            sqlParam.Add("@idCurso", int.Parse(ctrlSelect.Value));
+                        else
+                            sqlParam.Add("@idCurso", DBNull.Value);
                         conn.ExecutaComando(cmd, sqlParam);
                         this.PopulateGridView();
 

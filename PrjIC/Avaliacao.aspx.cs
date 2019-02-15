@@ -12,7 +12,7 @@ namespace ProjetoIC
     {
         private string _cmdSql = "INSERT INTO Resposta (id_Curso, id_Questao, id_Periodo, nu_Resposta, tx_Resposta) VALUES ({0}, {1}, {2}, {3}, {4});";
         private DataRow _rowPeriodo;
-        private long _idPeriodo = -1;
+        private int _idPeriodo = -1;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,8 +32,7 @@ namespace ProjetoIC
                     this._rowPeriodo = tabPeriodo.Rows[0];
 
                     this.lbAno.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
-                   // this._idPeriodo = (long)this._rowPeriodo["id_Periodo"];
-                    
+                    this._idPeriodo = (int)this._rowPeriodo["id_Periodo"];
                 }
                 else
                     Response.Redirect("indisponivel.html");

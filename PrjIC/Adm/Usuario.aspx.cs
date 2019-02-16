@@ -24,8 +24,12 @@ namespace PrjIC.Adm
 
             if (conn.AbrirConexao())
             {
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from Usuario");
+                //Antigo
+                //DataTable tabUsuario = conn.RetornaTabela(@"select * from Usuario");
 
+                DataTable tabUsuario = conn.RetornaTabela(@"select id_Usuario, ds_Email, ds_Senha, ds_Curso from Usuario, Curso where Usuario.id_Curso = Curso.id_Curso");
+                
+                //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
                 { 
                     this.dgvUsuario.DataSource = tabUsuario;

@@ -33,7 +33,7 @@
 
                             <asp:TemplateField  HeaderText="Curso">
                                 <ItemTemplate>
-                                    <asp:label Text='<%# Eval("id_Curso") %>' runat="server"/>
+                                    <asp:label Text='<%# Eval("ds_Curso") %>' runat="server"/>
                                 </ItemTemplate>
 
                                 <EditItemTemplate>

@@ -71,13 +71,13 @@
                                 <asp:TemplateField HeaderText="Ação">
                                     <ItemTemplate>
                                         <div class="text-center">
-                                            <asp:ImageButton runat="server" CommandName="Edit" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_editar.png" onmouseover="this.src='/img/icons/icone_editar_hover.png'" onmouseout="this.src='/img/icons/icone_editar.png'" CssClass="iconecrud"/>
+                                            <asp:ImageButton runat="server" CommandName="Edit" ToolTip="Editar Período" ImageUrl="/img/icons/icone_editar.png" onmouseover="this.src='/img/icons/icone_editar_hover.png'" onmouseout="this.src='/img/icons/icone_editar.png'" CssClass="iconecrud"/>
                                         </div>
                                     </ItemTemplate>   
                                     <EditItemTemplate>
                                         <div class="text-center">
-                                            <asp:ImageButton runat="server" CommandName="Update" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_confirmar.png" onmouseover="this.src='/img/icons/icone_confirmar_hover.png'" onmouseout="this.src='/img/icons/icone_confirmar.png'" CssClass="iconecrud"/>
-                                            <asp:ImageButton runat="server" CommandName="Cancel" ToolTip="Inserir Período" ImageUrl="/img/icons/icone_cancelar.png" onmouseover="this.src='/img/icons/icone_cancelar_hover.png'" onmouseout="this.src='/img/icons/icone_cancelar.png'" CssClass="iconecrud"/>
+                                            <asp:ImageButton runat="server" CommandName="Update" ToolTip="Salvar Alterações" ImageUrl="/img/icons/icone_confirmar.png" onmouseover="this.src='/img/icons/icone_confirmar_hover.png'" onmouseout="this.src='/img/icons/icone_confirmar.png'" CssClass="iconecrud"/>
+                                            <asp:ImageButton runat="server" CommandName="Cancel" ToolTip="Cancelar Alterações" ImageUrl="/img/icons/icone_cancelar.png" onmouseover="this.src='/img/icons/icone_cancelar_hover.png'" onmouseout="this.src='/img/icons/icone_cancelar.png'" CssClass="iconecrud"/>
                                         </div>
                                     </EditItemTemplate>  
                                     <FooterTemplate>

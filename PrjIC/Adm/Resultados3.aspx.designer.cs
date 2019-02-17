@@ -13,13 +13,13 @@ namespace PrjIC.Adm {
     public partial class Resultados3 {
         
         /// <summary>
-        /// comboo control.
+        /// cmbPeriodo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList comboo;
+        protected global::System.Web.UI.WebControls.DropDownList cmbPeriodo;
         
         /// <summary>
         /// dgvvw_Resultado_Ano control.

@@ -14,11 +14,36 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
+                this.PopulateDropDown();
                 this.PopulateGridView();
                 this.PopulateGridView2();
             }
         }
 
+        private void PopulateDropDown()
+        {
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                DataTable tabCurso = conn.RetornaTabela(@"select * from Periodo");
+
+                if (tabCurso.Rows.Count > 0)
+                {
+
+                    tabCurso.Rows.Add(-1, "Selecione um período");
+                    this.cmbPeriodo.DataSource = tabCurso;
+                    this.cmbPeriodo.DataTextField = "ds_Periodo";
+                    this.cmbPeriodo.DataValueField = "id_Periodo";
+                    this.cmbPeriodo.DataBind();
+                    this.cmbPeriodo.SelectedValue = "-1";
+                }
+                conn.FechaConexao();
+            }
+        }
 
         private void PopulateGridView()
         {

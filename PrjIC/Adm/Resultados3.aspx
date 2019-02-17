@@ -9,7 +9,7 @@
             <div class="sessoes text-center">Resultados Gerais</div>
              
                 
-                 <asp:dropdownlist runat="server" CssClass="form-control" id="comboo" autopostback="true">
+                 <asp:dropdownlist runat="server" CssClass="form-control" id="cmbPeriodo" autopostback="true">
                         </asp:dropdownlist>
        
 

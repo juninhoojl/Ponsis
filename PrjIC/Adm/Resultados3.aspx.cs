@@ -79,6 +79,13 @@ namespace PrjIC.Adm
             this.PopulateGridView();
         }
 
+        protected void cmbQuestao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
+            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
+            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+            this.PopulateGridView();
+        }
 
         private void PopulateGridView()
         {
@@ -92,8 +99,9 @@ namespace PrjIC.Adm
                 if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
                     nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
 
+               
                 //Retorna view aqui
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = " + nuAnoReferencia.ToString());
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = " + nuAnoReferencia.ToString() + "AND Questao = " + "'Como você avalia o acervo da Biblioteca (BIM)?'");
 
 
                 //Aqui que tenho que retornar 

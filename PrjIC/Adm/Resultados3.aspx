@@ -16,7 +16,7 @@
                  </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-5 combo-periodos">   
-                     <asp:dropdownlist runat="server" CssClass="form-control" id="cmbQuestao" autopostback="true" >
+                     <asp:dropdownlist runat="server" CssClass="form-control" id="cmbQuestao" autopostback="true" onselectedindexchanged="cmbQuestao_SelectedIndexChanged">
                             </asp:dropdownlist>
                  </div>
 

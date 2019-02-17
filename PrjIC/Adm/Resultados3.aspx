@@ -7,6 +7,11 @@
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
             <div class="sessoes text-center">Resultados Gerais</div>
+             
+                
+                 <asp:dropdownlist runat="server" CssClass="form-control" id="comboo" autopostback="true">
+                        </asp:dropdownlist>
+       
 
                 <div class="table-responsive">
 
@@ -65,7 +70,7 @@
         </div>
 
 
-                <div class="row">
+        <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
             <div class="sessoes text-center">Resultados Por Curso</div>

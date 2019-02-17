@@ -15,6 +15,7 @@ namespace PrjIC.Adm
             if (!this.IsPostBack)
             {
                 this.PopulateGridView();
+                this.PopulateGridView2();
             }
         }
 
@@ -27,7 +28,7 @@ namespace PrjIC.Adm
             if (conn.AbrirConexao())
             {
                 //Retorna view aqui
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano");
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = 2018");
 
 
                 //Aqui que tenho que retornar 
@@ -53,7 +54,41 @@ namespace PrjIC.Adm
             }
         }
 
+        //Funcao popular outra grid
 
+        private void PopulateGridView2()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Ano = 2018 AND Curso = 'Administração'");
+
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Resultado_Ano_Curso.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Resultado_Ano_Curso.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+                conn.FechaConexao();
+            }
+        }
 
 
     }

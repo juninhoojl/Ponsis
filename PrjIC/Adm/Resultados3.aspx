@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
-                <div class="sessoes text-center">Resultados</div>
+                <div class="sessoes text-center">Resultados Gerais</div>
 
                 <div class="table-responsive">
 
@@ -20,53 +20,42 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Questao">
+                           <asp:TemplateField HeaderText="Questão">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Classificacao">
-                                <ItemTemplate>
-                                    <asp:label Text='<%# Eval("Classificacao") %>' runat="server"/>
-                                </ItemTemplate>
-                           </asp:TemplateField>
-
-                           <asp:TemplateField HeaderText="Qtd_Total_Resposta">
+                           <asp:TemplateField HeaderText="Total Respostas">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Qtd_Ignorado">
+                           <asp:TemplateField HeaderText="Quantidade Ignoradas">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Ignorado") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Qtd_Detrator">
+                           <asp:TemplateField HeaderText="Quantidade Detratores">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Detrator") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Qtd_Neutro">
+                           <asp:TemplateField HeaderText="Quantidade Neutros">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Neutro") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Qtd_Promotor">
+                           <asp:TemplateField HeaderText="Quantidade Promotores">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Promotor") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Qtd_Desconhecido">
-                                <ItemTemplate>
-                                    <asp:label Text='<%# Eval("Qtd_Desconhecido") %>' runat="server"/>
-                                </ItemTemplate>
-                           </asp:TemplateField>
 
                         </Columns>
                     </asp:GridView>

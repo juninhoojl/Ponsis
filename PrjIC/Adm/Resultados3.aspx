@@ -10,7 +10,7 @@
 
                 <div class="table-responsive">
 
-                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="id_vw_Resultado_Ano">
+                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Questao">
 
                         <Columns>
 

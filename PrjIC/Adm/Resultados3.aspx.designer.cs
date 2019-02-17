@@ -22,13 +22,13 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.DropDownList cmbPeriodo;
         
         /// <summary>
-        /// Dropdownlist1 control.
+        /// cmbQuestao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Dropdownlist1;
+        protected global::System.Web.UI.WebControls.DropDownList cmbQuestao;
         
         /// <summary>
         /// dgvvw_Resultado_Ano control.

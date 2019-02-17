@@ -14,7 +14,9 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
+
                 this.PopulateDropDown();
+                this.PopulateDropDown2();
                 this.PopulateGridView2();
             }
         }
@@ -39,6 +41,31 @@ namespace PrjIC.Adm
                     this.cmbPeriodo.DataValueField = "nu_Ano_Referencia";
                     this.cmbPeriodo.DataBind();
                     this.cmbPeriodo.SelectedValue = "-1";
+                }
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateDropDown2()
+        {
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                DataTable tabQuestao = conn.RetornaTabela(@"select * from Questao WHERE ds_Classificacao = 'SI' OR ds_Classificacao = 'BI' ");
+
+                if (tabQuestao.Rows.Count > 0)
+                {
+
+                    //tabQuestao.Rows.Add(-1, "Selecione uma questao");
+                    this.cmbQuestao.DataSource = tabQuestao;
+                    this.cmbQuestao.DataTextField = "ds_Questao";
+                    this.cmbQuestao.DataValueField = "ds_Questao";
+                    this.cmbQuestao.DataBind();
+                    //this.cmbQuestao.SelectedValue = "";
                 }
                 conn.FechaConexao();
             }

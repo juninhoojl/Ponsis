@@ -4,14 +4,23 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
-            <div class="sessoes text-center">Resultados Gerais</div>
-             
-                
-                 <asp:dropdownlist runat="server" CssClass="form-control" id="cmbPeriodo" autopostback="true">
-                        </asp:dropdownlist>
-       
+             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Resultados Gerais</div>
+             </div>
+
+
+                 <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-5 combo-periodos">   
+                     <asp:dropdownlist runat="server" CssClass="form-control" id="cmbPeriodo" autopostback="true" onselectedindexchanged="cmbAno_SelectedIndexChanged">
+                            </asp:dropdownlist>
+                 </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-5 combo-periodos">   
+                     <asp:dropdownlist runat="server" CssClass="form-control" id="Dropdownlist1" autopostback="true" >
+                            </asp:dropdownlist>
+                 </div>
+
+             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"> 
 
                 <div class="table-responsive">
 
@@ -136,7 +145,6 @@
                 </div>
             </div>
         </div>
-
 
     </div>
 

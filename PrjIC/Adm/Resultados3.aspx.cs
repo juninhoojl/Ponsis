@@ -15,7 +15,6 @@ namespace PrjIC.Adm
             if (!this.IsPostBack)
             {
                 this.PopulateDropDown();
-                this.PopulateGridView();
                 this.PopulateGridView2();
             }
         }
@@ -37,13 +36,22 @@ namespace PrjIC.Adm
                     tabCurso.Rows.Add(-1, "Selecione um período");
                     this.cmbPeriodo.DataSource = tabCurso;
                     this.cmbPeriodo.DataTextField = "ds_Periodo";
-                    this.cmbPeriodo.DataValueField = "id_Periodo";
+                    this.cmbPeriodo.DataValueField = "nu_Ano_Referencia";
                     this.cmbPeriodo.DataBind();
                     this.cmbPeriodo.SelectedValue = "-1";
                 }
                 conn.FechaConexao();
             }
         }
+
+        protected void cmbAno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
+            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
+            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+            this.PopulateGridView();
+        }
+
 
         private void PopulateGridView()
         {
@@ -52,8 +60,13 @@ namespace PrjIC.Adm
 
             if (conn.AbrirConexao())
             {
+
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+
                 //Retorna view aqui
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = 2018");
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = " + nuAnoReferencia.ToString());
 
 
                 //Aqui que tenho que retornar 

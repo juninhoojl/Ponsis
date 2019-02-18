@@ -252,3 +252,19 @@ label {
     outline: none !important;
     box-shadow: none;
 }
+
+
+.modal {
+    background: rgba(62, 69, 84, 0.5);
+    font-family: 'palanquin';
+    color: #42444E;
+    font-size: 1em;
+}
+
+.modal-content {
+    background-color: #BEC2CB;
+}
+
+.modal-header, .modal-title, .modal-footer {
+    border-color: transparent;
+}

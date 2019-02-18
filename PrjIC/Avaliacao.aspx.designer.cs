@@ -13,6 +13,33 @@ namespace ProjetoIC {
     public partial class Avaliacao {
         
         /// <summary>
+        /// lbAno2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbAno2;
+        
+        /// <summary>
+        /// lbDataInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbDataInicio;
+        
+        /// <summary>
+        /// lbDataFim control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbDataFim;
+        
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

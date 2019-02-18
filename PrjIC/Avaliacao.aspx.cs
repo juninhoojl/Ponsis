@@ -17,6 +17,9 @@ namespace ProjetoIC
         protected void Page_Load(object sender, EventArgs e)
         {
             this.lbAno.Text = "";
+            this.lbAno2.Text = "";
+            this.lbDataInicio.Text = "";
+            this.lbDataFim.Text = "";
 
             Conexao conn = new Conexao();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
@@ -32,6 +35,11 @@ namespace ProjetoIC
                     this._rowPeriodo = tabPeriodo.Rows[0];
 
                     this.lbAno.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
+                    this.lbAno2.Text = "Instruções " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
+
+                    this.lbDataInicio.Text = "Inicio das avaliacoes " + this._rowPeriodo["dt_Inicio"] + "!";
+                    this.lbDataFim.Text = "Fim das avaliacoes " + this._rowPeriodo["dt_Fim"] + "!";
+
                     this._idPeriodo = (int)this._rowPeriodo["id_Periodo"];
                 }
                 else

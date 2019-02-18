@@ -38,24 +38,33 @@
 
     <body>
 
- 
-              <!-- Modal -->
-              <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">Modal Header</h4>
-                    </div>
-                    <div class="modal-body">
-                      <p>This is a large modal.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Observações Avaliacao de <asp:Label ID="lbAno2" runat="server" Text=""></asp:Label>  </h4>
                 </div>
-              </div>
+                <div class="modal-body">
+                   
+                        <ul>
+                            <li>Nome</li>
+                            <li>Telefone</li>
+                            <li>Casa</li>
+                            <li>Estado</li>
+                        </ul>
+
+                    <asp:Label ID="lbDataInicio" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lbDataFim" runat="server" Text=""></asp:Label>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        </div>
 
         <form id="form1" runat="server">
             

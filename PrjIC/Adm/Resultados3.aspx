@@ -15,7 +15,6 @@
             </div>
 
              <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"> 
-
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Questao">

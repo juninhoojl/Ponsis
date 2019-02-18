@@ -22,15 +22,6 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.DropDownList cmbPeriodo;
         
         /// <summary>
-        /// cmbQuestao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbQuestao;
-        
-        /// <summary>
         /// dgvvw_Resultado_Ano control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace PrjIC.Adm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano;
+        
+        /// <summary>
+        /// cmbPeriodo2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbPeriodo2;
         
         /// <summary>
         /// dgvvw_Resultado_Ano_Curso control.

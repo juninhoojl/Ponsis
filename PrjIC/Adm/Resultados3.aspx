@@ -90,7 +90,7 @@
             </div>
 
             <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
-                <asp:dropdownlist runat="server" CssClass="form-control" id="cmbQuestao2" autopostback="true">
+                <asp:dropdownlist runat="server" CssClass="form-control" id="cmbQuestao2" autopostback="true" onselectedindexchanged="cmbQuestao2_SelectedIndexChanged">
                     </asp:dropdownlist>
             </div>
 

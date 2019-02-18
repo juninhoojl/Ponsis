@@ -15,10 +15,12 @@ namespace PrjIC.Adm
             if (!this.IsPostBack)
             {
 
-                this.PopulateDropDown4();
+                
                 this.PopulateDropDown();
                 this.PopulateDropDown3();
-                
+                this.PopulateDropDown4();
+                this.PopulateDropDown5();
+
             }
         }
 
@@ -97,6 +99,31 @@ namespace PrjIC.Adm
             }
         }
 
+        private void PopulateDropDown5()
+        {
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                DataTable tabCurso = conn.RetornaTabela(@"select * from Questao");
+
+                if (tabCurso.Rows.Count > 0)
+                {
+
+                    //tabCurso.Rows.Add(1, '"Selecione um Questão"');
+                    this.cmbQuestao2.DataSource = tabCurso;
+                    this.cmbQuestao2.DataTextField = "ds_Questao";
+                    this.cmbQuestao2.DataValueField = "id_Questao";
+                    this.cmbQuestao2.DataBind();
+                    this.cmbQuestao2.SelectedValue = "-1";
+                }
+                conn.FechaConexao();
+            }
+        }
+
         protected void cmbAno_SelectedIndexChanged(object sender, EventArgs e)
         {
             //string selectedText = this.cmbPeriodo.SelectedItem.Text;
@@ -121,6 +148,13 @@ namespace PrjIC.Adm
             this.PopulateGridView2();
         }
 
+        protected void cmbQuestao2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
+            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
+            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+            this.PopulateGridView2();
+        }
 
         private void PopulateGridView()
         {

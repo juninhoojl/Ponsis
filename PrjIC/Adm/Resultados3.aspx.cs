@@ -15,9 +15,10 @@ namespace PrjIC.Adm
             if (!this.IsPostBack)
             {
 
+                this.PopulateDropDown4();
                 this.PopulateDropDown();
-                this.PopulateDropDown2();
-                this.PopulateGridView2();
+                this.PopulateDropDown3();
+                
             }
         }
 
@@ -35,7 +36,7 @@ namespace PrjIC.Adm
                 if (tabCurso.Rows.Count > 0)
                 {
 
-                    tabCurso.Rows.Add(-1, "Selecione um período");
+                    tabCurso.Rows.Add(-1, "Selecione um Período");
                     this.cmbPeriodo.DataSource = tabCurso;
                     this.cmbPeriodo.DataTextField = "ds_Periodo";
                     this.cmbPeriodo.DataValueField = "nu_Ano_Referencia";
@@ -46,7 +47,7 @@ namespace PrjIC.Adm
             }
         }
 
-        private void PopulateDropDown2()
+        private void PopulateDropDown3()
         {
             Conexao conn = new Conexao
             {
@@ -55,17 +56,42 @@ namespace PrjIC.Adm
 
             if (conn.AbrirConexao())
             {
-                DataTable tabQuestao = conn.RetornaTabela(@"select * from Questao WHERE ds_Classificacao = 'SI' OR ds_Classificacao = 'BI' ");
+                DataTable tabCurso = conn.RetornaTabela(@"select * from Periodo");
 
-                if (tabQuestao.Rows.Count > 0)
+                if (tabCurso.Rows.Count > 0)
                 {
 
-                    //tabQuestao.Rows.Add(-1, "Selecione uma questao");
-                    this.cmbQuestao.DataSource = tabQuestao;
-                    this.cmbQuestao.DataTextField = "ds_Questao";
-                    this.cmbQuestao.DataValueField = "ds_Questao";
-                    this.cmbQuestao.DataBind();
-                    //this.cmbQuestao.SelectedValue = "";
+                    tabCurso.Rows.Add(-1, "Selecione um Período");
+                    this.cmbPeriodo2.DataSource = tabCurso;
+                    this.cmbPeriodo2.DataTextField = "ds_Periodo";
+                    this.cmbPeriodo2.DataValueField = "nu_Ano_Referencia";
+                    this.cmbPeriodo2.DataBind();
+                    this.cmbPeriodo2.SelectedValue = "-1";
+                }
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateDropDown4()
+        {
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                DataTable tabCurso = conn.RetornaTabela(@"select * from Curso");
+
+                if (tabCurso.Rows.Count > 0)
+                {
+
+                    tabCurso.Rows.Add(-1, "Selecione um Curso");
+                    this.cmbCurso2.DataSource = tabCurso;
+                    this.cmbCurso2.DataTextField = "ds_Curso";
+                    this.cmbCurso2.DataValueField = "id_Curso";
+                    this.cmbCurso2.DataBind();
+                    this.cmbCurso2.SelectedValue = "-1";
                 }
                 conn.FechaConexao();
             }
@@ -79,13 +105,22 @@ namespace PrjIC.Adm
             this.PopulateGridView();
         }
 
-        protected void cmbQuestao_SelectedIndexChanged(object sender, EventArgs e)
+        protected void cmbAno2_SelectedIndexChanged(object sender, EventArgs e)
         {
             //string selectedText = this.cmbPeriodo.SelectedItem.Text;
             //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
             //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
-            this.PopulateGridView();
+            this.PopulateGridView2();
         }
+
+        protected void cmbCurso2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
+            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
+            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+            this.PopulateGridView2();
+        }
+
 
         private void PopulateGridView()
         {
@@ -127,8 +162,6 @@ namespace PrjIC.Adm
             }
         }
 
-        //Funcao popular outra grid
-
         private void PopulateGridView2()
         {
             Conexao conn = new Conexao();
@@ -136,8 +169,14 @@ namespace PrjIC.Adm
 
             if (conn.AbrirConexao())
             {
+
+
+                long nuAnoReferencia2 = -1;
+                if (this.cmbPeriodo2.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia2 = long.Parse("0" + this.cmbPeriodo2.SelectedItem.Value.Trim());
+
                 //Retorna view aqui
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Ano = 2018 AND Curso = 'Administração'");
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Ano = " + nuAnoReferencia2.ToString());
 
 
                 //Aqui que tenho que retornar 

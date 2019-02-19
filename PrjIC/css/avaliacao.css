@@ -257,14 +257,53 @@ label {
 .modal {
     background: rgba(62, 69, 84, 0.5);
     font-family: 'palanquin';
-    color: #42444E;
+    color: transparent;
     font-size: 1em;
+    border-radius: 0em;
+    padding: 0em;
+    height: 100%;
+
 }
 
+
 .modal-content {
-    background-color: #BEC2CB;
+    background-color: #EBEDEF;
+    color: #42444E;
+    border-radius: 2em;
 }
 
 .modal-header, .modal-title, .modal-footer {
     border-color: transparent;
+    color: #42444E;
+    background-color: #BEC2CB;
+
 }
+
+.modal-header{
+ border-radius: 1em 1em 0em 0em;
+}
+
+.modal-footer {
+    border-radius: 0em 0em 1em 1em;
+    padding: 0em;
+}
+
+.botao-fechar-modal, .botao-fechar-modal:hover, .botao-fechar-modal:visited, .botao-fechar-modal:focus{
+    margin: 0em;
+    background-color: transparent;
+    box-shadow: none;
+    border-color: transparent;
+    padding: 1em 0em 1em 0em;
+    border-radius: 0em 0em 1em 1em;
+    color: #42444E;
+
+}
+
+    .botao-fechar-modal:hover{
+
+        color: #000;
+    }
+
+    h4.modal-title{
+        margin: auto;
+    }

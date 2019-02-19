@@ -43,24 +43,27 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Observações Avaliacao de <asp:Label ID="lbAno2" runat="server" Text=""></asp:Label>  </h4>
+                    <h4 class="modal-title">
+                        <asp:Label ID="lbAno2" runat="server" Text=""></asp:Label>  
+
+                    </h4>
+
                 </div>
                 <div class="modal-body">
                    
                         <ul>
-                            <li>Nome</li>
-                            <li>Telefone</li>
-                            <li>Casa</li>
-                            <li>Estado</li>
+                            <li><asp:Label ID="lbDataInicio" runat="server" Text=""></asp:Label></li>
+                            <li><asp:Label ID="lbDataFim" runat="server" Text=""></asp:Label></li>
+                            <li>Somente a última questão é opcional!</li>
+                            <li>A avaliação é totalmente anônima! (Responda o que realmente acha)</li>
+                            <li>Após responder, você será redirecionado para a página onde será possível ver resultados anteriores (Somente fechadas)! [Os resultados referentes a essa só estará disponível após a data de encerramento das mesma]</li>
+                            
+                            <li>Obs.: O login só é necessário para o administrador do sistema e coordenadores do programa, os quais poderam ver os resultados!</li>
                         </ul>
 
-                    <asp:Label ID="lbDataInicio" runat="server" Text=""></asp:Label>
-                    <asp:Label ID="lbDataFim" runat="server" Text=""></asp:Label>
-                    
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-block botao-fechar-modal" data-dismiss="modal">Ok, entendi!</button>
                 </div>
             </div>
         </div>

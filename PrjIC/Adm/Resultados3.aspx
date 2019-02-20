@@ -74,31 +74,29 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="divResultado">
                 <div class="sessoes text-center">Resultados Por Curso</div>
             </div>
 
-            <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
+            <%--<div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
                 <asp:dropdownlist runat="server" CssClass="form-control" id="cmbPeriodo2" autopostback="true" onselectedindexchanged="cmbAno2_SelectedIndexChanged">
                     </asp:dropdownlist>
-            </div>
+            </div>--%>
 
             <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
-                <asp:dropdownlist runat="server" CssClass="form-control" id="cmbCurso2" autopostback="true" onselectedindexchanged="cmbCurso2_SelectedIndexChanged">
+                <asp:dropdownlist runat="server" CssClass="form-control" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged">
                     </asp:dropdownlist>
             </div>
 
-            <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
+            <%--<div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
                 <asp:dropdownlist runat="server" CssClass="form-control" id="cmbQuestao2" autopostback="true" onselectedindexchanged="cmbQuestao2_SelectedIndexChanged">
                     </asp:dropdownlist>
-            </div>
+            </div>--%>
 
 
 
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-
-
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultados">
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">

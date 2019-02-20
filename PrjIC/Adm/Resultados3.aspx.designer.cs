@@ -31,31 +31,31 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano;
         
         /// <summary>
-        /// cmbPeriodo2 control.
+        /// divResultado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbPeriodo2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultado;
         
         /// <summary>
-        /// cmbCurso2 control.
+        /// cmbCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbCurso2;
+        protected global::System.Web.UI.WebControls.DropDownList cmbCurso;
         
         /// <summary>
-        /// cmbQuestao2 control.
+        /// gridResultados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbQuestao2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultados;
         
         /// <summary>
         /// dgvvw_Resultado_Ano_Curso control.

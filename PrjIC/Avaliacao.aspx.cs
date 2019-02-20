@@ -38,8 +38,8 @@ namespace ProjetoIC
                     this.lbAno.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
                     this.lbAno2.Text = "Avaliação referente a " + this._rowPeriodo["nu_Ano_Referencia"] + "!";
 
-                    this.lbDataInicio.Text = "Início das avaliações: " + this._rowPeriodo["dt_Inicio"] + "!";
-                    this.lbDataFim.Text = "Fim das avaliações: " + this._rowPeriodo["dt_Fim"] + "!";
+                    this.lbDataInicio.Text = "Início das avaliações: " + ((DateTime)this._rowPeriodo["dt_Inicio"]).ToString("dd/MM/yyyy") + "!";
+                    this.lbDataFim.Text = "Fim das avaliações: " + ((DateTime)this._rowPeriodo["dt_Fim"]).ToString("dd/MM/yyyy") + "!";
 
                     this._idPeriodo = (int)this._rowPeriodo["id_Periodo"];
                 }

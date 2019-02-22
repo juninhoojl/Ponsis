@@ -3,6 +3,34 @@
 
      <div class="container-fluid">
         <div class="row">
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">   
+                <div class="panel center dicaselecao">
+                            <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">!</span>
+                                   Observações Importantes Sobre o Cadastro de Alunos Por Período
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-12">
+                                     
+                                    <ol>
+                                        <li>Selecione o período abaixo, pela descrição e edite a quantidade de usuários em cada curso!
+                                        </li>
+                                        <li>Não é possível inserir manualmente ou deletar uma relação. (Elas são criadas automaticamente com a
+                                            criação de um período!)
+
+
+                                        </li>
+                                    </ol>
+                                    Obs.: A quantidade de respostas não será limitada de acordo com a quantidade de alunos em cada curso.
+                                    A quantidade de alunos servirá para saber a quantidade de respostas esperadas e quantas foram recebidas, para avaliar sé algum quesito
+                                    deve ou não ser levado em consideração.
+                                </div>
+                            </div>
+                </div>
+                </div>
+
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div class="sessoes text-center">Cadastro de Alunos por Período</div>
             </div>

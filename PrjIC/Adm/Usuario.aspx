@@ -4,6 +4,34 @@
 
     <div class="container-fluid">
         <div class="row">
+
+                        <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">   
+                <div class="panel center dicaselecao">
+                            <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">!</span>
+                                   Observações Importantes Sobre o Cadastro de Usuários
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-12">
+                                     
+                                    <ol>
+                                        <li>Insira o email do usuário e selecione um curso específico ou "todos" que o usuário terá permissão para ver os resultados abertos.
+                                        </li>
+                                        <li>Ao clicar no ícone "+" o email cadastrado receberá a senha para acesso no mesmo email. E deverá utiliza-la para login.
+
+
+                                        </li>
+                                    </ol>
+                                    Obs.: Não existe a opção editar email ou reenviar senha. Logo, para realizar qualquer uma dessas alterações,
+                                    delete o usuário usando o ícone "-" e o insira novamente!
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+
+
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
                 <div class="sessoes text-center">Cadastro de Usuários

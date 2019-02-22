@@ -15,12 +15,12 @@ namespace PrjIC.Adm
             if (!this.IsPostBack)
             {
                 this.divResultadoCurso.Visible = false;
-                this.divResultadoGeral.Visible = false;
+   
                 this.gridResultados.Visible = false;
 
                 this.painelDicaResultados.Visible = true;
 
-                this.cmbCurso.Visible = false;
+
 
 
                 this.PopulateDropDownPeriodo();
@@ -89,7 +89,7 @@ namespace PrjIC.Adm
             //string selectedText = this.cmbPeriodo.SelectedItem.Text;
             //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
             //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
-            this.PopulateGridViewResultadoGeral();
+            this.PopulateGridViewResultadoCurso();
         }
 
         /// <summary>
@@ -106,48 +106,7 @@ namespace PrjIC.Adm
         /// Método chamado quando operíodo é selecionado
         /// carregarquestõesgerais
         /// </summary>
-        private void PopulateGridViewResultadoGeral()
-        {
-            Conexao conn = new Conexao();
-            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
-
-            if (conn.AbrirConexao())
-            {
-                long nuAnoReferencia = -1;
-                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
-                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
-               
-                //Retorna view aqui
-                //DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = " + nuAnoReferencia.ToString() + "AND Questao = " + "'Como você avalia o acervo da Biblioteca (BIM)?'");
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano WHERE Ano = " + nuAnoReferencia.ToString());
-
-                //Aqui que tenho que retornar 
-                if (tabUsuario.Rows.Count > 0)
-                {
-                    this.dgvvw_Resultado_Ano.DataSource = tabUsuario;
-                    this.dgvvw_Resultado_Ano.DataBind();
-                }
-                else
-                {
-                    tabUsuario.Rows.Add(tabUsuario.NewRow());
-                    this.dgvvw_Resultado_Ano.DataSource = tabUsuario;
-                    this.dgvvw_Resultado_Ano.DataBind();
-                    this.dgvvw_Resultado_Ano.Rows[0].Cells.Clear();
-                    this.dgvvw_Resultado_Ano.Rows[0].Cells.Add(new TableCell());
-                    this.dgvvw_Resultado_Ano.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
-                    this.dgvvw_Resultado_Ano.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
-                    this.dgvvw_Resultado_Ano.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
-                }
-
-                this.divResultadoGeral.Visible = true;
-                this.divResultadoCurso.Visible = true;
-                this.gridResultados.Visible = true;
-                this.painelDicaResultados.Visible = false;
-                this.cmbCurso.Visible = true;
-
-                conn.FechaConexao();
-            }
-        }
+ 
 
         private void PopulateGridViewResultadoCurso()
         {
@@ -185,6 +144,11 @@ namespace PrjIC.Adm
                     this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
 
                 }
+
+                this.divResultadoCurso.Visible = true;
+                this.gridResultados.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
 
                 conn.FechaConexao();
             }

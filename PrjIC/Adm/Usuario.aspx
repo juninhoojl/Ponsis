@@ -31,7 +31,7 @@
                                 </FooterTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField  HeaderText="Curso">
+                            <asp:TemplateField  HeaderText="Curso" >
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("ds_Curso") %>' runat="server"/>
                                 </ItemTemplate>

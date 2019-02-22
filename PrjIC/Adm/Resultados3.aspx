@@ -126,11 +126,6 @@
                         <Columns>
 
 
-                           <asp:TemplateField HeaderText="Curso">
-                                <ItemTemplate>
-                                    <asp:label Text='<%# Eval("Curso") %>' runat="server"/>
-                                </ItemTemplate>
-                           </asp:TemplateField>
 
                            <asp:TemplateField HeaderText="Questão">
                                 <ItemTemplate>

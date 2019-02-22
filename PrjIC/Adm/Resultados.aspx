@@ -45,9 +45,7 @@
                 <div class="sessoes text-center">Disciplinas</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Organização de Apoio do PPG</div>
-            </div>
+            
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div class="sessoes text-center">Pró Reitoria de Pós-graduação</div>
@@ -68,14 +66,9 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="divResultadoCurso">
-                <div class="sessoes text-center">Resultados Por Curso </div>
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Organização de Apoio do PPG</div>
             </div>
-
-
-
-
-
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultados">
                 <div class="table-responsive">

@@ -14,7 +14,7 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
-                this.divResultadoCurso.Visible = false;
+                
    
                 this.gridResultados.Visible = false;
 
@@ -123,7 +123,7 @@ namespace PrjIC.Adm
                     idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
 
                 //Retorna view aqui
-                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Ano = " + nuAnoReferencia.ToString() + 
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'OA' and Ano = " + nuAnoReferencia.ToString() + 
                                                             " and id_Curso = " + idCurso);
 
                 //Aqui que tenho que retornar 
@@ -145,7 +145,7 @@ namespace PrjIC.Adm
 
                 }
 
-                this.divResultadoCurso.Visible = true;
+                
                 this.gridResultados.Visible = true;
                 this.painelDicaResultados.Visible = false;
 

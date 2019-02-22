@@ -93,6 +93,13 @@
 
             </div>
         </div>
+
+    <div class="row">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1 text-center">
+                <a class="btnVoltarCruds" href="/Adm/Opcoes.aspx"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </div>
+        </div>
+
     </div>
 
 </asp:Content>

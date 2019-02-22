@@ -44,7 +44,7 @@ namespace ProjetoIC
                     this._idPeriodo = (int)this._rowPeriodo["id_Periodo"];
                 }
                 else
-                    Response.Redirect("indisponivel.html");
+                    Response.Redirect("Indisponivel.aspx");
 
                 conn.FechaConexao();
             }

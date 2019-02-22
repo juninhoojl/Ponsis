@@ -92,6 +92,8 @@ namespace PrjIC.Adm
             this.PopulateGridViewResultadoCursoOA();
             this.PopulateGridViewResultadoCursoSI();
             this.PopulateGridViewResultadoCursoPP();
+            this.PopulateGridViewResultadoCursoBI();
+            this.PopulateGridViewResultadoCursoDP();
         }
 
         /// <summary>
@@ -104,6 +106,8 @@ namespace PrjIC.Adm
             this.PopulateGridViewResultadoCursoOA();
             this.PopulateGridViewResultadoCursoPP();
             this.PopulateGridViewResultadoCursoSI();
+            this.PopulateGridViewResultadoCursoBI();
+            this.PopulateGridViewResultadoCursoDP();
         }
 
         /// <summary>
@@ -240,6 +244,100 @@ namespace PrjIC.Adm
                     this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
                     this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
                     this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+
+                this.gridResultadosPPG.Visible = true;
+
+                this.painelDicaResultados.Visible = false;
+
+
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateGridViewResultadoCursoBI()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'BI' and Ano = " + nuAnoReferencia.ToString() +
+                                                            " and id_Curso = " + idCurso);
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Resultado_Ano_Curso_BI.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_BI.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Resultado_Ano_Curso_BI.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_BI.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_BI.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso_BI.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso_BI.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso_BI.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso_BI.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+
+                this.gridResultadosPPG.Visible = true;
+
+                this.painelDicaResultados.Visible = false;
+
+
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateGridViewResultadoCursoDP()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'DP' and Ano = " + nuAnoReferencia.ToString() +
+                                                            " and id_Curso = " + idCurso);
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Resultado_Ano_Curso_DP.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_DP.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Resultado_Ano_Curso_DP.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_DP.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_DP.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso_DP.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso_DP.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso_DP.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso_DP.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
 
                 }
 

@@ -102,7 +102,6 @@
     <Content Include="img\pics\pig.gif" />
     <Content Include="img\vectors\top-arrow.svg" />
     <Content Include="Avaliacao.aspx" />
-    <Content Include="indisponivel.html" />
     <Content Include="js\comum.js" />
     <Content Include="Web.config" />
     <Content Include="Respondido.aspx" />

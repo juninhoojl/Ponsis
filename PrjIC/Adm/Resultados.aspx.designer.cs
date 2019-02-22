@@ -40,13 +40,22 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.DropDownList cmbCurso;
         
         /// <summary>
-        /// Div4 control.
+        /// TituloGridDP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridDP;
+        
+        /// <summary>
+        /// gridResultadosDP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultadosDP;
         
         /// <summary>
         /// dgvvw_Resultado_Ano_Curso_DP control.
@@ -58,31 +67,49 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano_Curso_DP;
         
         /// <summary>
-        /// gridResultadosPPG control.
+        /// TituloGridOA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultadosPPG;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridOA;
         
         /// <summary>
-        /// dgvvw_Resultado_Ano_Curso control.
+        /// gridResultadosOA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano_Curso;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultadosOA;
         
         /// <summary>
-        /// Div1 control.
+        /// dgvvw_Resultado_Ano_Curso_OA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
+        protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano_Curso_OA;
+        
+        /// <summary>
+        /// TituloGridPP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridPP;
+        
+        /// <summary>
+        /// gridResultadosPP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultadosPP;
         
         /// <summary>
         /// dgvvw_Resultado_Ano_Curso_PP control.
@@ -94,13 +121,22 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano_Curso_PP;
         
         /// <summary>
-        /// Div2 control.
+        /// TituloGridSI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridSI;
+        
+        /// <summary>
+        /// gridResultadosSI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultadosSI;
         
         /// <summary>
         /// dgvvw_Resultado_Ano_Curso_SI control.
@@ -112,13 +148,22 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano_Curso_SI;
         
         /// <summary>
-        /// Div3 control.
+        /// TituloGridBI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridBI;
+        
+        /// <summary>
+        /// gridResultadosBI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridResultadosBI;
         
         /// <summary>
         /// dgvvw_Resultado_Ano_Curso_BI control.

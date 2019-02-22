@@ -44,10 +44,10 @@
         <div class="row">
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Disciplinas</div>
+                <div id="TituloGridDP" runat="server"  class="sessoes text-center">Disciplinas</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div4">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosDP">
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_DP" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
@@ -103,13 +103,13 @@
         <div class="row">
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Organização de Apoio do PPG</div>
+                <div id="TituloGridOA" runat="server" class="sessoes text-center">Organização de Apoio do PPG</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosPPG">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosOA">
                 <div class="table-responsive">
 
-                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_OA" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
 
                         <Columns>
 
@@ -162,10 +162,10 @@
         <div class="row">
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Pró Reitoria de Pós-graduação</div>
+                <div id="TituloGridPP" runat="server"  class="sessoes text-center">Pró Reitoria de Pós-graduação</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosPP">
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_PP" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
@@ -221,10 +221,10 @@
         <div class="row">
 
              <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Sistemas de Informação</div>
+                <div id="TituloGridSI" runat="server" class="sessoes text-center">Sistemas de Informação</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div2">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosSI">
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_SI" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
@@ -280,10 +280,10 @@
         <div class="row">
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Biblioteca</div>
+                <div id="TituloGridBI" runat="server"  class="sessoes text-center">Biblioteca</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div3">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosBI">
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_BI" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">

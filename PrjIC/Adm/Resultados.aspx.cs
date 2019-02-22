@@ -14,10 +14,22 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
-                
-   
-                this.gridResultadosPPG.Visible = false;
-                //this.gridResultadosPP.Visible = false;
+
+                this.TituloGridOA.Visible = false;
+                this.gridResultadosOA.Visible = false;
+
+                this.TituloGridPP.Visible = false;
+                this.gridResultadosPP.Visible = false;
+
+                this.TituloGridSI.Visible = false;
+                this.gridResultadosSI.Visible = false;
+
+                this.TituloGridBI.Visible = false;
+                this.gridResultadosBI.Visible = false;
+
+                this.TituloGridDP.Visible = false;
+                this.gridResultadosDP.Visible = false;
+
                 this.painelDicaResultados.Visible = true;
 
 
@@ -137,25 +149,26 @@ namespace PrjIC.Adm
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
                 {
-                    this.dgvvw_Resultado_Ano_Curso.DataSource = tabUsuario;
-                    this.dgvvw_Resultado_Ano_Curso.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_OA.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_OA.DataBind();
                 }
                 else
                 {
                     tabUsuario.Rows.Add(tabUsuario.NewRow());
-                    this.dgvvw_Resultado_Ano_Curso.DataSource = tabUsuario;
-                    this.dgvvw_Resultado_Ano_Curso.DataBind();
-                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells.Clear();
-                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells.Add(new TableCell());
-                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
-                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
-                    this.dgvvw_Resultado_Ano_Curso.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+                    this.dgvvw_Resultado_Ano_Curso_OA.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_OA.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_OA.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso_OA.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso_OA.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso_OA.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso_OA.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
 
                 }
 
-                
-                this.gridResultadosPPG.Visible = true;
-        
+
+                //Mostra grid so quando carrega
+                this.TituloGridOA.Visible = true;
+                this.gridResultadosOA.Visible = true;
                 this.painelDicaResultados.Visible = false;
 
 
@@ -201,8 +214,9 @@ namespace PrjIC.Adm
                 }
 
 
-                this.gridResultadosPPG.Visible = true;
 
+                this.TituloGridPP.Visible = true;
+                this.gridResultadosPP.Visible = true;
                 this.painelDicaResultados.Visible = false;
 
 
@@ -248,7 +262,8 @@ namespace PrjIC.Adm
                 }
 
 
-                this.gridResultadosPPG.Visible = true;
+                this.TituloGridSI.Visible = true;
+                this.gridResultadosSI.Visible = true;
 
                 this.painelDicaResultados.Visible = false;
 
@@ -295,7 +310,9 @@ namespace PrjIC.Adm
                 }
 
 
-                this.gridResultadosPPG.Visible = true;
+
+                this.TituloGridBI.Visible = true;
+                this.gridResultadosBI.Visible = true;
 
                 this.painelDicaResultados.Visible = false;
 
@@ -342,7 +359,10 @@ namespace PrjIC.Adm
                 }
 
 
-                this.gridResultadosPPG.Visible = true;
+
+
+                this.TituloGridDP.Visible = true;
+                this.gridResultadosDP.Visible = true;
 
                 this.painelDicaResultados.Visible = false;
 

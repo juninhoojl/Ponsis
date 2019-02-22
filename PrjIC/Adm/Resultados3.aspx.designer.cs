@@ -13,6 +13,15 @@ namespace PrjIC.Adm {
     public partial class Resultados3 {
         
         /// <summary>
+        /// painelDicaResultados control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl painelDicaResultados;
+        
+        /// <summary>
         /// cmbPeriodo control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace PrjIC.Adm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbPeriodo;
+        
+        /// <summary>
+        /// divResultadoGeral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultadoGeral;
         
         /// <summary>
         /// dgvvw_Resultado_Ano control.
@@ -31,13 +49,13 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano;
         
         /// <summary>
-        /// divResultado control.
+        /// divResultadoCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultado;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResultadoCurso;
         
         /// <summary>
         /// cmbCurso control.

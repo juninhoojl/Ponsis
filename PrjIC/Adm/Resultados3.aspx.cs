@@ -14,9 +14,14 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
-                this.divResultado.Visible = false;
+                this.divResultadoCurso.Visible = false;
+                this.divResultadoGeral.Visible = false;
                 this.gridResultados.Visible = false;
+
+                this.painelDicaResultados.Visible = true;
+
                 this.cmbCurso.Visible = false;
+
 
                 this.PopulateDropDownPeriodo();
                 //this.PopulateDropDown3();
@@ -134,8 +139,10 @@ namespace PrjIC.Adm
                     this.dgvvw_Resultado_Ano.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
                 }
 
-                this.divResultado.Visible = true;
+                this.divResultadoGeral.Visible = true;
+                this.divResultadoCurso.Visible = true;
                 this.gridResultados.Visible = true;
+                this.painelDicaResultados.Visible = false;
                 this.cmbCurso.Visible = true;
 
                 conn.FechaConexao();

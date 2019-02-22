@@ -4,15 +4,41 @@
 
     <div class="container-fluid">
         <div class="row">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"  runat="server" id="painelDicaResultados">   
+                <div class="panel center dicaselecao">
+                            <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">?</span>
+                                   Como funciona a visualização dos resultados?
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-12">
+                                     Para ver os resultados:
+                                    <ol>
+                                        <li>Selecione no combo box abaixo o período que deseja ver os resultados.</li>
+                                        <li>Selecione no outro combo box que surgirá o curso para as outras questões!</li>
+                                    </ol>
+                                    Obs.: O "Resultado Geral" não é separado por curso por se tratarem de quesitos comuns à todos!
+                                </div>
+                            </div>
+                </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Resultados Gerais</div>
             </div>
 
-            <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-5 combo-periodos">   
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Filtrar Por Período</div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
                 <asp:dropdownlist runat="server" CssClass="form-control" id="cmbPeriodo" autopostback="true" onselectedindexchanged="cmbAno_SelectedIndexChanged">
                     </asp:dropdownlist>
             </div>
+
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="divResultadoGeral">
+                <div class="sessoes text-center">Resultados Gerais</div>
+            </div>
+
 
              <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"> 
                 <div class="table-responsive">
@@ -21,11 +47,7 @@
 
                         <Columns>
 
-                           <asp:TemplateField HeaderText="Ano">
-                                <ItemTemplate>
-                                    <asp:label Text='<%# Eval("Ano") %>' runat="server"/>
-                                </ItemTemplate>
-                           </asp:TemplateField>
+
 
                            <asp:TemplateField HeaderText="Questão">
                                 <ItemTemplate>
@@ -74,8 +96,8 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="divResultado">
-                <div class="sessoes text-center">Resultados Por Curso</div>
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="divResultadoCurso">
+                <div class="sessoes text-center">Resultados Por Curso </div>
             </div>
 
             <%--<div class="col-sm-12 col-md-6 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
@@ -103,11 +125,6 @@
 
                         <Columns>
 
-                           <asp:TemplateField HeaderText="Ano">
-                                <ItemTemplate>
-                                    <asp:label Text='<%# Eval("Ano") %>' runat="server"/>
-                                </ItemTemplate>
-                           </asp:TemplateField>
 
                            <asp:TemplateField HeaderText="Curso">
                                 <ItemTemplate>

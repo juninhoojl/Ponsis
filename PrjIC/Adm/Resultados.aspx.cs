@@ -16,8 +16,8 @@ namespace PrjIC.Adm
             {
                 
    
-                this.gridResultados.Visible = false;
-
+                this.gridResultadosPPG.Visible = false;
+                //this.gridResultadosPP.Visible = false;
                 this.painelDicaResultados.Visible = true;
 
 
@@ -89,7 +89,9 @@ namespace PrjIC.Adm
             //string selectedText = this.cmbPeriodo.SelectedItem.Text;
             //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
             //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
-            this.PopulateGridViewResultadoCurso();
+            this.PopulateGridViewResultadoCursoOA();
+            this.PopulateGridViewResultadoCursoSI();
+            this.PopulateGridViewResultadoCursoPP();
         }
 
         /// <summary>
@@ -99,7 +101,9 @@ namespace PrjIC.Adm
         /// <param name="e"></param>
         protected void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.PopulateGridViewResultadoCurso();
+            this.PopulateGridViewResultadoCursoOA();
+            this.PopulateGridViewResultadoCursoPP();
+            this.PopulateGridViewResultadoCursoSI();
         }
 
         /// <summary>
@@ -108,7 +112,7 @@ namespace PrjIC.Adm
         /// </summary>
  
 
-        private void PopulateGridViewResultadoCurso()
+        private void PopulateGridViewResultadoCursoOA()
         {
             Conexao conn = new Conexao();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
@@ -146,7 +150,8 @@ namespace PrjIC.Adm
                 }
 
                 
-                this.gridResultados.Visible = true;
+                this.gridResultadosPPG.Visible = true;
+        
                 this.painelDicaResultados.Visible = false;
 
 
@@ -154,6 +159,99 @@ namespace PrjIC.Adm
             }
         }
 
+        private void PopulateGridViewResultadoCursoPP()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'PP' and Ano = " + nuAnoReferencia.ToString() +
+                                                            " and id_Curso = " + idCurso);
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Resultado_Ano_Curso_PP.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_PP.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Resultado_Ano_Curso_PP.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_PP.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_PP.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso_PP.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso_PP.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso_PP.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso_PP.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+
+                this.gridResultadosPPG.Visible = true;
+
+                this.painelDicaResultados.Visible = false;
+
+
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateGridViewResultadoCursoSI()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'SI' and Ano = " + nuAnoReferencia.ToString() +
+                                                            " and id_Curso = " + idCurso);
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+
+                this.gridResultadosPPG.Visible = true;
+
+                this.painelDicaResultados.Visible = false;
+
+
+                conn.FechaConexao();
+            }
+        }
 
     }
 

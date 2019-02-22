@@ -47,17 +47,13 @@
 
             
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Pró Reitoria de Pós-graduação</div>
-            </div>
+
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div class="sessoes text-center">Biblioteca</div>
             </div>
 
-             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Sistemas de Informação</div>
-            </div>
+
 
            
 
@@ -70,7 +66,7 @@
                 <div class="sessoes text-center">Organização de Apoio do PPG</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultados">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosPPG">
                 <div class="table-responsive">
 
                         <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
@@ -122,6 +118,127 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Pró Reitoria de Pós-graduação</div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div1">
+                <div class="table-responsive">
+
+                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_PP" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+
+                        <Columns>
+
+
+
+                           <asp:TemplateField HeaderText="Questão">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Total Respostas">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Ignoradas">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Ignorado") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Detratores">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Detrator") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Neutros">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Neutro") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Promotores">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Promotor") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+
+                        </Columns>
+                    </asp:GridView>
+    
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Sistemas de Informação</div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div2">
+                <div class="table-responsive">
+
+                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_SI" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+
+                        <Columns>
+
+
+
+                           <asp:TemplateField HeaderText="Questão">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Total Respostas">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Ignoradas">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Ignorado") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Detratores">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Detrator") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Neutros">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Neutro") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Quantidade Promotores">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Qtd_Promotor") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+
+                        </Columns>
+                    </asp:GridView>
+    
+                </div>
+            </div>
+        </div>
+
 
     </div>
 

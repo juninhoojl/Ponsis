@@ -10,6 +10,6 @@
 namespace PrjIC {
     
     
-    public partial class Resultados {
+    public partial class ResultadosAntigo {
     }
 }

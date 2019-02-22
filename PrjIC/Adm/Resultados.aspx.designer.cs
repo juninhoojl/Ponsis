@@ -10,7 +10,7 @@
 namespace PrjIC.Adm {
     
     
-    public partial class Resultados3 {
+    public partial class Resultados {
         
         /// <summary>
         /// painelDicaResultados control.

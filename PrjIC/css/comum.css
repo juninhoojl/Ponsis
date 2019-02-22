@@ -25,7 +25,7 @@ body {
 
 /* Botao scroll topo */
 .cd-top {
-    border-radius: 2em 0em 0em 2em;
+    border-radius: 2em 0 0 2em;
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -117,7 +117,7 @@ body {
     background-color: transparent;
     border-color: transparent;
     color: #42444E;
-    margin: 0em;
+    margin: 0;
 }
 
 
@@ -179,8 +179,8 @@ body {
     background-color: transparent;
     border-color: transparent;
     border-radius: 0.3em;
-    border: 0em;
-    margin: 1.5em 0em 0em 0em;
+    border: 0;
+    margin: 1.5em 0 0 0;
     font-family: 'palanquin';
     color: red;
 }
@@ -197,7 +197,7 @@ body {
     background-color: #BDC2CC;
     padding: 0.5em 0.5em 0.5em 0.5em;
     border-color: transparent;
-    border-radius: 0.3em 0.3em 0em 0em;
+    border-radius: 0.3em 0.3em 0 0;
 }
 
 .titulo-painel {
@@ -220,7 +220,7 @@ body {
     background-color: #EBEDEF;
     border: none;
     padding: 1em;
-    margin: 2em 0em 1em 0em;
+    margin: 2em 0 1em 0;
 }
 
 
@@ -229,7 +229,7 @@ body {
         background-color: #BDC2CC;
         border: none;
         padding: 1em;
-        margin: 2em 0em 1em 0em;
+        margin: 2em 0 1em 0;
     }
 
 /* Relativo ao box de opcoes */
@@ -308,7 +308,7 @@ body {
 .form-control {
     font-size: 1em;
     color: #42444E;
-    padding: 0em;
+    padding: 0;
 }
 
     .form-control:focus {
@@ -333,7 +333,7 @@ body {
 
 #login-form {
     padding: 1em 1.5em 1em 1.5em;
-    margin: 0em 0em 0em 0em;
+    margin: 0 0 0 0;
 }
 
 
@@ -352,8 +352,8 @@ input.form-control {
     font-family: 'runhills';
     font-size: 1.5em;
     color: #42444E;
-    line-height: 0em;
-    margin-bottom: 0em;
+    line-height: 0;
+    margin-bottom: 0;
 }
 
 
@@ -364,8 +364,8 @@ input.form-control {
     color: #42444E;
     text-align: center;
     background: transparent;
-    padding: 0em 0em 0.2em 0em;
-    margin: 0em;
+    padding: 0 0 0.2em 0;
+    margin: 0;
     outline: 0;
     border-color: transparent;
 }
@@ -377,8 +377,8 @@ input.form-control {
         color: #000;
         text-align: center;
         background: transparent;
-        padding: 0em 0em 0.2em 0em;
-        margin: 0em;
+        padding: 0 0 0.2em 0;
+        margin: 0;
         outline: 0;
         border-color: transparent;
         cursor: pointer;
@@ -395,7 +395,7 @@ input.form-control {
     font-family: 'palanquin';
     background-color: #EBEDEF;
     border-radius: 0.3em 0.3em 0.3em 0.3em;
-    padding: 0em;
+    padding: 0;
     color: #42444E;
     margin-top: 1.5em;
     font-size: 1.3em;
@@ -409,7 +409,7 @@ input.form-control {
         font-family: 'palanquin';
         background-color: #BDC2CC;
         border-radius: 0.3em 0.3em 0.3em 0.3em;
-        padding: 0em;
+        padding: 0;
         color: #42444E;
         outline: none !important;
         box-shadow: none;
@@ -428,7 +428,7 @@ input.form-control {
     /*this will be the color of the odd row*/
     background-color: #BDC2CC;
 
-    margin: 2em 0em 1em 0em;
+    margin: 2em 0 1em 0;
     -moz-border-radius: 1em;
     border-radius: 15em;
     border: solid 1px #BDC2CC;

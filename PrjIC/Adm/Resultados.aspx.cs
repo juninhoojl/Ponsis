@@ -8,7 +8,7 @@ using ProjetoIC.Classes;
 
 namespace PrjIC.Adm
 {
-    public partial class Resultados3 : System.Web.UI.Page
+    public partial class Resultados : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

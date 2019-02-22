@@ -479,3 +479,24 @@ input.form-control {
     font-size: 1.1em;
     color: #42444E;
 }
+
+
+.btnVoltarCruds {
+    color: #AF9CED;
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'palanquin';
+    font-size: 1.3em;
+}
+
+    .btnVoltarCruds:hover {
+        color: #BDA8FF;
+        outline: none;
+        background: none;
+        border: none;
+        text-decoration: none;
+        font-family: 'palanquin';
+        font-size: 1.3em;
+    }

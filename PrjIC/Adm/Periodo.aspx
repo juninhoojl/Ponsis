@@ -3,6 +3,34 @@
 
     <div class="container-fluid">
         <div class="row">
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">   
+                <div class="panel center dicaselecao">
+                            <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">!</span>
+                                   Observações Importantes Sobre o Cadastro de Períodos
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-12">
+                                     
+                                    <ol>
+                                        <li>Não cadastre períodos com datas sobrepostas! Caso elas estejam sobrepostas não será possível diferenciar
+                                            a qual período uma avaliação pertence!
+                                        </li>
+                                        <li>Ao clicar no incone "+" automaticamente já será criada a relação de alunos por curso, por período,
+                                            que devem ser editadas logo após, poìs são inseridas setadas todos os cursos com "0"!
+
+                                        </li>
+                                    </ol>
+                                    Obs.: Não utilize as teclas de voltar e avançar do navegador!
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+
+
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
 
                 <div class="sessoes text-center">Cadastro de Períodos</div>

@@ -185,6 +185,7 @@ namespace PrjIC.Adm
             {
                 long nuAnoReferencia = -1;
 
+
                 if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1") 
                     nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
                 long idCurso = -1;

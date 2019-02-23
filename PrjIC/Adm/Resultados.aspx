@@ -18,15 +18,19 @@
                                 <div class="col-12">
                                      Para ver os resultados:
                                     <ol>
-                                        <li>Selecione no combo box abaixo o período que deseja ver os resultados.</li>
-                                        <li>Selecione no outro combo box que surgirá o curso para as outras questões!</li>
+                                        <li>Selecione no combo box o período que deseja ver!</li>
+                                        <li>E Selecione no outro combo box o curso que deseja ver!</li>
                                     </ol>
-                                    Obs.: O "Resultado Geral" não é separado por curso por se tratarem de quesitos comuns à todos!
                                 </div>
                             </div>
                 </div>
 
             </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div id="Div1" runat="server"  class="sessoes text-center">Filtros</div>
+            </div>
+
 
 
             <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-5 combo-periodos">   
@@ -40,6 +44,38 @@
             </div>
 
         </div>
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div id="Div2" runat="server"  class="sessoes text-center">Informações</div>
+            </div>
+
+
+             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"  runat="server" id="painelSobreColeta">   
+                <div class="panel center dicaselecao">
+                            <div class="panel-heading">
+                                <div class="titulo-painel text-left"><span class="badge">?</span>
+                                   Curso x - Ano y
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-12">
+                                     Números:
+                                    <ol>
+                                        <li>Abriu em</li>
+                                        <li>Fechou em</li>
+                                        <li>Quantas alunos</li>
+                                        <li>Quantas respostas</li>
+                                        <li>% Respostas</li>
+                                    </ol>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+        </div>
+
 
         <div class="row">
 

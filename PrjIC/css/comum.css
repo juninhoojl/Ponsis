@@ -428,7 +428,7 @@ input.form-control {
     /*this will be the color of the odd row*/
     background-color: #BDC2CC;
 
-    margin: 2em 0 1em 0;
+
     -moz-border-radius: 1em;
     border-radius: 15em;
     border: solid 1px #BDC2CC;
@@ -501,3 +501,9 @@ input.form-control {
         font-size: 1.3em;
     }
 
+.table-responsive{
+    padding: 0;
+    border-radius: 0.3em;
+    margin: 1.5em 0 0 0;
+
+}

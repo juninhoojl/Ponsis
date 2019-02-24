@@ -373,6 +373,37 @@
         </div>
 
 
+
+                <div class="row">
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div id="Div3" runat="server"  class="sessoes text-center">Abertas</div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div4">
+                <div class="table-responsive">
+
+                        <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_Aberto" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="id_Questao">
+
+                        <Columns>
+
+
+                           <asp:TemplateField HeaderText="Resposta">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("tx_Resposta") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+
+                        </Columns>
+                    </asp:GridView>
+    
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 
 

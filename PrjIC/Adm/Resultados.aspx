@@ -50,12 +50,11 @@
                     </div>
                     <div class="panel-body">
                         <div class="col-12">
-                                Números:
-                            <ol>
+                            <ul>
                                 <li runat="server" id="liAvaliacao">Abriu em</li>
                                 <li runat="server" id="liQtAlunos">Quantos alunos</li>
                                 <li runat="server" id="liQtrepostas">Quantas respostas</li>
-                            </ol>
+                            </ul>
                         </div>
                     </div>
                 </div>

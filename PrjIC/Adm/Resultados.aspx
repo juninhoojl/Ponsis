@@ -349,7 +349,7 @@
                 <div id="Div3" runat="server"  class="sessoes text-center">Abertas</div>
             </div>
 
-             <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-5 combo-periodos">   
+             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   
                 <asp:dropdownlist runat="server" CssClass="form-control" id="cmbQuestao" autopostback="true" onselectedindexchanged="cmbQuestao_SelectedIndexChanged">
                     </asp:dropdownlist>
             </div>
@@ -362,7 +362,7 @@
                         <Columns>
 
 
-                           <asp:TemplateField HeaderText="Resposta">
+                           <asp:TemplateField HeaderText="Respostas Abertas">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("tx_Resposta") %>' runat="server"/>
                                 </ItemTemplate>

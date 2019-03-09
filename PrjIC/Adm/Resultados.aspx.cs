@@ -14,7 +14,6 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
-
                 this.TituloGridOA.Visible = false;
                 this.gridResultadosOA.Visible = false;
 
@@ -32,15 +31,15 @@ namespace PrjIC.Adm
 
                 this.painelDicaResultados.Visible = true;
 
-
+                this.DivInformacoes.Visible = false;
+                this.DivAbertas.Visible = false;
 
                 this.PopulateDropDownPeriodo();
                 //this.PopulateDropDown3();
                 this.PopulateDropDownCurso();
                 //this.PopulateDropDownQuestao();
-
-                
-
+                this.PopulateDropDownQuestao();
+                //this.PopulateDropDownQuestao();
             }
         }
 
@@ -64,6 +63,87 @@ namespace PrjIC.Adm
                     this.cmbPeriodo.DataBind();
                     this.cmbPeriodo.SelectedValue = "-1000";
                 }
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateLIAlunos()
+        {
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                long nuAno = long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = long.Parse(this.cmbCurso.SelectedItem.Value.Trim());
+
+                DataTable tabQtAlunos = conn.RetornaTabela(String.Format(@"select nu_Alunos 
+                                                                             from AlunoCurso, Periodo 
+                                                                            where AlunoCurso.id_Periodo = Periodo.id_Periodo
+                                                                              and id_Curso = {0} 
+                                                                              and Periodo.nu_Ano_Referencia = {1}", idCurso, nuAno));
+
+                this.liQtAlunos.Visible = true;
+
+                if (tabQtAlunos.Rows.Count == 1)
+                    this.liQtAlunos.InnerText = "Quantidade de alunos: " + tabQtAlunos.Rows[0][0].ToString();
+                else
+                    this.liQtAlunos.InnerText = "Quantidade de alunos: 0";
+
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateLIQtResposta()
+        {
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                long nuAno = long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = long.Parse(this.cmbCurso.SelectedItem.Value.Trim());
+
+                DataTable tabQtResposta = conn.RetornaTabela(String.Format(@"
+select Count(*) from Resposta, Periodo
+ where Resposta.id_Periodo = Periodo.id_Periodo
+   and Periodo.nu_Ano_Referencia = {0}
+   and resposta.id_Curso = {1}
+   and Resposta.id_Questao in (select Top(1) id_Questao from Questao where ds_Classificacao  ='SI')
+",
+                                                                        nuAno.ToString(),
+                                                                        idCurso));
+
+                this.liQtrepostas.Visible = true;
+
+                this.liQtrepostas.InnerText = "Quantidade de respostas: " + tabQtResposta.Rows[0][0].ToString();
+
+                conn.FechaConexao();
+            }
+        }
+
+        private void PopulateLIAvalizacao()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAno = long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+
+                DataTable tabPeriodo = conn.RetornaTabela(String.Format(@"select * from periodo where nu_Ano_Referencia = {0}", nuAno));
+
+                if (tabPeriodo.Rows.Count == 1)
+                    this.liAvaliacao.InnerText = String.Format("Período de avaliação: {0} a {1}",  
+                                                               ((DateTime)tabPeriodo.Rows[0]["dt_Inicio"]).ToString("dd/MM/yyyy"),
+                                                               ((DateTime)tabPeriodo.Rows[0]["dt_Fim"]).ToString("dd/MM/yyyy"));
+                else
+                    this.liAvaliacao.InnerText = "Período de avaliação: __/__/____ a __/__/____";
+
                 conn.FechaConexao();
             }
         }
@@ -93,44 +173,38 @@ namespace PrjIC.Adm
             }
         }
 
-        /// <summary>
-        /// Método chamado quando a seleção do período é feita
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void cmbAno_SelectedIndexChanged(object sender, EventArgs e)
+        private void PopulateDropDownQuestao()
         {
-            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
-            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
-            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
-            this.PopulateGridViewResultadoCursoOA();
-            this.PopulateGridViewResultadoCursoSI();
-            this.PopulateGridViewResultadoCursoPP();
-            this.PopulateGridViewResultadoCursoBI();
-            this.PopulateGridViewResultadoCursoDP();
-            this.PopulateGridViewResultadoCursoAberto();
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                DataTable tabQuestao = conn.RetornaTabela(@"select * from Questao where fx_Final = 0");
+
+                if (tabQuestao.Rows.Count > 0)
+                {
+                    tabQuestao.Rows.Add(-1, 0, "Selecione uma Questão", "1");
+
+                    this.cmbQuestao.DataSource = tabQuestao;
+                    this.cmbQuestao.DataTextField = "ds_Questao";
+                    this.cmbQuestao.DataValueField = "id_Questao";
+                    this.cmbQuestao.DataBind();
+
+                    this.cmbQuestao.SelectedValue = "-1";
+                }
+                conn.FechaConexao();
+            }
         }
 
-        /// <summary>
-        /// Método chamado quando o curso é selecioado
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.PopulateGridViewResultadoCursoOA();
-            this.PopulateGridViewResultadoCursoPP();
-            this.PopulateGridViewResultadoCursoSI();
-            this.PopulateGridViewResultadoCursoBI();
-            this.PopulateGridViewResultadoCursoDP();
-            this.PopulateGridViewResultadoCursoAberto();
-        }
 
         /// <summary>
         /// Método chamado quando operíodo é selecionado
         /// carregarquestõesgerais
         /// </summary>
- 
+
 
         private void PopulateGridViewResultadoCursoOA()
         {
@@ -169,12 +243,7 @@ namespace PrjIC.Adm
 
                 }
 
-
-                //Mostra grid so quando carrega
-                this.TituloGridOA.Visible = true;
-                this.gridResultadosOA.Visible = true;
-                this.painelDicaResultados.Visible = false;
-
+                this.HabilitaControles();
 
                 conn.FechaConexao();
             }
@@ -224,12 +293,7 @@ namespace PrjIC.Adm
 
                 }
 
-
-
-                this.TituloGridPP.Visible = true;
-                this.gridResultadosPP.Visible = true;
-                this.painelDicaResultados.Visible = false;
-
+                this.HabilitaControles();
 
                 conn.FechaConexao();
             }
@@ -272,12 +336,7 @@ namespace PrjIC.Adm
 
                 }
 
-
-                this.TituloGridSI.Visible = true;
-                this.gridResultadosSI.Visible = true;
-
-                this.painelDicaResultados.Visible = false;
-
+                this.HabilitaControles();
 
                 conn.FechaConexao();
             }
@@ -320,13 +379,7 @@ namespace PrjIC.Adm
 
                 }
 
-
-
-                this.TituloGridBI.Visible = true;
-                this.gridResultadosBI.Visible = true;
-
-                this.painelDicaResultados.Visible = false;
-
+                this.HabilitaControles();
 
                 conn.FechaConexao();
             }
@@ -369,14 +422,7 @@ namespace PrjIC.Adm
 
                 }
 
-
-
-
-                this.TituloGridDP.Visible = true;
-                this.gridResultadosDP.Visible = true;
-
-                this.painelDicaResultados.Visible = false;
-
+                this.HabilitaControles();
 
                 conn.FechaConexao();
             }
@@ -397,8 +443,22 @@ namespace PrjIC.Adm
                 if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
                     idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
 
+                long idQuestao = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idQuestao = long.Parse("0" + this.cmbQuestao.SelectedItem.Value.Trim());
+
                 //Retorna view aqui
-                DataTable tabUsuario = conn.RetornaTabela(@"select tResp.id_Curso, tResp.id_Questao, tResp.tx_Resposta, tPer.nu_Ano_Referencia from Resposta tResp, Periodo tPer where tResp.tx_Resposta is not null and tPer.nu_Ano_Referencia = " + nuAnoReferencia.ToString() + "and tResp.id_Curso = " + idCurso);
+                DataTable tabUsuario = conn.RetornaTabela(String.Format(@"select Resposta.id_Curso, Resposta.id_Questao, Resposta.tx_Resposta, Periodo.nu_Ano_Referencia 
+  from Resposta, Periodo
+ where Resposta.id_Periodo = Periodo.id_Periodo
+   and Resposta.tx_Resposta is not null 
+   and Len(ltrim(rtrim(Resposta.tx_Resposta))) > 0
+   and Periodo.nu_Ano_Referencia = {0}  
+   and Resposta.id_Curso = {1}
+   and Resposta.id_Questao = {2}",
+                                                                        nuAnoReferencia.ToString(),
+                                                                        idCurso,
+                                                                        idQuestao));
 
 
 
@@ -428,7 +488,93 @@ namespace PrjIC.Adm
             }
         }
 
+        private void HabilitaControles()
+        {
+            if (long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim()) > 0 &&
+                long.Parse(this.cmbCurso.SelectedItem.Value.Trim()) > 0)
+            {
+                this.DivInformacoes.Visible = true;
+                this.DivAbertas.Visible = true;
+
+                //Mostra grid so quando carrega
+                this.TituloGridOA.Visible = true;
+                this.gridResultadosOA.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
+                this.TituloGridSI.Visible = true;
+                this.gridResultadosSI.Visible = true;
+
+                this.TituloGridPP.Visible = true;
+                this.gridResultadosPP.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
+                this.painelDicaResultados.Visible = false;
+                this.TituloGridBI.Visible = true;
+                this.gridResultadosBI.Visible = true;
+
+                this.TituloGridDP.Visible = true;
+                this.gridResultadosDP.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
+            }
+        }
+
+
+        #region Métodos de seleção de COMBOs
+
+        private void CarregarDados()
+        {
+            if (long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim()) > 0 &&
+                long.Parse(this.cmbCurso.SelectedItem.Value.Trim()) > 0)
+            {
+                this.PopulateGridViewResultadoCursoOA();
+                this.PopulateGridViewResultadoCursoSI();
+                this.PopulateGridViewResultadoCursoPP();
+                this.PopulateGridViewResultadoCursoBI();
+                this.PopulateGridViewResultadoCursoDP();
+
+                if (long.Parse(this.cmbQuestao.SelectedItem.Value.Trim()) > 0)
+                    this.PopulateGridViewResultadoCursoAberto();
+
+                this.PopulateLIAlunos();
+                this.PopulateLIQtResposta();
+                this.PopulateLIAvalizacao();
+            }
+        }
+
+
+        /// <summary>
+        /// Método chamado quando a seleção do período é feita
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void cmbPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
+            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
+            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+            this.CarregarDados();
+        }
+
+        /// <summary>
+        /// Método chamado quando o curso é selecioado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void cmbCurso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.CarregarDados();
+        }
+
+        protected void cmbQuestao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string selectedText = this.cmbPeriodo.SelectedItem.Text;
+            //string selectedValue = this.cmbPeriodo.SelectedItem.Value;
+            //long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim());
+
+            this.CarregarDados();
+        }
+
+        #endregion Métodos de seleção de COMBOs
     }
-
-
 }

@@ -27,11 +27,21 @@ namespace PrjIC.Adm
                 //Antigo
                 //DataTable tabUsuario = conn.RetornaTabela(@"select * from Usuario");
 
-                DataTable tabUsuario = conn.RetornaTabela(@"select id_Usuario, ds_Email, ds_Senha, ds_Curso from Usuario, Curso where Usuario.id_Curso = Curso.id_Curso");
+                DataTable tabUsuario = conn.RetornaTabela(@"
+SELECT Usuario.id_Usuario, Usuario.ds_Email, Usuario.ds_Senha, Curso.ds_Curso
+  FROM Usuario LEFT OUTER JOIN
+       Curso ON Usuario.id_Curso = Curso.id_Curso");
                 
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
-                { 
+                {
+                    foreach (DataRow row in tabUsuario.Rows)
+                    {
+                        if (row["ds_Curso"] == DBNull.Value)
+                            row["ds_Curso"] = "Todos";
+                    }
+
+
                     this.dgvUsuario.DataSource = tabUsuario;
                     this.dgvUsuario.DataBind();
                 }
@@ -109,6 +119,8 @@ namespace PrjIC.Adm
 
                         conn.FechaConexao();
                         this.lbErro.Visible = false;
+
+                        //this.c.dgvUsuario.EditIndex.SelectedIndex = -1;
                     }
                 }
                 catch (Exception ex)

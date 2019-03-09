@@ -49,6 +49,15 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.DropDownList cmbCurso;
         
         /// <summary>
+        /// DivInformacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivInformacoes;
+        
+        /// <summary>
         /// Div2 control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,33 @@ namespace PrjIC.Adm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl painelSobreColeta;
+        
+        /// <summary>
+        /// liAvaliacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liAvaliacao;
+        
+        /// <summary>
+        /// liQtAlunos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liQtAlunos;
+        
+        /// <summary>
+        /// liQtrepostas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liQtrepostas;
         
         /// <summary>
         /// TituloGridDP control.
@@ -202,6 +238,15 @@ namespace PrjIC.Adm {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Resultado_Ano_Curso_BI;
         
         /// <summary>
+        /// DivAbertas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl DivAbertas;
+        
+        /// <summary>
         /// Div3 control.
         /// </summary>
         /// <remarks>
@@ -209,6 +254,15 @@ namespace PrjIC.Adm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div3;
+        
+        /// <summary>
+        /// cmbQuestao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbQuestao;
         
         /// <summary>
         /// Div4 control.

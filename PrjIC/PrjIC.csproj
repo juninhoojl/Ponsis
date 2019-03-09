@@ -114,7 +114,6 @@
     <Content Include="Respondido.aspx" />
     <Content Include="Apresentacao.aspx" />
     <Content Include="Indisponivel.aspx" />
-    <Content Include="ResultadosAntigo.aspx" />
     <Content Include="Adm\AlunoCurso.aspx" />
     <Content Include="Adm\Resultados.aspx" />
   </ItemGroup>
@@ -186,13 +185,6 @@
     </Compile>
     <Compile Include="Indisponivel.aspx.designer.cs">
       <DependentUpon>Indisponivel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ResultadosAntigo.aspx.cs">
-      <DependentUpon>ResultadosAntigo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ResultadosAntigo.aspx.designer.cs">
-      <DependentUpon>ResultadosAntigo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Adm\AlunoCurso.aspx.cs">
       <DependentUpon>AlunoCurso.aspx</DependentUpon>

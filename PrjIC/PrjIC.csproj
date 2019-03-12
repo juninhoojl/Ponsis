@@ -105,10 +105,10 @@
     <Content Include="img\icons\icon_64x64.png" />
     <Content Include="img\icons\icon_72x72.png" />
     <Content Include="img\icons\icone_menos.png" />
-    <Content Include="img\indicadores\amarelo.png" />
-    <Content Include="img\indicadores\azul.png" />
-    <Content Include="img\indicadores\verde.png" />
-    <Content Include="img\indicadores\vermelho.png" />
+    <Content Include="img\indicadores\Diamante.png" />
+    <Content Include="img\indicadores\Feliz.png" />
+    <Content Include="img\indicadores\Neutro.png" />
+    <Content Include="img\indicadores\Triste.png" />
     <Content Include="img\pics\graph.png" />
     <Content Include="img\pics\img1.jpg" />
     <Content Include="img\pics\llama.gif" />

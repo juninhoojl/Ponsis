@@ -105,6 +105,7 @@
     <Content Include="img\icons\icon_64x64.png" />
     <Content Include="img\icons\icon_72x72.png" />
     <Content Include="img\icons\icone_menos.png" />
+    <Content Include="img\icons\Logo.png" />
     <Content Include="img\indicadores\Diamante.png" />
     <Content Include="img\indicadores\Feliz.png" />
     <Content Include="img\indicadores\Neutro.png" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Security;
+using ProjetoIC.Classes;
 
 namespace PrjIC.Adm
 {
@@ -32,8 +33,29 @@ namespace PrjIC.Adm
 
         private bool Validar()
         {
-            bool lvalidado = true;
+            bool lvalidado = false;
 
+            var nmPath = System.Web.HttpContext.Current.Server.MapPath("../admin.txt");
+
+            if (System.IO.File.Exists(nmPath))
+            {
+                //var nmPathEmail = System.Web.HttpContext.Current.Server.MapPath("../email.txt");
+                //string arquivoEmail  = System.IO.File.ReadAllText(nmPathEmail);
+                //string host1 = Conexao.GetValor(arquivoEmail, "host:");
+                //string user1 = Conexao.GetValor(arquivoEmail, "user:");
+                //string password1 = Conexao.GetValor(arquivoEmail, "password:");
+                //string nameUser1 = Conexao.GetValor(arquivoEmail, "nameUser:");
+
+                string arquivo  = System.IO.File.ReadAllText(nmPath);
+                string user     = Conexao.GetValor(arquivo, "user:");
+                string password = Conexao.GetValor(arquivo, "password:");
+
+                if (!String.IsNullOrWhiteSpace(user) && !String.IsNullOrWhiteSpace(password))
+                    if (user.Equals(this.txtUsername.Value) && password.Equals(this.txtPassword.Value))
+                        lvalidado = true;
+            }
+
+            this.lbErro.Visible = !lvalidado;
 
             return lvalidado;
         }

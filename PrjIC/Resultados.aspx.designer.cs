@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PrjIC.Adm {
+namespace PrjIC {
     
     
     public partial class Resultados {

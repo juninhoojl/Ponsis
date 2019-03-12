@@ -95,7 +95,6 @@ namespace ProjetoIC.Classes
             return result;
         }
 
-
         /// <summary>
         /// Executa comando
         /// </summary>
@@ -118,6 +117,27 @@ namespace ProjetoIC.Classes
             int result = command.ExecuteNonQuery();
 
             return result;
+        }
+
+        public static string GetValor(string conteudo, string chave)
+        {
+            string valor = String.Empty;
+            int posIni, posFin;
+
+            if ((posIni = conteudo.IndexOf(chave)) > -1)
+            {
+                posFin = conteudo.IndexOf('\r', posIni);
+                if (posFin > 0)
+                    valor = conteudo.Substring(posIni + chave.Length, posFin - posIni - chave.Length).Replace('\r', ' ').Replace('\n', ' ').Replace(" ", "");
+                else
+                {
+                    if (conteudo.IndexOf(':', posIni+ chave.Length) == -1)
+                        valor = conteudo.Substring(posIni + chave.Length).Replace('\r', ' ').Replace('\n', ' ').Replace(" ", "");
+                }
+
+            }
+
+            return valor;
         }
     }
 }

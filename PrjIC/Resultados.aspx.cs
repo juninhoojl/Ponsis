@@ -6,7 +6,7 @@ using System.Web.UI.WebControls;
 using ProjetoIC.Classes;
 
 
-namespace PrjIC.Adm
+namespace PrjIC
 {
     public partial class Resultados : System.Web.UI.Page
     {

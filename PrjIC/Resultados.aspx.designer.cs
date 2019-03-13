@@ -130,6 +130,33 @@ namespace PrjIC {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Tempo;
         
         /// <summary>
+        /// TituloGridEgresso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridEgresso;
+        
+        /// <summary>
+        /// gridEgresso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridEgresso;
+        
+        /// <summary>
+        /// dgvvw_Egresso control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvvw_Egresso;
+        
+        /// <summary>
         /// TituloGridPublicacoes control.
         /// </summary>
         /// <remarks>

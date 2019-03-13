@@ -116,6 +116,41 @@
             </div>
         </div>
 
+                <div class="row">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div id="TituloGridEgresso" runat="server" class="sessoes text-center">Egresso</div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridEgresso">
+                <div class="table-responsive">
+                    <asp:GridView CssClass="gridview" ID="dgvvw_Egresso" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+                        <Columns>
+                           <asp:TemplateField HeaderText="Questão">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Sim">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Sim") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Não">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Nao") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+
+                        </Columns>
+                   
+                    </asp:GridView>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div id="TituloGridPublicacoes" runat="server" class="sessoes text-center">Publicações</div>
@@ -137,7 +172,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Nenhuma">
+                           <asp:TemplateField HeaderText="0">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q0") %>' runat="server"/>
                                 </ItemTemplate>

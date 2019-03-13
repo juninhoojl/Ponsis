@@ -399,6 +399,59 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
             }
         }
 
+        private void PopulateGridViewEgresso()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"SELECT Periodo.nu_Ano_Referencia AS 'ANO', 
+Curso.ds_Curso AS 'Curso', 
+Questao.ds_Questao AS 'Questao', 
+Count(case when Resposta.nu_Resposta =  1                                 then 1 else null end) as 'Sim',
+Count(case when Resposta.nu_Resposta =  0								 then 1 else null end) as 'Nao'
+FROM Resposta, Questao, Curso, Periodo
+WHERE Resposta.id_Periodo = Periodo.id_Periodo
+AND Resposta.id_Curso   = Curso.id_Curso
+AND Resposta.id_Questao = Questao.id_Questao
+AND Questao.tp_Questao <> 'text'
+AND Questao.fx_Final = 1
+AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoReferencia.ToString() + "GROUP BY Periodo.nu_Ano_Referencia, Curso.ds_Curso, Questao.ds_Questao");
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Egresso.DataSource = tabUsuario;
+                    this.dgvvw_Egresso.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Egresso.DataSource = tabUsuario;
+                    this.dgvvw_Egresso.DataBind();
+                    this.dgvvw_Egresso.Rows[0].Cells.Clear();
+                    this.dgvvw_Egresso.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Egresso.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Egresso.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Egresso.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+                this.HabilitaControles();
+
+                conn.FechaConexao();
+            }
+        }
+
+
         private void PopulateGridViewTempo()
         {
             Conexao conn = new Conexao();
@@ -639,6 +692,10 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.gridTempo.Visible = true;
                 this.painelDicaResultados.Visible = false;
 
+                this.TituloGridEgresso.Visible = true;
+                this.gridEgresso.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
             }
         }
 
@@ -657,6 +714,7 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.PopulateGridViewResultadoCursoDP();
                 this.PopulateGridViewPublicacoes();
                 this.PopulateGridViewTempo();
+                this.PopulateGridViewEgresso();
 
                 if (long.Parse(this.cmbQuestao.SelectedItem.Value.Trim()) > 0)
                     this.PopulateGridViewResultadoCursoAberto();

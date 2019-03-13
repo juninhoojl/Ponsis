@@ -377,19 +377,19 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
                 {
-                    this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
-                    this.dgvvw_Resultado_Ano_Curso_SI.DataBind();
+                    this.dgvvw_Publicacoes.DataSource = tabUsuario;
+                    this.dgvvw_Publicacoes.DataBind();
                 }
                 else
                 {
                     tabUsuario.Rows.Add(tabUsuario.NewRow());
-                    this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
-                    this.dgvvw_Resultado_Ano_Curso_SI.DataBind();
-                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells.Clear();
-                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells.Add(new TableCell());
-                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
-                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
-                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+                    this.dgvvw_Publicacoes.DataSource = tabUsuario;
+                    this.dgvvw_Publicacoes.DataBind();
+                    this.dgvvw_Publicacoes.Rows[0].Cells.Clear();
+                    this.dgvvw_Publicacoes.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Publicacoes.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Publicacoes.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Publicacoes.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
 
                 }
 
@@ -573,6 +573,10 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.gridResultadosDP.Visible = true;
                 this.painelDicaResultados.Visible = false;
 
+                this.TituloGridPublicacoes.Visible = true;
+                this.gridPublicacoes.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
             }
         }
 
@@ -589,6 +593,7 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.PopulateGridViewResultadoCursoPP();
                 this.PopulateGridViewResultadoCursoBI();
                 this.PopulateGridViewResultadoCursoDP();
+                this.PopulateGridViewPublicacoes();
 
                 if (long.Parse(this.cmbQuestao.SelectedItem.Value.Trim()) > 0)
                     this.PopulateGridViewResultadoCursoAberto();

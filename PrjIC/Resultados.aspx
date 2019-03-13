@@ -83,31 +83,31 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Q0">
+                           <asp:TemplateField HeaderText="Nenhuma">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q0") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Q1">
+                           <asp:TemplateField HeaderText="Entre 1 e 4">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q1") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Q2">
+                           <asp:TemplateField HeaderText="Entre 5 e 8">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q2") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Q3">
+                           <asp:TemplateField HeaderText="Entre 9 e 12">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q3") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Q4">
+                           <asp:TemplateField HeaderText="Mais que 12">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q4") %>' runat="server"/>
                                 </ItemTemplate>
@@ -115,6 +115,7 @@
 
 
                         </Columns>
+                   
                     </asp:GridView>
                 </div>
             </div>

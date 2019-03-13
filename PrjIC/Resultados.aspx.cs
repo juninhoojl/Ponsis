@@ -342,6 +342,63 @@ select Count(*) from Resposta, Periodo
             }
         }
 
+        private void PopulateGridViewPublicacoes()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"SELECT Periodo.nu_Ano_Referencia AS 'ANO', 
+Curso.ds_Curso AS 'Curso', 
+Questao.ds_Questao AS 'Questao', 
+cast(Count(*) as decimal) as 'Total',
+Count(case when Resposta.nu_Resposta =  0   then 1 else null end) as 'Q0',
+Count(case when Resposta.nu_Resposta >  0  and Resposta.nu_Resposta < 5   then 1 else null end) as 'Q1',
+Count(case when Resposta.nu_Resposta >  4  and Resposta.nu_Resposta < 9   then 1 else null end) as 'Q2',
+Count(case when Resposta.nu_Resposta >  8  and Resposta.nu_Resposta < 13  then 1 else null end) as 'Q3',
+Count(case when Resposta.nu_Resposta >  12                  then 1 else null end) as 'Q4'
+FROM Resposta, Questao, Curso, Periodo
+WHERE Resposta.id_Periodo = Periodo.id_Periodo
+AND Resposta.id_Curso   = Curso.id_Curso
+AND Resposta.id_Questao = Questao.id_Questao
+AND Questao.tp_Questao <> 'text'
+AND Questao.fx_Final = 15
+AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoReferencia.ToString() + "GROUP BY Periodo.nu_Ano_Referencia, Curso.ds_Curso, Questao.ds_Questao");
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
+                    this.dgvvw_Resultado_Ano_Curso_SI.DataBind();
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells.Clear();
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Resultado_Ano_Curso_SI.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+                this.HabilitaControles();
+
+                conn.FechaConexao();
+            }
+        }
+
         private void PopulateGridViewResultadoCursoBI()
         {
             Conexao conn = new Conexao();

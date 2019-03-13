@@ -382,40 +382,51 @@
                         <Columns>
 
 
-
                            <asp:TemplateField HeaderText="Questão">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Total Respostas">
+                           <asp:TemplateField HeaderText="Respostas">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Quantidade Ignoradas">
+                           <asp:TemplateField HeaderText="Ignoradas">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Ignorado") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Quantidade Detratores">
+                           <asp:TemplateField HeaderText="Detratores">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Detrator") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Quantidade Neutros">
+                           <asp:TemplateField HeaderText="Neutros">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Neutro") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Quantidade Promotores">
+                           <asp:TemplateField HeaderText="Promotores">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Promotor") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                                                      <asp:TemplateField HeaderText="Ícone">
+                                <ItemTemplate>
+                                    <img src="/img/indicadores/Feliz.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                                </ItemTemplate>
+                          </asp:TemplateField>
+
+                          <asp:TemplateField HeaderText="NPS">
+                                <ItemTemplate>
+                                    19.05
                                 </ItemTemplate>
                            </asp:TemplateField>
 

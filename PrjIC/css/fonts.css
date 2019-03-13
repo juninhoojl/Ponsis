@@ -14,10 +14,10 @@
     font-style: normal;
 }
 
-/*Fonte Runhills*/ 
+/*Fonte Runhills*/
 @font-face {
     font-family: 'runhills';
-    src: url('fonts/runhills.ttf');
+    src: url('fonts/palanquin-bold.ttf');
     font-weight: normal;
     font-style: normal;
 }

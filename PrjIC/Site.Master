@@ -5,7 +5,7 @@
 <html lang="pt-br">
     <head runat="server">
         <!-- Conferir se vou usar isso ou nao -->
-        <title> Sistema </title>
+        <title> ponsis </title>
 
         <!-- Normalize stylesheet-->
         <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
@@ -40,7 +40,7 @@
             <nav class="navbar navbar-expand-md navbar-light navbar-custom">
                 <!-- Logo -->
                 <a class="navbar-brand" href="/Apresentacao.aspx">
-                    <img src="/img/icons/Logo.png" width="160" class="d-inline-block align-top" alt="">
+                    <img src="/img/icons/Logo.png" height="35"  class="d-inline-block align-top" alt="">
                 </a>
 
                 <!-- Collapsibe Button -->

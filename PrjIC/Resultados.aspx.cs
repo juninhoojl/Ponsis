@@ -29,6 +29,17 @@ namespace PrjIC
                 this.TituloGridDP.Visible = false;
                 this.gridResultadosDP.Visible = false;
 
+                this.TituloGridEgresso.Visible = false;
+                this.gridEgresso.Visible = false;
+
+                this.TituloGridTempo.Visible = false;
+                this.gridTempo.Visible = false;
+
+                this.TituloGridPublicacoes.Visible = false;
+                this.gridPublicacoes.Visible = false;
+
+                this.PanelOpcoes.Visible = false;
+
                 this.painelDicaResultados.Visible = true;
 
                 this.DivInformacoes.Visible = false;
@@ -695,6 +706,8 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.TituloGridEgresso.Visible = true;
                 this.gridEgresso.Visible = true;
                 this.painelDicaResultados.Visible = false;
+
+                this.PanelOpcoes.Visible = true;
 
             }
         }

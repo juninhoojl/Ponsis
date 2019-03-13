@@ -36,6 +36,42 @@
             </div>
         </div>
 
+                   <div  id="PanelOpcoes" runat="server" class="row">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Opções</div>
+           </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="panel center dicaselecao">
+                    <div class="panel-heading">
+                        <div class="titulo-painel text-left"><span class="badge">?</span>
+                            Exibição
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-12">
+
+                            <ul>
+                                <li>Coluna 1<label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                                </label></li>
+                                <li>Coluna 1<label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                                </label></li>
+                                <li>Coluna 1<label class="switch">
+                                  <input type="checkbox">
+                                  <span class="slider round"></span>
+                                </label></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row" runat="server" id="DivInformacoes">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div id="Div2" runat="server"  class="sessoes text-center">Informações</div>
@@ -210,45 +246,11 @@
             </div>
         </div>
 
-        <div class="row">
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Exibição</div>
-           </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="panel center dicaselecao">
-                    <div class="panel-heading">
-                        <div class="titulo-painel text-left"><span class="badge">?</span>
-                            Exibição
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-12">
-
-                            <ul>
-                                <li>Coluna 1<label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label></li>
-                                <li>Coluna 1<label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label></li>
-                                <li>Coluna 1<label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div id="TituloGridDP" runat="server"  class="sessoes text-center">Disciplinas</div>
+                <div id="TituloGridDP" runat="server" class="sessoes text-center">Disciplinas</div>
             </div>
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosDP">
@@ -262,7 +264,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Respostas">
+                           <asp:TemplateField HeaderText="Total">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>
@@ -326,7 +328,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Respostas">
+                           <asp:TemplateField HeaderText="Total">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>
@@ -396,7 +398,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Respostas">
+                           <asp:TemplateField HeaderText="Total">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>
@@ -467,7 +469,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Respostas">
+                           <asp:TemplateField HeaderText="Total">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>
@@ -536,7 +538,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Respostas">
+                           <asp:TemplateField HeaderText="Total">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Qtd_Total_Resposta") %>' runat="server"/>
                                 </ItemTemplate>

@@ -399,6 +399,62 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
             }
         }
 
+        private void PopulateGridViewTempo()
+        {
+            Conexao conn = new Conexao();
+            conn.ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString;
+
+            if (conn.AbrirConexao())
+            {
+                long nuAnoReferencia = -1;
+                if (this.cmbPeriodo.SelectedItem.Value.Trim() != "-1")
+                    nuAnoReferencia = long.Parse("0" + this.cmbPeriodo.SelectedItem.Value.Trim());
+                long idCurso = -1;
+                if (this.cmbCurso.SelectedItem.Value.Trim() != "-1")
+                    idCurso = long.Parse("0" + this.cmbCurso.SelectedItem.Value.Trim());
+
+                //Retorna view aqui
+                DataTable tabUsuario = conn.RetornaTabela(@"SELECT Periodo.nu_Ano_Referencia AS 'ANO', 
+Curso.ds_Curso AS 'Curso', 
+Questao.ds_Questao AS 'Questao', 
+Count(case when Resposta.nu_Resposta =  0                                 then 1 else null end) as 'T0',
+Count(case when Resposta.nu_Resposta =  1                 then 1 else null end) as 'T1',
+Count(case when Resposta.nu_Resposta =  2                 then 1 else null end) as 'T2',
+Count(case when Resposta.nu_Resposta =  3                 then 1 else null end) as 'T3',
+Count(case when Resposta.nu_Resposta =  4                 then 1 else null end) as 'T4'
+FROM Resposta, Questao, Curso, Periodo
+WHERE Resposta.id_Periodo = Periodo.id_Periodo
+AND Resposta.id_Curso   = Curso.id_Curso
+AND Resposta.id_Questao = Questao.id_Questao
+AND Questao.tp_Questao <> 'text'
+AND Questao.fx_Final = 4
+AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoReferencia.ToString() + "GROUP BY Periodo.nu_Ano_Referencia, Curso.ds_Curso, Questao.ds_Questao");
+
+                //Aqui que tenho que retornar 
+                if (tabUsuario.Rows.Count > 0)
+                {
+                    this.dgvvw_Tempo.DataSource = tabUsuario;
+                    this.dgvvw_Tempo.DataBind();
+                }
+                else
+                {
+                    tabUsuario.Rows.Add(tabUsuario.NewRow());
+                    this.dgvvw_Tempo.DataSource = tabUsuario;
+                    this.dgvvw_Tempo.DataBind();
+                    this.dgvvw_Tempo.Rows[0].Cells.Clear();
+                    this.dgvvw_Tempo.Rows[0].Cells.Add(new TableCell());
+                    this.dgvvw_Tempo.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
+                    this.dgvvw_Tempo.Rows[0].Cells[0].Text = "Nenhum resultado disponivel";
+                    this.dgvvw_Tempo.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
+
+                }
+
+                this.HabilitaControles();
+
+                conn.FechaConexao();
+            }
+        }
+
         private void PopulateGridViewResultadoCursoBI()
         {
             Conexao conn = new Conexao();
@@ -545,6 +601,8 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
             }
         }
 
+
+
         private void HabilitaControles()
         {
             if (long.Parse(this.cmbPeriodo.SelectedItem.Value.Trim()) > 0 &&
@@ -577,10 +635,14 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.gridPublicacoes.Visible = true;
                 this.painelDicaResultados.Visible = false;
 
+                this.TituloGridTempo.Visible = true;
+                this.gridTempo.Visible = true;
+                this.painelDicaResultados.Visible = false;
+
             }
         }
 
-
+  
         #region Métodos de seleção de COMBOs
 
         private void CarregarDados()
@@ -594,6 +656,7 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.PopulateGridViewResultadoCursoBI();
                 this.PopulateGridViewResultadoCursoDP();
                 this.PopulateGridViewPublicacoes();
+                this.PopulateGridViewTempo();
 
                 if (long.Parse(this.cmbQuestao.SelectedItem.Value.Trim()) > 0)
                     this.PopulateGridViewResultadoCursoAberto();

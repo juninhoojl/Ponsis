@@ -61,8 +61,62 @@
             </div>
         </div>
 
-        <div class="row">
+            <div class="row">
 
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div id="TituloGridTempo" runat="server" class="sessoes text-center">Tempo na Pós-Graduação</div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridTempo">
+                <div class="table-responsive">
+                    <asp:GridView CssClass="gridview" ID="dgvvw_Tempo" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+                        <Columns>
+                           <asp:TemplateField HeaderText="Questão">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Até 12 meses">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("T0") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="13 a 24">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("T1") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                          <asp:TemplateField HeaderText="25 a 36">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("T2") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="37 a 45">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("T3") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Mais que 48">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("T4") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+
+
+                        </Columns>
+                   
+                    </asp:GridView>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div id="TituloGridPublicacoes" runat="server" class="sessoes text-center">Publicações</div>
             </div>
@@ -89,19 +143,19 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Entre 1 e 4">
+                           <asp:TemplateField HeaderText="1 a 4">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q1") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Entre 5 e 8">
+                           <asp:TemplateField HeaderText="5 a 8">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q2") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                           <asp:TemplateField HeaderText="Entre 9 e 12">
+                           <asp:TemplateField HeaderText="9 a 12">
                                 <ItemTemplate>
                                     <asp:label Text='<%# Eval("Q3") %>' runat="server"/>
                                 </ItemTemplate>

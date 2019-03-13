@@ -103,6 +103,33 @@ namespace PrjIC {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liQtrepostas;
         
         /// <summary>
+        /// TituloGridPublicacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TituloGridPublicacoes;
+        
+        /// <summary>
+        /// gridPublicacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gridPublicacoes;
+        
+        /// <summary>
+        /// dgvvw_Publicacoes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvvw_Publicacoes;
+        
+        /// <summary>
         /// TituloGridDP control.
         /// </summary>
         /// <remarks>

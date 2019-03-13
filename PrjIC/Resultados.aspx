@@ -61,10 +61,69 @@
             </div>
         </div>
 
-                <div class="row">
+        <div class="row">
+
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Exibição</div>
+                <div id="TituloGridPublicacoes" runat="server" class="sessoes text-center">Publicações</div>
             </div>
+
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridPublicacoes">
+                <div class="table-responsive">
+                    <asp:GridView CssClass="gridview" ID="dgvvw_Publicacoes" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+                        <Columns>
+                           <asp:TemplateField HeaderText="Questão">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Questao") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Total">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Total") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Q0">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Q0") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Q1">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Q1") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Q2">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Q2") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Q3">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Q3") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+                           <asp:TemplateField HeaderText="Q4">
+                                <ItemTemplate>
+                                    <asp:label Text='<%# Eval("Q4") %>' runat="server"/>
+                                </ItemTemplate>
+                           </asp:TemplateField>
+
+
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="sessoes text-center">Exibição</div>
+           </div>
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div class="panel center dicaselecao">
@@ -96,7 +155,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
@@ -418,7 +476,7 @@
                                 </ItemTemplate>
                            </asp:TemplateField>
 
-                                                      <asp:TemplateField HeaderText="Ícone">
+                          <asp:TemplateField HeaderText="Ícone">
                                 <ItemTemplate>
                                     <img src="/img/indicadores/Feliz.png" width="40" height="40" class="d-inline-block align-top" alt="">
                                 </ItemTemplate>
@@ -437,8 +495,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <div class="row" runat="server" id="DivAbertas">
 

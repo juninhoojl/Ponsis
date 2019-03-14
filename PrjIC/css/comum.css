@@ -201,9 +201,12 @@ body {
 
 .panel > .panel-body {
     background-color: #EBEDEF;
-    padding: 0.9em 0px 0.9em 0px;
-    border-color: blue;
+    border-color: transparent;
     border-radius: 0px 0px 5px 5px;
+    font-family: 'palanquin';
+    font-size: 1.1em;
+    color: #42444E;
+    padding: 1em;
 }
 
 /* Relativo aos botoes */
@@ -466,10 +469,10 @@ input.form-control {
 }
 
 
-.dicaselecao {
-    font-family: 'palanquin';
-    font-size: 1.1em;
-    color: #42444E;
+.combo-filtro {
+
+    margin: 1em 0 1em 0;
+
 }
 
 

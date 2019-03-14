@@ -1,76 +1,54 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="/Site.Master" AutoEventWireup="true" CodeBehind="Resultados.aspx.cs" Inherits="PrjIC.Resultados" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-fluid">
+       
         <div class="row">
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"  runat="server" id="painelDicaResultados">   
-                <div class="panel center dicaselecao">
+        <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="panel center">
                     <div class="panel-heading">
-                        <div class="titulo-painel text-left"><span class="badge">?</span>
-                            Como funciona a visualização dos resultados?
+                        <div class="titulo-painel text-center">
+                            <i class="fas fa-filter"> </i>Filtros e Opções
                         </div>
                     </div>
-                    <div class="panel-body">
-                        <div class="col-12">
-                                Para ver os resultados:
-                            <ol>
-                                <li>Selecione no combo box o período que deseja ver!</li>
-                                <li>E Selecione no outro combo box o curso que deseja ver!</li>
-                            </ol>
-                        </div>
+
+                    <div class="panel-body dicaselecao">
+                            <div runat="server" id="painelDicaResultados">
+                                    • Para ver os resultados:
+                                <ol>
+                                    <li>Selecione no primeiro combo box o período.</li>
+                                    <li>No segundo selecione o curso!</li>
+                                </ol>
+                            </div>
+
+                            <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbPeriodo" autopostback="true" onselectedindexchanged="cmbPeriodo_SelectedIndexChanged"></asp:dropdownlist>
+                            <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged"></asp:dropdownlist>
+
+                            <div id="PanelOpcoes" runat="server">
+                                <ul>
+                                    <li>Coluna 1<label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                    </label></li>
+                                    <li>Coluna 1<label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                    </label></li>
+                                    <li>Coluna 1<label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider round"></span>
+                                    </label></li>
+
+                                </ul>
+                            </div>
                     </div>
+
+
                 </div>
-            </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div id="Div1" runat="server"  class="sessoes text-center">Filtros</div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 offset-lg-1 col-lg-5 combo-periodos">   
-                <asp:dropdownlist runat="server" CssClass="form-control" id="cmbPeriodo" autopostback="true" onselectedindexchanged="cmbPeriodo_SelectedIndexChanged">
-                    </asp:dropdownlist>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-5 combo-periodos">   
-                <asp:dropdownlist runat="server" CssClass="form-control" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged">
-                    </asp:dropdownlist>
-            </div>
+                       
+                    </div>
         </div>
 
-                   <div  id="PanelOpcoes" runat="server" class="row">
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Opções</div>
-           </div>
-
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="panel center dicaselecao">
-                    <div class="panel-heading">
-                        <div class="titulo-painel text-left"><span class="badge">?</span>
-                            Exibição
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-12">
-
-                            <ul>
-                                <li>Coluna 1<label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label></li>
-                                <li>Coluna 1<label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label></li>
-                                <li>Coluna 1<label class="switch">
-                                  <input type="checkbox">
-                                  <span class="slider round"></span>
-                                </label></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="row" runat="server" id="DivInformacoes">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
@@ -78,20 +56,20 @@
             </div>
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1"  runat="server" id="painelSobreColeta">
-                <div class="panel center dicaselecao">
+                <div class="panel center">
                     <div class="panel-heading">
                         <div class="titulo-painel text-left"><span class="badge">?</span>
                             Resumo Geral
                         </div>
                     </div>
                     <div class="panel-body">
-                        <div class="col-12">
+
                             <ul>
                                 <li runat="server" id="liAvaliacao">Abriu em</li>
                                 <li runat="server" id="liQtAlunos">Quantos alunos</li>
                                 <li runat="server" id="liQtrepostas">Quantas respostas</li>
                             </ul>
-                        </div>
+
                     </div>
                 </div>
             </div>

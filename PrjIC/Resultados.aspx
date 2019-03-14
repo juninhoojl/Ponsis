@@ -85,36 +85,39 @@
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <ul>
                                     
+
                                     <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-5">
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox5" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox5_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="switch-5">Coluna Promotores</label>
+                                        <label for="CheckBox5">Coluna Promotores</label>
+                                    </li>
+
+
+                                    <li>
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox6" runat="server" Checked="true" AutoPostBack="true" oncheckedchanged="CheckBox6_CheckedChanged"></asp:CheckBox>
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="CheckBox6">Coluna Ícone</label>
                                     </li>
 
                                     <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-6">
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox7" runat="server" Checked="true" AutoPostBack="true" oncheckedchanged="CheckBox7_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="switch-6">Coluna Ícone</label>
+                                        <label for="CheckBox7">Coluna NPS</label>
                                     </li>
 
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-7">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        <label for="switch-7">Coluna NPS</label>
-                                    </li>
 
                                     <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-8">
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox8" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox8_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="switch-8">Informações Adicionais</label>
+                                        <label for="CheckBox8">Informações Adicionais</label>
                                     </li>
                                 </ul>
                                 </div>

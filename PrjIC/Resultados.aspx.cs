@@ -58,32 +58,42 @@ namespace PrjIC
                 dgvvw_Resultado_Ano_Curso_DP.Columns[2].Visible = false;
                 dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible = false;
                 dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_DP.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_DP.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_DP.Columns[7].Visible = true;
 
                 dgvvw_Resultado_Ano_Curso_OA.Columns[1].Visible = false;
                 dgvvw_Resultado_Ano_Curso_OA.Columns[2].Visible = false;
                 dgvvw_Resultado_Ano_Curso_OA.Columns[3].Visible = false;
                 dgvvw_Resultado_Ano_Curso_OA.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[7].Visible = true;
 
 
                 dgvvw_Resultado_Ano_Curso_PP.Columns[1].Visible = false;
                 dgvvw_Resultado_Ano_Curso_PP.Columns[2].Visible = false;
                 dgvvw_Resultado_Ano_Curso_PP.Columns[3].Visible = false;
                 dgvvw_Resultado_Ano_Curso_PP.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[7].Visible = true;
 
                 dgvvw_Resultado_Ano_Curso_BI.Columns[1].Visible = false;
                 dgvvw_Resultado_Ano_Curso_BI.Columns[2].Visible = false;
                 dgvvw_Resultado_Ano_Curso_BI.Columns[3].Visible = false;
                 dgvvw_Resultado_Ano_Curso_BI.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[7].Visible = true;
 
                 dgvvw_Resultado_Ano_Curso_SI.Columns[1].Visible = false;
                 dgvvw_Resultado_Ano_Curso_SI.Columns[2].Visible = false;
                 dgvvw_Resultado_Ano_Curso_SI.Columns[3].Visible = false;
                 dgvvw_Resultado_Ano_Curso_SI.Columns[4].Visible = false;
-
-
-
-
-
+                dgvvw_Resultado_Ano_Curso_SI.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[7].Visible = true;
 
             }
         }
@@ -174,6 +184,88 @@ namespace PrjIC
             }
 
         }
+
+        protected void CheckBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox5.Checked)
+            {
+                //Promotores
+                dgvvw_Resultado_Ano_Curso_DP.Columns[5].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[5].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[5].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[5].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[5].Visible = true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[5].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[5].Visible = false;
+            }
+
+        }
+
+        protected void CheckBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox5.Checked)
+            {
+                //Icones
+                dgvvw_Resultado_Ano_Curso_DP.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[6].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[6].Visible = true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[6].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[6].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[6].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[6].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[6].Visible = false;
+            }
+
+        }
+
+
+        protected void CheckBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox7.Checked)
+            {
+                //NPS
+                dgvvw_Resultado_Ano_Curso_DP.Columns[7].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[7].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[7].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[7].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[7].Visible = true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[7].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[7].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[7].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[7].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[7].Visible = false;
+            }
+
+        }
+
+        protected void CheckBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox8.Checked)
+            {
+                //Informacoes adicionais
+
+            }
+            else
+            {
+
+            }
+
+        }
+
 
         private void PopulateDropDownPeriodo()
         {

@@ -198,7 +198,6 @@ body {
     line-height: 1em;
 }
 
-
 .panel > .panel-body {
     background-color: #EBEDEF;
     border-color: transparent;
@@ -206,7 +205,7 @@ body {
     font-family: 'palanquin';
     font-size: 1.1em;
     color: #42444E;
-    padding: 1em;
+    padding: 1em 1em 0.25em 1em;
 }
 
 /* Relativo aos botoes */
@@ -217,7 +216,6 @@ body {
     padding: 1em;
     margin: 2em 0 1em 0;
 }
-
 
     .btn:hover, .btn:focus, .btn:active {
         border-radius: 0.3em;
@@ -234,9 +232,6 @@ body {
     color: #42444E;
     text-align: center;
 }
-
-
-
 
 /* Cores dos icones indicadores*/
 .icone-feliz {
@@ -463,15 +458,11 @@ input.form-control {
 }
 
 
-.combo-periodos {
-    margin-top: 2em;
-
-}
 
 
 .combo-filtro {
 
-    margin: 1em 0 1em 0;
+    margin: 0 0 1em 0;
 
 }
 
@@ -569,3 +560,19 @@ input:checked + .slider:before {
         border-radius: 50%;
     }
 
+
+hr.hr-opcoes {
+    border-color: transparent;
+    border-radius: 0.2em;
+    background-color: #BEC2CB;
+    margin: 0 0.5em 0.5em 0.5em;
+}
+
+.lista-opcoes{
+    margin: 0;
+}
+
+.titulo-opcoes{
+    margin: 0 0 1em 0;
+    font-family: 'palanquin-bold';
+}

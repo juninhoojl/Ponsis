@@ -13,78 +13,105 @@
 
                     <div class="panel-body dicaselecao">
                             <div runat="server" id="painelDicaResultados">
-                                    • Para ver os resultados:
-                                <ol>
-                                    <li>Selecione no primeiro combo box o período.</li>
-                                    <li>No segundo selecione o curso!</li>
-                                </ol>
-                            </div>
-
-                            <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbPeriodo" autopostback="true" onselectedindexchanged="cmbPeriodo_SelectedIndexChanged"></asp:dropdownlist>
-                            <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged"></asp:dropdownlist>
-
-                            <div id="PanelOpcoes" runat="server">
                                 <ul>
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna Total
-                                    </li>
-
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna Ignoradas
-                                    </li>
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna Detratores
-                                    </li>
-                                                                        <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna Neutros
-                                    </li>
-
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna Promotores
-                                    </li>
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna Ícone
-                                    </li>
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Coluna NPS
-                                    </li>
-
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        Informações Adicionais
+                                    <li>Obs.: Para ver os resultados selecione o período
+                                        e o curso nos filtros ⇊
                                     </li>
                                 </ul>
+                            </div>
+
+                         <div class="row">
+                             
+                             <div class="col-12 text-center titulo-opcoes">
+                                 Filtros
+                             </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+
+                            <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbPeriodo" autopostback="true" onselectedindexchanged="cmbPeriodo_SelectedIndexChanged"></asp:dropdownlist>
+                             </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">  
+                                    <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged"></asp:dropdownlist>
+                            </div>
+                             </div>
+                            <div id="PanelOpcoes" runat="server">
+                                <hr class="hr-opcoes">
+                                <div class="row">
+                             <div class="col-12 text-center titulo-opcoes">
+                                 Visualização
+                             </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <ul class="lista-opcoes">
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-1">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-1">Coluna Total</label>
+                                    </li>
+
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-2">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-2">Coluna Ignoradas</label>
+                                    </li>
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-3">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-3">Coluna Detratores</label>
+                                    </li>
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-4">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-4">Coluna Neutros</label>
+                                    </li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <ul>
+                                    
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-5">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-5">Coluna Promotores</label>
+                                    </li>
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-6">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-6">Coluna Ícone</label>
+                                    </li>
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-7">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-7">Coluna NPS</label>
+                                    </li>
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox" id="switch-8">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="switch-8">Informações Adicionais</label>
+                                    </li>
+                                </ul>
+                                </div>
+</div>
                             </div>
                     </div>
 

@@ -89,6 +89,7 @@ body {
     z-index: 1000;
     background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0);
     font-family: 'runhills';
+    font-size: 1.25em;
 }
 
 /* change the brand and text color */
@@ -579,4 +580,14 @@ hr.hr-opcoes {
 
 .titulo-abertas{
     margin-bottom: 0.6em;
+}
+
+#BotaoOpcoesVisu {
+    text-decoration: none;
+    color: #42444E;
+}
+
+#BotaoOpcoesVisu:hover {
+    text-decoration: none;
+    color: #000;
 }

@@ -33,9 +33,14 @@
                                     <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged"></asp:dropdownlist>
                             </div>
                              </div>
-                        <a href="#demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
-  <div id="demo" class="collapse">
-                            <div id="PanelOpcoes" runat="server">
+
+                        <div id="PanelOpcoes" runat="server">
+                        <div class="col-12 text-center titulo-opcoes">
+                        <a id="BotaoOpcoesVisu" href="#PainelOpcoesVisu" data-toggle="collapse">Mais Opções <i class="far fa-hand-point-left"></i></a>
+
+                        </div>
+                        <div id="PainelOpcoesVisu" class="collapse">
+                            <div runat="server">
                                 <hr class="hr-opcoes">
                                 <div class="row">
                              <div class="col-12 text-center titulo-opcoes">
@@ -125,7 +130,8 @@
                                 </div>
 </div>
                             </div>
-      </div>
+                        </div>
+                        </div>
                     </div>
 
 

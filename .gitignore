@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 /PrjIC/email.txt
 /PrjIC/admin.txt
+*.DS_Store

@@ -33,6 +33,8 @@
                                     <asp:dropdownlist runat="server" CssClass="form-control combo-filtro" id="cmbCurso" autopostback="true" onselectedindexchanged="cmbCurso_SelectedIndexChanged"></asp:dropdownlist>
                             </div>
                              </div>
+                        <a href="#demo" class="btn btn-info" data-toggle="collapse">Simple collapsible</a>
+  <div id="demo" class="collapse">
                             <div id="PanelOpcoes" runat="server">
                                 <hr class="hr-opcoes">
                                 <div class="row">
@@ -47,7 +49,7 @@
                                           <asp:CheckBox ID="CheckBox1" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox1_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox1">Coluna Total</label>
+                                        <label>Coluna Total</label>
                                     </li>
 
 
@@ -56,7 +58,7 @@
                                           <asp:CheckBox ID="CheckBox2" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox2_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox2">Coluna Ignoradas</label>
+                                        <label>Coluna Ignoradas</label>
                                     </li>
 
 
@@ -65,7 +67,7 @@
                                           <asp:CheckBox ID="CheckBox3" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox3_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox3">Coluna Detratores</label>
+                                        <label>Coluna Detratores</label>
                                     </li>
 
 
@@ -74,7 +76,7 @@
                                           <asp:CheckBox ID="CheckBox4" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox4_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox4">Coluna Neutros</label>
+                                        <label">Coluna Neutros</label>
                                     </li>
 
 
@@ -91,7 +93,7 @@
                                           <asp:CheckBox ID="CheckBox5" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox5_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox5">Coluna Promotores</label>
+                                        <label>Coluna Promotores</label>
                                     </li>
 
 
@@ -100,7 +102,7 @@
                                           <asp:CheckBox ID="CheckBox6" runat="server" Checked="true" AutoPostBack="true" oncheckedchanged="CheckBox6_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox6">Coluna Ícone</label>
+                                        <label>Coluna Ícone</label>
                                     </li>
 
                                     <li>
@@ -108,7 +110,7 @@
                                           <asp:CheckBox ID="CheckBox7" runat="server" Checked="true" AutoPostBack="true" oncheckedchanged="CheckBox7_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox7">Coluna NPS</label>
+                                        <label>Coluna NPS</label>
                                     </li>
 
 
@@ -117,12 +119,13 @@
                                           <asp:CheckBox ID="CheckBox8" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox8_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="CheckBox8">Informações Adicionais</label>
+                                        <label>Informações Adicionais</label>
                                     </li>
                                 </ul>
                                 </div>
 </div>
                             </div>
+      </div>
                     </div>
 
 
@@ -157,6 +160,8 @@
                 </div>
             </div>
         </div>
+
+        <div runat="server" id="InformacoesAdicionais">
 
             <div class="row">
 
@@ -215,7 +220,7 @@
             </div>
         </div>
 
-                <div class="row">
+            <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div id="TituloGridEgresso" runat="server" class="sessoes text-center">Egressão</div>
             </div>
@@ -250,7 +255,7 @@
             </div>
         </div>
 
-        <div class="row">
+            <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
                 <div id="TituloGridPublicacoes" runat="server" class="sessoes text-center">Publicações</div>
             </div>
@@ -309,7 +314,7 @@
             </div>
         </div>
 
-
+         </div>
 
         <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
@@ -654,7 +659,7 @@
         <div class="row" runat="server" id="DivAbertas">
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div id="Div3" runat="server"  class="sessoes text-center">Abertas</div>
+                <div id="Div3" runat="server"  class="sessoes text-center titulo-abertas">Abertas</div>
             </div>
 
              <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">   

@@ -95,6 +95,8 @@ namespace PrjIC
                 dgvvw_Resultado_Ano_Curso_SI.Columns[6].Visible = true;
                 dgvvw_Resultado_Ano_Curso_SI.Columns[7].Visible = true;
 
+                InformacoesAdicionais.Visible = false;
+
             }
         }
 
@@ -257,11 +259,12 @@ namespace PrjIC
             if (CheckBox8.Checked)
             {
                 //Informacoes adicionais
+                InformacoesAdicionais.Visible = true;
 
             }
             else
             {
-
+                InformacoesAdicionais.Visible = false;
             }
 
         }

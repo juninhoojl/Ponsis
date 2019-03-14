@@ -503,16 +503,14 @@ input.form-control {
 
 }
 
-
-
 /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
     width: 2.2em;
     height: 1.1em;
-    margin: 0;
-    margin-top: 0.25em;
+    padding: 0;
+    line-height: 1em;
 }
 
     /* Hide default HTML checkbox */
@@ -570,3 +568,4 @@ input:checked + .slider:before {
     .slider.round:before {
         border-radius: 50%;
     }
+

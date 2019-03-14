@@ -25,19 +25,65 @@
 
                             <div id="PanelOpcoes" runat="server">
                                 <ul>
-                                    <li>Coluna 1<label class="switch">
-                                      <input type="checkbox">
-                                      <span class="slider round"></span>
-                                    </label></li>
-                                    <li>Coluna 1<label class="switch">
-                                      <input type="checkbox">
-                                      <span class="slider round"></span>
-                                    </label></li>
-                                    <li>Coluna 1<label class="switch">
-                                      <input type="checkbox">
-                                      <span class="slider round"></span>
-                                    </label></li>
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna Total
+                                    </li>
 
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna Ignoradas
+                                    </li>
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna Detratores
+                                    </li>
+                                                                        <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna Neutros
+                                    </li>
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna Promotores
+                                    </li>
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna Ícone
+                                    </li>
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Coluna NPS
+                                    </li>
+
+                                    <li>
+                                        <label class="switch">                                        
+                                          <input type="checkbox">
+                                          <span class="slider round"></span>
+                                        </label>
+                                        Informações Adicionais
+                                    </li>
                                 </ul>
                             </div>
                     </div>
@@ -132,7 +178,7 @@
 
                 <div class="row">
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div id="TituloGridEgresso" runat="server" class="sessoes text-center">Egresso</div>
+                <div id="TituloGridEgresso" runat="server" class="sessoes text-center">Egressão</div>
             </div>
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridEgresso">

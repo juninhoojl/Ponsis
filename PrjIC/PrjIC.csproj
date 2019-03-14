@@ -106,10 +106,6 @@
     <Content Include="img\indicadores\Feliz.png" />
     <Content Include="img\indicadores\Neutro.png" />
     <Content Include="img\indicadores\Triste.png" />
-    <Content Include="img\pics\graph.png" />
-    <Content Include="img\pics\img1.jpg" />
-    <Content Include="img\pics\llama.gif" />
-    <Content Include="img\pics\pig.gif" />
     <Content Include="img\vectors\top-arrow.svg" />
     <Content Include="Avaliacao.aspx" />
     <Content Include="js\comum.js" />
@@ -208,12 +204,6 @@
     <Content Include="css\fonts\palanquin-bold.ttf" />
     <Content Include="css\fonts\palanquin.ttf" />
     <Content Include="css\fonts\RunHills.ttf" />
-    <Content Include="img\aseprite\icon_114x114.aseprite" />
-    <Content Include="img\aseprite\icon_128x128.aseprite" />
-    <Content Include="img\aseprite\icon_16x16.aseprite" />
-    <Content Include="img\aseprite\icon_32x32.aseprite" />
-    <Content Include="img\aseprite\icon_64x64.aseprite" />
-    <Content Include="img\aseprite\icon_72x72.aseprite" />
     <Content Include="Adm\Web.config" />
     <None Include="Adm\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

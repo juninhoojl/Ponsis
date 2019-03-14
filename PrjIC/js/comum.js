@@ -78,10 +78,10 @@
 
 // Mostrar senha
 function mouseoverPass(obj) {
-    var obj = document.getElementById('myPassword');
+    var obj = document.getElementById('txtPassword');
     obj.type = "text";
 }
 function mouseoutPass(obj) {
-    var obj = document.getElementById('myPassword');
+    var obj = document.getElementById('txtPassword');
     obj.type = "password";
 }

@@ -118,6 +118,7 @@
     <Content Include="Indisponivel.aspx" />
     <Content Include="Adm\AlunoCurso.aspx" />
     <Content Include="Resultados.aspx" />
+    <Content Include="Pagina404.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adm\Login.aspx.cs">
@@ -201,6 +202,13 @@
     </Compile>
     <Compile Include="Resultados.aspx.designer.cs">
       <DependentUpon>Resultados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina404.aspx.cs">
+      <DependentUpon>Pagina404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina404.aspx.designer.cs">
+      <DependentUpon>Pagina404.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

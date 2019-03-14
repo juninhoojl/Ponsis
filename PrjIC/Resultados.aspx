@@ -41,23 +41,23 @@
                              </div>
                                 <div class="col-sm-12 col-md-6 col-lg-6">
                                     <ul class="lista-opcoes">
+
                                     <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-1">
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox1" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox1_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="switch-1">Coluna Total</label>
+                                        <label for="CheckBox1">Coluna Total</label>
                                     </li>
 
 
                                     <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-2">
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox2" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox2_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="switch-2">Coluna Ignoradas</label>
+                                        <label for="CheckBox2">Coluna Ignoradas</label>
                                     </li>
-
 
 
                                     <li>
@@ -164,6 +164,8 @@
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridTempo">
                 <div class="table-responsive">
                     <asp:GridView CssClass="gridview" ID="dgvvw_Tempo" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
+
+                        
                         <Columns>
                            <asp:TemplateField HeaderText="Questão">
                                 <ItemTemplate>
@@ -172,7 +174,7 @@
                            </asp:TemplateField>
 
                            <asp:TemplateField HeaderText="Até 12 meses">
-                                <ItemTemplate>
+                                <ItemTemplate >
                                     <asp:label Text='<%# Eval("T0") %>' runat="server"/>
                                 </ItemTemplate>
                            </asp:TemplateField>

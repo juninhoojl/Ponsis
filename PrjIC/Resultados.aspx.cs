@@ -53,24 +53,102 @@ namespace PrjIC
                 //this.PopulateDropDownQuestao();
 
                 //Colunas predefinidas
+
+                dgvvw_Resultado_Ano_Curso_DP.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_DP.Columns[2].Visible = false;
                 dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible = false;
                 dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = false;
+
+                dgvvw_Resultado_Ano_Curso_OA.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[4].Visible = false;
+
+
+                dgvvw_Resultado_Ano_Curso_PP.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[4].Visible = false;
+
+                dgvvw_Resultado_Ano_Curso_BI.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[4].Visible = false;
+
+                dgvvw_Resultado_Ano_Curso_SI.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[4].Visible = false;
+
+
+
+
 
 
             }
         }
 
-
-        protected void CheckBox3_CheckedChanged(object sender, EventArgs e)
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(CheckBox3.Checked)
+            if (CheckBox1.Checked)
             {
-                //Todas as grids
-                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible=true;
+                //Total
+                dgvvw_Resultado_Ano_Curso_DP.Columns[1].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[1].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[1].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[1].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[1].Visible = true;
             }
             else
             {
-                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible=false;
+                dgvvw_Resultado_Ano_Curso_DP.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[1].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[1].Visible = false;
+            }
+
+        }
+        protected void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox2.Checked)
+            {
+                //Ignoradas
+                dgvvw_Resultado_Ano_Curso_DP.Columns[2].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[2].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[2].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[2].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[2].Visible = true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[2].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[2].Visible = false;
+            }
+
+        }
+
+        protected void CheckBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox3.Checked)
+            {
+                //Detratores
+                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[3].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[3].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[3].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[3].Visible = true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[3].Visible = false;
             }
 
         }
@@ -79,12 +157,20 @@ namespace PrjIC
         {
             if (CheckBox4.Checked)
             {
-                //Todas as grids
+                //Neutros
                 dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = true;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[4].Visible = true;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[4].Visible = true;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[4].Visible = true;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[4].Visible = true;
             }
             else
             {
                 dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_OA.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_PP.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_BI.Columns[4].Visible = false;
+                dgvvw_Resultado_Ano_Curso_SI.Columns[4].Visible = false;
             }
 
         }

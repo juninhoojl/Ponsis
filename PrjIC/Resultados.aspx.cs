@@ -51,7 +51,42 @@ namespace PrjIC
                 //this.PopulateDropDownQuestao();
                 this.PopulateDropDownQuestao();
                 //this.PopulateDropDownQuestao();
+
+                //Colunas predefinidas
+                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible = false;
+                dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = false;
+
+
             }
+        }
+
+
+        protected void CheckBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if(CheckBox3.Checked)
+            {
+                //Todas as grids
+                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible=true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[3].Visible=false;
+            }
+
+        }
+
+        protected void CheckBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBox4.Checked)
+            {
+                //Todas as grids
+                dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = true;
+            }
+            else
+            {
+                dgvvw_Resultado_Ano_Curso_DP.Columns[4].Visible = false;
+            }
+
         }
 
         private void PopulateDropDownPeriodo()

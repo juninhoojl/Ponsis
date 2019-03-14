@@ -57,21 +57,28 @@
                                         </label>
                                         <label for="switch-2">Coluna Ignoradas</label>
                                     </li>
-                                    <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-3">
-                                          <span class="slider round"></span>
-                                        </label>
-                                        <label for="switch-3">Coluna Detratores</label>
-                                    </li>
+
+
 
                                     <li>
-                                        <label class="switch">                                        
-                                          <input type="checkbox" id="switch-4">
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox3" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox3_CheckedChanged"></asp:CheckBox>
                                           <span class="slider round"></span>
                                         </label>
-                                        <label for="switch-4">Coluna Neutros</label>
+                                        <label for="CheckBox3">Coluna Detratores</label>
                                     </li>
+
+
+                                    <li>
+                                        <label class="switch">      
+                                          <asp:CheckBox ID="CheckBox4" runat="server" Checked="false" AutoPostBack="true" oncheckedchanged="CheckBox4_CheckedChanged"></asp:CheckBox>
+                                          <span class="slider round"></span>
+                                        </label>
+                                        <label for="CheckBox4">Coluna Neutros</label>
+                                    </li>
+
+
+
 
                                     </ul>
                                 </div>

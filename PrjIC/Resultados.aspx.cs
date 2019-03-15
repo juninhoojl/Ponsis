@@ -470,7 +470,7 @@ select Count(*) from Resposta, Periodo
 
                 foreach (DataRow row in tabUsuario.Rows)
                 {
-                    row["NPS"]    = Math.Round((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"], 2);
+                    row["NPS"]    = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"])*100, 2);
                     row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
                 }
 
@@ -525,6 +525,13 @@ select Count(*) from Resposta, Periodo
                                                             " and id_Curso = " + idCurso);
 
                 //Aqui que tenho que retornar 
+
+                foreach (DataRow row in tabUsuario.Rows)
+                {
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
+                }
+
                 if (tabUsuario.Rows.Count > 0)
                 {
                     this.dgvvw_Resultado_Ano_Curso_PP.DataSource = tabUsuario;
@@ -568,6 +575,13 @@ select Count(*) from Resposta, Periodo
                                                             " and id_Curso = " + idCurso);
 
                 //Aqui que tenho que retornar 
+
+                foreach (DataRow row in tabUsuario.Rows)
+                {
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
+                }
+
                 if (tabUsuario.Rows.Count > 0)
                 {
                     this.dgvvw_Resultado_Ano_Curso_SI.DataSource = tabUsuario;
@@ -775,6 +789,13 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'BI' and Ano = " + nuAnoReferencia.ToString() +
                                                             " and id_Curso = " + idCurso);
 
+
+                foreach (DataRow row in tabUsuario.Rows)
+                {
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
+                }
+
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
                 {
@@ -817,6 +838,12 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 //Retorna view aqui
                 DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'DP' and Ano = " + nuAnoReferencia.ToString() +
                                                             " and id_Curso = " + idCurso);
+
+                foreach (DataRow row in tabUsuario.Rows)
+                {
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
+                }
 
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)

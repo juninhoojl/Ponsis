@@ -355,13 +355,13 @@
 
                             <asp:TemplateField HeaderText="Ícone">
                                 <ItemTemplate>
-                                    <img src="/img/indicadores/Triste.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                                    <asp:Image runat="server" src='<%# Eval("Imagem") %>' width="40" height="40" class="d-inline-block align-top" alt=""/>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="NPS">
                                 <ItemTemplate>
-                                    19.05
+                                    <asp:Label Text='<%# Eval("NPS") %>' runat="server" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 
@@ -419,7 +419,7 @@
 
                             <asp:TemplateField HeaderText="Ícone">
                                 <ItemTemplate>
-                                    <asp:Image runat="server" ID="XYZ" src='<%# Eval("Imagem") %>' width="40" height="40" class="d-inline-block align-top" alt=""/>
+                                    <asp:Image runat="server" src='<%# Eval("Imagem") %>' width="40" height="40" class="d-inline-block align-top" alt=""/>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
@@ -483,13 +483,13 @@
 
                             <asp:TemplateField HeaderText="Ícone">
                                 <ItemTemplate>
-                                    <img src="/img/indicadores/Neutro.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                                    <asp:Image runat="server" src='<%# Eval("Imagem") %>' width="40" height="40" class="d-inline-block align-top" alt=""/>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="NPS">
                                 <ItemTemplate>
-                                    19.05
+                                    <asp:Label Text='<%# Eval("NPS") %>' runat="server" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 
@@ -554,13 +554,13 @@
 
                             <asp:TemplateField HeaderText="Ícone">
                                 <ItemTemplate>
-                                    <img src="/img/indicadores/Feliz.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                                    <asp:Image runat="server" src='<%# Eval("Imagem") %>' width="40" height="40" class="d-inline-block align-top" alt=""/>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="NPS">
                                 <ItemTemplate>
-                                    19.05
+                                    <asp:Label Text='<%# Eval("NPS") %>' runat="server" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 
@@ -623,13 +623,13 @@
 
                             <asp:TemplateField HeaderText="Ícone">
                                 <ItemTemplate>
-                                    <img src="/img/indicadores/Feliz.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                                    <asp:Image runat="server" src='<%# Eval("Imagem") %>' width="40" height="40" class="d-inline-block align-top" alt=""/>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
                             <asp:TemplateField HeaderText="NPS">
                                 <ItemTemplate>
-                                    19.05
+                                    <asp:Label Text='<%# Eval("NPS") %>' runat="server" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 

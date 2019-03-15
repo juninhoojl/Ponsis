@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ProjetoIC.Classes;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Web.UI.WebControls;
-using ProjetoIC.Classes;
-
 
 namespace PrjIC
 {
     public partial class Resultados : System.Web.UI.Page
     {
+        private int _idCurso;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
@@ -96,10 +96,19 @@ namespace PrjIC
                 dgvvw_Resultado_Ano_Curso_SI.Columns[7].Visible = true;
 
                 InformacoesAdicionais.Visible = false;
+            }
 
+            if (this.Session["Curso"] != null)
+            {
+                this._idCurso = (int)this.Session["Curso"];
+                this.DivAbertas.Visible = true;
+            }
+            else
+            {
+                this._idCurso = 0;
+                this.DivAbertas.Visible = false;
             }
         }
-
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox1.Checked)
@@ -142,7 +151,6 @@ namespace PrjIC
             }
 
         }
-
         protected void CheckBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox3.Checked)
@@ -164,7 +172,6 @@ namespace PrjIC
             }
 
         }
-
         protected void CheckBox4_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox4.Checked)
@@ -186,7 +193,6 @@ namespace PrjIC
             }
 
         }
-
         protected void CheckBox5_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox5.Checked)
@@ -208,7 +214,6 @@ namespace PrjIC
             }
 
         }
-
         protected void CheckBox6_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox5.Checked)
@@ -230,8 +235,6 @@ namespace PrjIC
             }
 
         }
-
-
         protected void CheckBox7_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox7.Checked)
@@ -253,7 +256,6 @@ namespace PrjIC
             }
 
         }
-
         protected void CheckBox8_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBox8.Checked)
@@ -268,7 +270,6 @@ namespace PrjIC
             }
 
         }
-
 
         private void PopulateDropDownPeriodo()
         {
@@ -384,7 +385,11 @@ select Count(*) from Resposta, Periodo
 
             if (conn.AbrirConexao())
             {
-                DataTable tabCurso = conn.RetornaTabela(@"select * from Curso");
+                string cmdSql = @"select * from Curso";
+                if (this.Session["Curso"] != null && (int)this.Session["Curso"] > 0)
+                    cmdSql = cmdSql + String.Format(@" where id_Curso = {0}", (int)this.Session["Curso"]);
+
+                DataTable tabCurso = conn.RetornaTabela(cmdSql);
 
                 if (tabCurso.Rows.Count > 0)
                 {
@@ -433,6 +438,18 @@ select Count(*) from Resposta, Periodo
         /// </summary>
 
 
+        private string GetNomeImagem(decimal nps)
+        {
+            if (nps >= 75)
+                return "img/indicadores/Diamante.png";
+            else if (nps >= 50)
+                return "img/indicadores/Feliz.png";
+            else if (nps >= 25)
+                return "img/indicadores/Neutro.png";
+
+            return "img/indicadores/Triste.png";
+        }
+
         private void PopulateGridViewResultadoCursoOA()
         {
             Conexao conn = new Conexao();
@@ -450,6 +467,12 @@ select Count(*) from Resposta, Periodo
                 //Retorna view aqui
                 DataTable tabUsuario = conn.RetornaTabela(@"select * from vw_Resultado_Ano_Curso WHERE Classificacao = 'OA' and Ano = " + nuAnoReferencia.ToString() + 
                                                             " and id_Curso = " + idCurso);
+
+                foreach (DataRow row in tabUsuario.Rows)
+                {
+                    row["NPS"]    = Math.Round((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"], 2);
+                    row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
+                }
 
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
@@ -678,7 +701,6 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
             }
         }
 
-
         private void PopulateGridViewTempo()
         {
             Conexao conn = new Conexao();
@@ -842,19 +864,16 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
 
                 //Retorna view aqui
                 DataTable tabUsuario = conn.RetornaTabela(String.Format(@"select Resposta.id_Curso, Resposta.id_Questao, Resposta.tx_Resposta, Periodo.nu_Ano_Referencia 
-  from Resposta, Periodo
- where Resposta.id_Periodo = Periodo.id_Periodo
-   and Resposta.tx_Resposta is not null 
-   and Len(ltrim(rtrim(Resposta.tx_Resposta))) > 0
-   and Periodo.nu_Ano_Referencia = {0}  
-   and Resposta.id_Curso = {1}
-   and Resposta.id_Questao = {2}",
-                                                                        nuAnoReferencia.ToString(),
-                                                                        idCurso,
-                                                                        idQuestao));
-
-
-
+                  from Resposta, Periodo
+                    where Resposta.id_Periodo = Periodo.id_Periodo
+                   and Resposta.tx_Resposta is not null 
+                   and Len(ltrim(rtrim(Resposta.tx_Resposta))) > 0
+                   and Periodo.nu_Ano_Referencia = {0}  
+                   and Resposta.id_Curso = {1}
+                   and Resposta.id_Questao = {2}",
+                    nuAnoReferencia.ToString(),
+                    idCurso,
+                    idQuestao));
 
                 //Aqui que tenho que retornar 
                 if (tabUsuario.Rows.Count > 0)
@@ -875,13 +894,9 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
 
                 }
 
-
-
                 conn.FechaConexao();
             }
         }
-
-
 
         private void HabilitaControles()
         {
@@ -889,7 +904,7 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 long.Parse(this.cmbCurso.SelectedItem.Value.Trim()) > 0)
             {
                 this.DivInformacoes.Visible = true;
-                this.DivAbertas.Visible = true;
+                this.DivAbertas.Visible = (this.Session["Curso"] != null);
 
                 //Mostra grid so quando carrega
                 this.TituloGridOA.Visible = true;
@@ -928,7 +943,6 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
             }
         }
 
-  
         #region Métodos de seleção de COMBOs
 
         private void CarregarDados()
@@ -953,7 +967,6 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.PopulateLIAvalizacao();
             }
         }
-
 
         /// <summary>
         /// Método chamado quando a seleção do período é feita

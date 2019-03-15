@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Data;
 using System.Web.Security;
 using ProjetoIC.Classes;
 
@@ -10,18 +12,18 @@ namespace PrjIC.Adm
         {
             if (!this.IsPostBack)
             {
-
             }
         }
 
         protected void btLogar_Click(object sender, EventArgs e)
         {
-            if (this.Validar())
+            if (this.ValidarAdmin())
             {
                 try
                 {
-                    //this.Session["NotaAtual"] = null;
-                    //this.Session["NotaTodas"] = null;
+                    this.Session["Logado"] = true;
+                    this.Session["Admin"]  = true;
+                    this.Session["Curso"]  = -1;
 
                     FormsAuthentication.RedirectFromLoginPage("~/Adm/Opcoes.aspx", true);
                 }
@@ -29,9 +31,13 @@ namespace PrjIC.Adm
                 {
                 }
             }
+            else if (this.ValidarUsuario())
+            {
+                FormsAuthentication.RedirectFromLoginPage("~/Resultados.aspx", true);
+            }
         }
 
-        private bool Validar()
+        private bool ValidarAdmin()
         {
             bool lvalidado = false;
 
@@ -39,20 +45,50 @@ namespace PrjIC.Adm
 
             if (System.IO.File.Exists(nmPath))
             {
-                //var nmPathEmail = System.Web.HttpContext.Current.Server.MapPath("../email.txt");
-                //string arquivoEmail  = System.IO.File.ReadAllText(nmPathEmail);
-                //string host1 = Conexao.GetValor(arquivoEmail, "host:");
-                //string user1 = Conexao.GetValor(arquivoEmail, "user:");
-                //string password1 = Conexao.GetValor(arquivoEmail, "password:");
-                //string nameUser1 = Conexao.GetValor(arquivoEmail, "nameUser:");
-
-                string arquivo  = System.IO.File.ReadAllText(nmPath);
-                string user     = Conexao.GetValor(arquivo, "user:");
+                string arquivo = System.IO.File.ReadAllText(nmPath);
+                string user = Conexao.GetValor(arquivo, "user:");
                 string password = Conexao.GetValor(arquivo, "password:");
 
                 if (!String.IsNullOrWhiteSpace(user) && !String.IsNullOrWhiteSpace(password))
                     if (user.Equals(this.txtUsername.Value) && password.Equals(this.txtPassword.Value))
                         lvalidado = true;
+            }
+
+            this.lbErro.Visible = !lvalidado;
+
+            return lvalidado;
+        }
+        private bool ValidarUsuario()
+        {
+            bool lvalidado = false;
+
+            this.Session["Logado"] = false;
+            this.Session["Admin"]  = false;
+            this.Session["Curso"]  = 0;
+
+            Conexao conn = new Conexao
+            {
+                ConnectionString = ConfigurationManager.ConnectionStrings["ProjetoIC"].ConnectionString
+            };
+
+            if (conn.AbrirConexao())
+            {
+                DataTable tabCurso = conn.RetornaTabela(String.Format(@"select * from Usuario where ds_Email = '{0}' AND ds_Senha = '{1}'",
+                                                                      this.txtUsername.Value,
+                                                                      this.txtPassword.Value));
+
+                if (tabCurso.Rows.Count == 1)
+                {
+                    this.Session["Logado"] = true;
+                    this.Session["Admin"]  = false;
+                    if (tabCurso.Rows[0]["id_Curso"] == DBNull.Value)
+                        this.Session["Curso"] = -1;
+                    else
+                        this.Session["Curso"]  = int.Parse(((long)tabCurso.Rows[0]["id_Curso"]).ToString());
+
+                    lvalidado = true;
+                }
+                conn.FechaConexao();
             }
 
             this.lbErro.Visible = !lvalidado;

@@ -9,6 +9,11 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.Session["Admin"] != null && (bool)this.Session["Admin"] == true)
+                this.DivAdmin.Visible = true;
+            else
+                this.DivAdmin.Visible = false;
+
             if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 this.btnEntrar.Visible = false;
@@ -26,9 +31,9 @@ namespace WebApplication1
         }
         protected void btnSair_Click(object sender, EventArgs e)
         {
-            //this.Session["nmCliente"] = null;
-            //this.Session["cdIdentificacao"] = null;
-            //this.Session["cnpjEmpresa"] = null;
+            this.Session["Logado"] = null;
+            this.Session["Admin"]  = null;
+            this.Session["Curso"]  = null;
 
             FormsAuthentication.SignOut();
             this.Response.Redirect("~/Apresentacao.aspx");

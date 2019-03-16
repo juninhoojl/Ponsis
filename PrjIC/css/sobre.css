@@ -1,83 +1,114 @@
-/**/
-/*
-CORES
-
-Background = #3E4554
+/*--------- CORES ---------
+Background-Gradient = #3E4554 -> #242830
+Navbar-Gradient = #EBEDEF -> #DCDEE0
 Parte de cima do painel = #BEC2CB
 Parte do corpo do painel = #EBEDEF
 Letra branca dentro do label = #F5F5F5
 Cores letras escuras(texto) e badge = #42444E
-Cor titulos = #AF9CED
+Cor Titulos = #AF9CED
+-------------------------*/
 
-*/
-
-
-/* Cores icones */
-.feliz {
-    color: #BCD67F;
-    font-size: 1.5em;
+body {
+    background-color: #3E4554;
 }
 
-.diamante {
-    color: #7ABEE9;
-    font-size: 1.5em;
-}
-
-.normal {
-    color: #FDEE51;
-    font-size: 1.5em;
-}
-
-.triste {
-    color: #D4624A;
-    font-size: 1.5em;
-}
-
-
-
-/*titulo dos blocos */
-.titulo-bloco {
-    font-family: 'runhills';
-    font-size: 2em;
-    color: #42444E;
-    line-height: 1.2em;
-}
-
-/* Texto explicando*/
-.texto-exp {
-    padding: 1em;
-    background-color: transparent;
-    margin: 0em;
-    color: #F5F5F5;
-    font-family: 'palanquin';
-    font-size: 1.2em;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-
-/*titulo dos blocos */
-.titulo-parte {
-    font-family: 'runhills';
-    font-size: 2em;
-    color: #AF9CED;
-    line-height: 1.2em;
-}
 
 .colorido {
     background-color: #AF9CED;
+}
+
+#logo {
+    margin: 6em 0 3em 0;
+    width: 35em;
+}
+
+.texto-sobre {
+    color: #F0F2F5;
+    font-size: 2.3em;
+    font-family: 'arial';
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+hr {
+    background-color: #F0F2F5;
+    border-color: transparent;
+    width: 60%;
+    height: 0.2em;
+}
+
+.texto-colunas {
     padding: 1em;
+    color: #42444E;
+    font-size: 2em;
+    font-family: 'arial';
+    text-align: center;
 }
 
-.trasparente {
-    background-color: transparent;
+.titulo-colunas {
+    color: #42444E;
+    font-size: 2em;
+    font-family: 'arial';
+    margin-bottom: 0.5em;
+    text-align: center;
 }
 
-.gruposs {
-    font-family: 'palanquin-bold';
-    color: #AF9CED;
+.titulo-geral {
+    padding: 1em;
+    color: #42444E;
+    font-size: 4em;
+    font-family: 'arial';
+    margin-top: 1em;
+    text-align: center;
 }
 
-.intervalos {
-    min-width: 10em;
+
+.cinza {
+    background-color: #EBEDEF;
+}
+
+
+
+#img-calculo {
+    margin: 1em 0 1em 0;
+    width: 100%;
+}
+
+.branco {
+    background-color: #F0F2F5;
+}
+
+.titulo-utilizam {
+    color: #F0F2F5;
+    font-size: 3.2em;
+    font-family: 'arial';
+    margin: 1em 0 1em 0;
+    text-align: center;
+}
+
+.utilizam-nps {
+    margin-bottom: 5em;
+}
+
+.painel-calculo {
+    background-color: #F0F2F5;
+}
+
+.calculo-nps {
+    margin: 1em 0 1em 0;
+    color: #42444E;
+    font-size: 3.2em;
+}
+
+.img-calculo {
+    margin-bottom: 2em;
+}
+
+.claro {
+    background-color: #B4A9F5;
+}
+
+.nps-indicadores {
+    padding: 3em 1em 3em 1em;
 }

@@ -111,9 +111,19 @@
     <Content Include="img\indicadores\Neutro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="img\indicadores\Nps_Aceitavel.png" />
+    <Content Include="img\indicadores\Nps_Bom.png" />
+    <Content Include="img\indicadores\Nps_Otimo.png" />
+    <Content Include="img\indicadores\Nps_Ruim.png" />
     <Content Include="img\indicadores\Triste.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="img\logos\logo1b.png" />
+    <Content Include="img\logos\logo2b.png" />
+    <Content Include="img\logos\logo3b.png" />
+    <Content Include="img\logos\logo4b.png" />
+    <Content Include="img\logos\logo5b.png" />
+    <Content Include="img\logos\logo6b.png" />
     <Content Include="img\vectors\top-arrow.svg" />
     <Content Include="Avaliacao.aspx" />
     <Content Include="js\comum.js" />

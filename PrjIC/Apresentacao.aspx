@@ -4,7 +4,6 @@
      <!-- Questionario stylesheet -->
   <link rel = "stylesheet" type = "text/css" href = "css/sobre.css" />
 
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 colorido">

@@ -9,13 +9,6 @@ namespace PrjIC.Classes
 {
     public class Email
     {
-        #region Variáveis privadas e estáticas
-
-        private static Email __email;
-
-        #endregion Variáveis privadas e estáticas
-
-
         #region Variávies internas
 
         private MailAddress _mailFrom;
@@ -49,64 +42,6 @@ namespace PrjIC.Classes
 
         #region Métodos públicos
 
-        public static Email email
-        {
-            get
-            {
-                if (__email == null)
-                {
-                    __email = new Email
-                    {
-                        _mailFrom = new MailAddress("gestor@adiautomacao.com.br", "Gestor"),
-                        _smtpHost = "smtp.adiautomacao.com.br",
-                        _smtpLogin = "gestor@adiautomacao.com.br",
-                        _smtpSenha = "gestor01*",
-                        _smtpSsl = false,
-                        _smtpPorta = 587,
-                        _timeOut = 1000000
-                    };
-                }
-
-                return __email;
-            }
-        }
-
-        public static Email EmailBackup()
-        {
-            Email bakEmail = new Email
-            {
-                _mailFrom = new System.Net.Mail.MailAddress(Email.email._smtpLogin, Email.email.MailFrom.DisplayName),
-                _smtpHost = Email.email._smtpHost,
-                _smtpLogin = Email.email._smtpLogin,
-                _smtpSenha = Email.email._smtpSenha,
-                _smtpSsl = Email.email._smtpSsl,
-                _smtpPorta = Email.email._smtpPorta,
-                _timeOut = Email.email._timeOut
-            };
-
-            return bakEmail;
-        }
-
-        public static void EmailRestore(Email email)
-        {
-            //Email.email._mailFrom  = email._mailFrom;
-            if (!Email.email._mailFrom.Address.Equals(email._smtpLogin) ||
-                !Email.email._mailFrom.DisplayName.Equals(email._mailFrom.DisplayName))
-                Email.email._mailFrom = new System.Net.Mail.MailAddress(email._smtpLogin, email.MailFrom.DisplayName);
-            if (!Email.email._smtpHost.Equals(email._smtpHost))
-                Email.email._smtpHost = email._smtpHost;
-            if (!Email.email._smtpLogin.Equals(email._smtpLogin))
-                Email.email._smtpLogin = email._smtpLogin;
-            if (!Email.email._smtpSenha.Equals(email._smtpSenha))
-                Email.email._smtpSenha = email._smtpSenha;
-            if (!Email.email._smtpSsl.Equals(email._smtpSsl))
-                Email.email._smtpSsl = email._smtpSsl;
-            if (!Email.email._smtpPorta.Equals(email._smtpPorta))
-                Email.email._smtpPorta = email._smtpPorta;
-            if (!Email.email._timeOut.Equals(email._timeOut))
-                Email.email._timeOut = email._timeOut;
-        }
-
         public bool EnviarEmail(string[] emailsPara, string assunto, string mensagemHtml, string nomeArquivoAttach, byte[] fileAttach)
         {
             if (mensagemHtml.Substring(0, 1) == ".")
@@ -116,7 +51,7 @@ namespace PrjIC.Classes
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
                 msg.Subject = assunto;
                 msg.Body = mensagemHtml;
 
@@ -133,11 +68,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              String.Join(";", emailsPara),
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -153,7 +83,7 @@ namespace PrjIC.Classes
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
                 msg.Subject = assunto;
                 msg.Body = mensagemHtml;
 
@@ -169,11 +99,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -182,8 +107,6 @@ namespace PrjIC.Classes
 
         public bool EnviarEmail(string emailPara, string emailCopia, string assunto, string mensagemHtml, Dictionary<string, byte[]> dicArquivos)
         {
-            Email email = Email.email;
-
             if (mensagemHtml.Substring(0, 1) == ".")
                 mensagemHtml = mensagemHtml.Substring(1);
 
@@ -192,7 +115,7 @@ namespace PrjIC.Classes
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
                 msg.Subject = assunto;
                 msg.Body = mensagemHtml;
 
@@ -208,11 +131,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -231,13 +149,11 @@ namespace PrjIC.Classes
 
         public bool EnviarEmail(string emailPara, string assunto, string mensagemHtml, IEnumerable<string> cc, Dictionary<string, byte[]> dicArquivos)
         {
-            Email email = Email.email;
-
             MailMessage msg = new MailMessage();
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
 
                 msg.To.Add(emailPara);
 
@@ -257,11 +173,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -271,19 +182,15 @@ namespace PrjIC.Classes
 
         public bool EnviarEmail(string emailPara, string assunto, string mensagemHtml, IEnumerable<string> cc)
         {
-            Email email = Email.email;
-
             MailMessage msg = new MailMessage();
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
 
                 msg.To.Add(emailPara);
 
-                //msg.Fi
                 foreach (string item in cc)
-                    //msg.To.Add(new MailAddress(item, item + "aaa"));
                     msg.Bcc.Add(item);
 
                 msg.Subject = assunto;
@@ -291,11 +198,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -304,14 +206,12 @@ namespace PrjIC.Classes
 
         public bool EnviarEmailCC(string emailPara, string assunto, string mensagemHtml, IEnumerable<string> cc)
         {
-            Email email = Email.email;
-
             MailMessage msg = new MailMessage();
 
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
                 msg.To.Add(emailPara);
 
                 foreach (string item in cc)
@@ -322,11 +222,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -335,14 +230,12 @@ namespace PrjIC.Classes
 
         public bool EnviarEmailCCO(string emailPara, string assunto, string mensagemHtml, IEnumerable<string> cc)
         {
-            Email email = Email.email;
-
             MailMessage msg = new MailMessage();
 
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
                 msg.To.Add(emailPara);
 
                 foreach (string item in cc)
@@ -354,11 +247,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -367,14 +255,12 @@ namespace PrjIC.Classes
 
         public bool EnviarEmailReplayToList(string emailPara, string assunto, string mensagemHtml, IEnumerable<string> cc)
         {
-            Email email = Email.email;
-
             MailMessage msg = new MailMessage();
 
             try
             {
                 msg.IsBodyHtml = true;
-                msg.From = email._mailFrom;
+                msg.From = this._mailFrom;
                 msg.To.Add(emailPara);
 
                 foreach (string item in cc)
@@ -385,11 +271,6 @@ namespace PrjIC.Classes
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(string.Format("Não foi possível montar o e-mail a ser enviado para '{0}'.\n\nMotivo: '{1}'.",
-                //                              emailPara,
-                //                              ex.Message),
-                //                "Erro",
-                //                MessageBoxButtons.OK);
                 return false;
             }
 
@@ -449,50 +330,9 @@ namespace PrjIC.Classes
                     stContinua = false;
                     enviado = true;
                 }
-                //catch (System.ArgumentNullException fe1)
-                //{
-                //    stContinua = (MessageBox.Show(string.Format("Não foi possível enviar e-mail para '{0}'.\n\nMotivo: '{1}'.\n\nTentar novamente?",
-                //                                                mensagem.To[0].Address,
-                //                                                fe1.Message),
-                //                                  "Questionamento",
-                //                                  MessageBoxButtons.YesNo,
-                //                                  MessageBoxIcon.Question) == DialogResult.Yes);
-                //}
-                //catch (System.InvalidOperationException fe2)
-                //{
-                //    stContinua = (MessageBox.Show(string.Format("Não foi possível enviar e-mail para '{0}'.\n\nMotivo: '{1}'.\n\nTentar novamente?",
-                //                                                mensagem.To[0].Address,
-                //                                                fe2.Message),
-                //                                  "Questionamento",
-                //                                  MessageBoxButtons.YesNo,
-                //                                  MessageBoxIcon.Question) == DialogResult.Yes);
-                //}
-                //catch (System.Net.Mail.SmtpException fe4)
-                //{
-                //    stContinua = (MessageBox.Show(string.Format("Não foi possível enviar e-mail para '{0}'.\n\nMotivo: '{1}'.\n\nTentar novamente?",
-                //                                                mensagem.To[0].Address,
-                //                                                fe4.Message),
-                //                                  "Questionamento",
-                //                                  MessageBoxButtons.YesNo,
-                //                                  MessageBoxIcon.Question) == DialogResult.Yes);
-                //}
-                //catch (FormatException)
-                //{
-                //    stContinua = (MessageBox.Show(string.Format("Não foi possível enviar e-mail para '{0}' porque o formato do e-mail é inválido.\n\nTentar novamente?",
-                //                                                mensagem.To[0].Address),
-                //                                  "Questionamento",
-                //                                  MessageBoxButtons.YesNo,
-                //                                  MessageBoxIcon.Question) == DialogResult.Yes);
-                //}
                 catch (Exception)
                 {
-                    //stContinua = (MessageBox.Show(string.Format("Não foi possível enviar e-mail para '{0}'.\nTentar novamente?",
-                    //                                            mensagem.To[0].Address),
-                    //                              "Questionamento",
-                    //                              MessageBoxButtons.YesNo,
-                    //                              MessageBoxIcon.Question) == DialogResult.Yes);
                     stContinua = false;
-
                 }
             }
 

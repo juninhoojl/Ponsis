@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Net.Mail;
 using System.Web.UI.WebControls;
+using PrjIC.Classes;
 using ProjetoIC.Classes;
 
 namespace PrjIC.Adm
@@ -41,7 +43,6 @@ SELECT Usuario.id_Usuario, Usuario.ds_Email, Usuario.ds_Senha, Curso.ds_Curso
                             row["ds_Curso"] = "Todos";
                     }
 
-
                     this.dgvUsuario.DataSource = tabUsuario;
                     this.dgvUsuario.DataBind();
                 }
@@ -55,7 +56,6 @@ SELECT Usuario.id_Usuario, Usuario.ds_Email, Usuario.ds_Senha, Curso.ds_Curso
                     this.dgvUsuario.Rows[0].Cells[0].ColumnSpan = tabUsuario.Columns.Count;
                     this.dgvUsuario.Rows[0].Cells[0].Text = "Nenhum usuário cadastrado!";
                     this.dgvUsuario.Rows[0].Cells[0].HorizontalAlign = HorizontalAlign.Center;
-
                 }
 
                 conn.FechaConexao();
@@ -103,21 +103,60 @@ SELECT Usuario.id_Usuario, Usuario.ds_Email, Usuario.ds_Senha, Curso.ds_Curso
 
                     if (conn.AbrirConexao())
                     {
-                        string cmd = "insert into Usuario (ds_Email, ds_Senha, id_Curso) values (@dsEmail, @dsSenha, @idCurso)";
+                        string newSenha  = Guid.NewGuid().ToString().Substring(0,8);
+                        TextBox txtEmail = this.dgvUsuario.FooterRow.FindControl("txtds_EmailFooter") as TextBox;
 
-                        Dictionary<string, object> sqlParam = new Dictionary<string, object>();
+                        var nmPath = System.Web.HttpContext.Current.Server.MapPath("../email.txt");
+                        var nmPathEmail = System.Web.HttpContext.Current.Server.MapPath("../template_email.html");
 
-                        var xx = this.dgvUsuario.FooterRow.FindControl("txtds_EmailFooter") as TextBox;
-                        sqlParam.Add("@dsEmail", xx.Text.Trim());
-                        sqlParam.Add("@dsSenha", "" );
-                        if (int.Parse(ctrlSelect.Value) >0)
-                            sqlParam.Add("@idCurso", int.Parse(ctrlSelect.Value));
-                        else
-                            sqlParam.Add("@idCurso", DBNull.Value);
-                        conn.ExecutaComando(cmd, sqlParam);
-                        this.PopulateGridView();
+                        if (System.IO.File.Exists(nmPath))
+                        {
+                            string dsEmail  = System.IO.File.ReadAllText(nmPathEmail);
+                            string arquivo  = System.IO.File.ReadAllText(nmPath);
+                            string host     = Conexao.GetValor(arquivo, "host:");
+                            string user     = Conexao.GetValor(arquivo, "user:");
+                            string password = Conexao.GetValor(arquivo, "password:");
+                            string nameUser = Conexao.GetValor(arquivo, "nameUser:");
+                            int port        = int.Parse(Conexao.GetValor(arquivo, "port:"));
+                            bool   ssl      = Conexao.GetValor(arquivo, "ssl:").ToLower().Equals("true");
 
-                        conn.FechaConexao();
+                            Email email     = new Email();
+                            email.MailFrom  = new MailAddress(user, nameUser);
+                            email.SmtpHost  = host;
+                            email.SmtpLogin = user;
+                            email.SmtpSenha = password;
+                            email.SmtpSsl   = ssl;
+                            email.SmtpPorta = port;
+                            email.TimeOut   = 100000;
+
+                            if (email.EnviarEmail(txtEmail.Text.Trim(),
+                                                  "Registro para Login do 'Sistema de Avaliação de Pós-Graduação'",
+                                                  dsEmail.Replace("#@SENHA@#", newSenha)))
+                            {
+                                string cmd = "insert into Usuario (ds_Email, ds_Senha, id_Curso) values (@dsEmail, @dsSenha, @idCurso)";
+
+                                Dictionary<string, object> sqlParam = new Dictionary<string, object>();
+
+                                sqlParam.Add("@dsEmail", txtEmail.Text.Trim());
+                                sqlParam.Add("@dsSenha", newSenha);
+                                if (int.Parse(ctrlSelect.Value) > 0)
+                                    sqlParam.Add("@idCurso", int.Parse(ctrlSelect.Value));
+                                else
+                                    sqlParam.Add("@idCurso", DBNull.Value);
+                                conn.ExecutaComando(cmd, sqlParam);
+                                this.PopulateGridView();
+
+                                conn.FechaConexao();
+                            }
+                            else
+                            {
+
+                            }
+                        }
+
+
+
+
                         this.lbErro.Visible = false;
 
                         //this.c.dgvUsuario.EditIndex.SelectedIndex = -1;

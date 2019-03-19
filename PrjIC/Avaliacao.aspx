@@ -54,11 +54,11 @@
                         <ul>
                             <li><asp:Label ID="lbDataInicio" runat="server" Text=""></asp:Label></li>
                             <li><asp:Label ID="lbDataFim" runat="server" Text=""></asp:Label></li>
-                            <li>Somente a última questão é opcional!</li>
-                            <li>A avaliação é totalmente anônima! (Responda o que realmente acha)</li>
-                            <li>Após responder, você será redirecionado para a página onde será possível ver resultados anteriores (Somente fechadas)! [Os resultados referentes a essa só estará disponível após a data de encerramento das mesma]</li>
+                            <li>Somente as questões abertas são opcionais!</li>
+                            <li>A avaliação é totalmente anônima! (Responda o que realmente pensa)</li>
+                            <li>Após responder, você será redirecionado para a página onde será possível ver resultados anteriores (Somente fechadas)! [Os resultados referentes a essa avaliação só estará disponível após a data de encerramento]</li>
                             
-                            <li>Obs.: O login só é necessário para o administrador do sistema e coordenadores do programa, os quais poderam ver os resultados!</li>
+                            <li>Obs.: O login só é necessário para o administrador do sistema e coordenadores do programa, os quais poderam ver os resultados abertos!</li>
                         </ul>
 
                 </div>

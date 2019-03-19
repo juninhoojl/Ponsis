@@ -123,10 +123,13 @@ namespace ProjetoIC
                 this.MostraMensagem(this.lbq5, this.q5);
             else if (String.IsNullOrWhiteSpace(this.q6.Value))
                 this.MostraMensagem(this.lbq6, this.q6);
-            else if (String.IsNullOrWhiteSpace(this.q7.Text))
-                this.MostraMensagem(this.lbq7, this.q7);
-            else if (String.IsNullOrWhiteSpace(this.q8.Text))
-                this.MostraMensagem(this.lbq8, this.q8);
+
+            // Questao aberta 7 e 8 eh opcional
+            //else if (String.IsNullOrWhiteSpace(this.q7.Text))
+              //  this.MostraMensagem(this.lbq7, this.q7);
+            //else if (String.IsNullOrWhiteSpace(this.q8.Text))
+              //  this.MostraMensagem(this.lbq8, this.q8);
+
             else if (String.IsNullOrWhiteSpace(this.q9.Value))
                 this.MostraMensagem(this.lbq9, this.q9);
             else if (String.IsNullOrWhiteSpace(this.q10.Value))
@@ -139,10 +142,12 @@ namespace ProjetoIC
                 this.MostraMensagem(this.lbq13, this.q13);
             else if (String.IsNullOrWhiteSpace(this.q14.Value))
                 this.MostraMensagem(this.lbq14, this.q14);
-            else if (String.IsNullOrWhiteSpace(this.q15.Text))
-                this.MostraMensagem(this.lbq15, this.q15);
-            else if (String.IsNullOrWhiteSpace(this.q16.Text))
-                this.MostraMensagem(this.lbq16, this.q16);
+
+            // Questao aberta 15 e 16 eh opcional
+            //else if (String.IsNullOrWhiteSpace(this.q15.Text))
+              //  this.MostraMensagem(this.lbq15, this.q15);
+            //else if (String.IsNullOrWhiteSpace(this.q16.Text))
+              //  this.MostraMensagem(this.lbq16, this.q16);
 
             else if (String.IsNullOrWhiteSpace(this.q17.Value))
                 this.MostraMensagem(this.lbq17, this.q17);

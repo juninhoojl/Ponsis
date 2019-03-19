@@ -10,7 +10,7 @@ Cor Titulos = #AF9CED
 
 body {
   /*background-color: #3E4554;*/
-  font: 100% runhills, palanquin;
+  font: 100% palanquin-bold, palanquin;
   margin: 0;
   background: #3E4554;
   background: -webkit-linear-gradient(to bottom right, #3E4554, #242830);
@@ -88,7 +88,7 @@ body {
 .navbar-custom {
     z-index: 1000;
     background-image: linear-gradient(to top right, #EBEDEF, #DCDEE0);
-    font-family: 'runhills';
+    font-family: 'palanquin-bold';
     font-size: 1.25em;
 }
 
@@ -138,7 +138,7 @@ body {
     background: none;
     border: none;
     text-decoration: none;
-    font-family: 'runhills';
+    font-family: 'palanquin-bold';
     margin-left: 0.2em;
 }
 
@@ -148,7 +148,7 @@ body {
         background: none;
         border: none;
         text-decoration: none;
-        font-family: 'runhills';
+        font-family: 'palanquin-bold';
         margin-left: 0.2em;
     }
 
@@ -160,7 +160,7 @@ body {
 
 .sessoes {
     margin-top: 1.5em;
-    font-family: 'runhills';
+    font-family: 'palanquin-bold';
     font-size: 1.75em;
     color: #AF9CED;
     line-height: 1em;
@@ -340,7 +340,7 @@ input.form-control {
 /* Relativo ao texto dos nomes */
 .titulo-form {
     margin-top: 1em;
-    font-family: 'runhills';
+    font-family: 'palanquin-bold';
     font-size: 1.5em;
     color: #42444E;
     line-height: 0;
@@ -350,7 +350,7 @@ input.form-control {
 
 
 #btnEntrar, #btnSair {
-    font-family: 'runhills';
+    font-family: 'palanquin-bold';
     font-size: 1.2em;
     color: #42444E;
     text-align: center;
@@ -363,7 +363,7 @@ input.form-control {
 
 
     #btnEntrar:hover, #btnEntrar:active, #btnEntrar:focus, #btnSair:hover, #btnSair:focus, #btnSair:active{
-        font-family: 'runhills';
+        font-family: 'palanquin-bold';
         font-size: 1.2em;
         color: #000;
         text-align: center;
@@ -462,9 +462,8 @@ input.form-control {
 
 
 .combo-filtro {
-
     margin: 0 0 1em 0;
-
+    font-family: 'palanquin';
 }
 
 

@@ -233,7 +233,6 @@
   <ItemGroup>
     <Content Include="css\fonts\palanquin-bold.ttf" />
     <Content Include="css\fonts\palanquin.ttf" />
-    <Content Include="css\fonts\RunHills.ttf" />
     <Content Include="Adm\Web.config" />
     <None Include="Adm\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -241,8 +240,6 @@
     <None Include="Adm\Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="css\fonts\Palanquin-Medium.ttf" />
-    <Content Include="css\fonts\Palanquin-Regular.ttf" />
     <None Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">

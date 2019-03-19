@@ -10,7 +10,6 @@
                 <input runat="server" type="text" name="username" id="txtUsername" class="form-control" placeholder="Usuario">
                 <br>
                 <input runat="server" type="password" name="password" id="txtPassword" class="form-control" placeholder="Senha" />
-                <i class="fas fa-eye olho" onmouseover="mouseoverPass();" onmouseout="mouseoutPass();"></i>
 
                 <asp:Button runat="server" class="btn btn-block" ID="btnEnviar" type="" Text="Enviar" OnClick="btLogar_Click" />
                 

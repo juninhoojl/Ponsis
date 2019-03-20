@@ -98,16 +98,18 @@ namespace PrjIC
                 InformacoesAdicionais.Visible = false;
             }
 
-            if (this.Session["Curso"] != null)
-            {
-                this._idCurso = (int)this.Session["Curso"];
-                this.DivAbertas.Visible = true;
-            }
-            else
-            {
-                this._idCurso = 0;
+            //if (this.Session["Curso"] != null)
+            //{
+                //this._idCurso = (int)this.Session["Curso"];
+                //So libera as abertas se estiver logado e no carregamento
+
                 this.DivAbertas.Visible = false;
-            }
+           // }
+           // else
+           // {
+               // this._idCurso = 0;
+              //  this.DivAbertas.Visible = false;
+           // }
         }
         protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -921,6 +923,10 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
 
                 }
 
+
+
+
+
                 conn.FechaConexao();
             }
         }
@@ -964,6 +970,17 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
                 this.TituloGridEgresso.Visible = true;
                 this.gridEgresso.Visible = true;
                 this.painelDicaResultados.Visible = false;
+
+                if (this.Session["Curso"] != null)
+                {
+                    this._idCurso = (int)this.Session["Curso"];
+                    this.DivAbertas.Visible = true;
+                }
+                else
+                {
+                    this._idCurso = 0;
+                    this.DivAbertas.Visible = false;
+                }
 
                 this.PanelOpcoes.Visible = true;
 

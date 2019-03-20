@@ -32,7 +32,7 @@
                 </div>
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
-                <div class="sessoes text-center">Cadastro de Alunos por Período</div>
+                <div class="sessoes text-center" id="titulocadastroap">Cadastro de Alunos por Período</div>
             </div>
 
             <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">

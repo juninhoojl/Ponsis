@@ -8,6 +8,30 @@ Cores letras escuras(texto) e badge = #42444E
 Cor Titulos = #AF9CED
 -------------------------*/
 
+@media (min-width: 500px) {
+    html {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1000px) {
+    html {
+        font-size: 15em;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 1em;
+    }
+}
+
 body {
     background-color: #3E4554;
     font-family: 'palanquin';
@@ -113,3 +137,5 @@ hr {
 .nps-indicadores {
     padding: 3em 1em 3em 1em;
 }
+
+

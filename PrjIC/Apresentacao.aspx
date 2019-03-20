@@ -24,7 +24,6 @@
 
             <div class="row">
 
-
                 <div class="col-sm-12 col-md-12 col-lg-4 texto-colunas cinza">
 
                 <div class="titulo-colunas text-center"><i class="fas fa-terminal"></i> Ponsis</div>
@@ -46,51 +45,41 @@
 
             </div>
 
+
             <div class="row colorido">
-                 <div class="col-12 text-center imagem-calculo">
-                    <div class="titulo-utilizam text-center">
+                    <div class="col-12 titulo-utilizam text-center">
                         Quem utiliza o NPS?
                     </div>
+            </div>          
 
-                <div class="row utilizam-nps">
-                <div class="col-sm-6 col-md-4 col-lg-2 img-logo">
+            <div class="row colorido utilizam-nps">
 
+                <div class="col-4 img-logo">
                     <img src="img/logos/logo1b.png" class="img-fluid">
-
                 </div>
 
-
-                <div class="col-sm-6 col-md-4 col-lg-2 img-logo">
-
+                <div class="col-4 img-logo">
                     <img src="img/logos/logo4b.png" class="img-fluid">
-
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 img-logo">
 
+                <div class="col-4 img-logo">
                     <img src="img/logos/logo3b.png" class="img-fluid">
-
                 </div>
 
-
-                <div class="col-sm-6 col-md-4 col-lg-2 img-logo">
-
+                <div class="col-4 img-logo">
                     <img src="img/logos/logo2b.png" class="img-fluid">
-
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-2 img-logo">
-
+                <div class="col-4 img-logo">
                     <img src="img/logos/logo5b.png" class="img-fluid">
-
                 </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-2 img-logo">
-
+                <div class="col-4 img-logo">
                     <img src="img/logos/logo6b.png" class="img-fluid">
-
                 </div>
 
-                </div>
+            </div>
+
 
             <div class="row painel-calculo">
                 <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
@@ -135,9 +124,9 @@
 
 
                 </div>
-        </div>
+   
 
-                    </div>
+                 
         </div>
 
 </asp:Content>

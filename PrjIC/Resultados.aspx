@@ -16,7 +16,7 @@
                         <div runat="server" id="painelDicaResultados">
                             <ul>
                                 <li>Obs.: Para ver os resultados selecione o período
-                                        e o curso nos filtros ⇊
+                                        e o curso nos filtros ⇊ (Somente usuários cadastrados e logados podem ver as respostas abertas)
                                 </li>
                             </ul>
                         </div>

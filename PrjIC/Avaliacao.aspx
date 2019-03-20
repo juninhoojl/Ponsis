@@ -75,7 +75,8 @@
             <div class="row">
               <div class="faixa-ano col-sm-12 col-md-12 col-lg-12"> 
                   <div class="text-center">
-                            <i data-toggle="modal" data-target="#myModal" class="fas fa-question-circle btnmodal"/></i>
+                      <button id="BTNMODAL" type="button" data-toggle="modal" data-target="#myModal"><i class="fas fa-question-circle btnmodal"/></i></button>
+                            
                             <asp:Label ID="lbAno" runat="server" Text=""></asp:Label> 
                             
                   </div>

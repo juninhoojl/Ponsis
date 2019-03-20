@@ -307,3 +307,23 @@ label {
     h4.modal-title{
         margin: auto;
     }
+
+
+
+#BTNMODAL {
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    outline-color: transparent;
+    color: #42444E;
+}
+
+#BTNMODAL:hover {
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    outline-color: transparent;
+    color: #000;
+}

@@ -28,20 +28,18 @@
                 <div class="col-sm-12 col-md-12 col-lg-4 texto-colunas cinza">
 
                 <div class="titulo-colunas text-center"><i class="fas fa-terminal"></i> Ponsis</div>
-                    O Ponsis é um sistema baseado em WEB que auxilia a coleta e análise de opiniões, mais especificamente opiniões à respeito da qualidade de ensino e outros aspectos.
+                    O Ponsis é um sistema baseado em WEB que auxilia a coleta e análise de opiniões dos alunos, à respeito da qualidade do ensino de um curso.
                 </div>
 
                 <div class="col-sm-12 col-md-12 col-lg-4 texto-colunas branco">
                     <div class="titulo-colunas text-center"><i class="fas fa-bullseye"></i> Objetivo</div>
-                    O objetivo do Ponsis é apresentar resultados objetivos de acordo com opiniões dos discentes de pós-graduação. Facilitando a tomada de decisões!
-
+                    Apresentar visualmente os resultados das opiniões dos alunos identificando as oportunidades de melhorias e os diferenciais do curso analisado, auxiliando assim o processo de tomada de decisão.
                 </div>
 
                <div class="col-sm-12 col-md-12 col-lg-4 texto-colunas cinza">
 
                 <div class="titulo-colunas text-center"><i class="fas fa-calculator"></i> Método</div>
-                    Com base na opinião dos discentes, é calculado no Net Promoter Score (NPS). Que tem como objetivo facilitar a análise de pontos fracos e fortes dos mesmos.
-
+                   Coletar as respostas individuais dos alunos, processa-las e calcular os resultados consolidados por meio da teoria do Net Promoter Score (NPS).
                 </div>
 
             </div>

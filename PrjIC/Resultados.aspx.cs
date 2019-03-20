@@ -218,7 +218,7 @@ namespace PrjIC
         }
         protected void CheckBox6_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckBox5.Checked)
+            if (CheckBox6.Checked)
             {
                 //Icones
                 dgvvw_Resultado_Ano_Curso_DP.Columns[6].Visible = true;

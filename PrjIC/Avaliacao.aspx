@@ -56,9 +56,8 @@
                             <li><asp:Label ID="lbDataFim" runat="server" Text=""></asp:Label></li>
                             <li>Somente as questões abertas são opcionais!</li>
                             <li>A avaliação é totalmente anônima! (Responda o que realmente pensa)</li>
-                            <li>Após responder, você será redirecionado para a página onde será possível ver resultados anteriores (Somente fechadas)!</li>
+                            <li>Após responder, você será redirecionado para a página onde será possível ver os resultados!</li>
                             
-                            <li>Obs.: O login só é necessário para o administrador do sistema e coordenadores do programa, os quais poderam ver os resultados abertos!</li>
                         </ul>
 
                 </div>

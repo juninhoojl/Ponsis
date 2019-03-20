@@ -314,16 +314,23 @@ label {
     text-decoration: none;
     background-color: transparent;
     border-color: transparent;
-    padding: 0;
-    outline-color: transparent;
     color: #42444E;
+    padding: 0;
+    outline: none !important;
+    box-shadow: none;
+    margin: 0;
 }
 
-#BTNMODAL:hover {
-    text-decoration: none;
-    background-color: transparent;
-    border-color: transparent;
-    padding: 0;
-    outline-color: transparent;
-    color: #000;
-}
+    #BTNMODAL:hover {
+        text-decoration: none;
+        background-color: transparent;
+        border-color: transparent;
+        color: #000;
+        padding: 0;
+        outline: none !important;
+        box-shadow: none;
+        margin: 0;
+    }
+
+
+

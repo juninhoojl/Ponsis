@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 namespace PrjIC
 {
     public partial class Resultados : System.Web.UI.Page
+
     {
         private int _idCurso;
 
@@ -472,7 +473,9 @@ select Count(*) from Resposta, Periodo
 
                 foreach (DataRow row in tabUsuario.Rows)
                 {
-                    row["NPS"]    = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"])*100, 2);
+                    //Resultado ok
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"]/(decimal)row["Qtd_Total_Resposta"])*100) - (((decimal)row["Qtd_Detrator"] / (decimal)row["Qtd_Total_Resposta"])*100)), 2);
+
                     row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
                 }
 
@@ -530,7 +533,8 @@ select Count(*) from Resposta, Periodo
 
                 foreach (DataRow row in tabUsuario.Rows)
                 {
-                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    //Resultado ok
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) * 100) - (((decimal)row["Qtd_Detrator"] / (decimal)row["Qtd_Total_Resposta"]) * 100)), 2);
                     row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
                 }
 
@@ -580,7 +584,8 @@ select Count(*) from Resposta, Periodo
 
                 foreach (DataRow row in tabUsuario.Rows)
                 {
-                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    //Resultado ok
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) * 100) - (((decimal)row["Qtd_Detrator"] / (decimal)row["Qtd_Total_Resposta"]) * 100)), 2);
                     row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
                 }
 
@@ -794,7 +799,8 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
 
                 foreach (DataRow row in tabUsuario.Rows)
                 {
-                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    //Resultado ok
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) * 100) - (((decimal)row["Qtd_Detrator"] / (decimal)row["Qtd_Total_Resposta"]) * 100)), 2);
                     row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
                 }
 
@@ -843,7 +849,8 @@ AND Curso.id_Curso = " + idCurso + "AND Periodo.nu_Ano_Referencia = " + nuAnoRef
 
                 foreach (DataRow row in tabUsuario.Rows)
                 {
-                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) - (decimal)row["Qtd_Detrator"]) / (decimal)row["Qtd_Total_Resposta"]) * 100, 2);
+                    //Resultado ok
+                    row["NPS"] = Math.Round(((((decimal)row["Qtd_Promotor"] / (decimal)row["Qtd_Total_Resposta"]) * 100) - (((decimal)row["Qtd_Detrator"] / (decimal)row["Qtd_Total_Resposta"]) * 100)), 2);
                     row["Imagem"] = this.GetNomeImagem((decimal)row["NPS"]);
                 }
 

@@ -175,13 +175,13 @@ namespace PrjIC {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liQtrepostas;
         
         /// <summary>
-        /// InformacoesAdicionais control.
+        /// InformacoesAdicionais1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl InformacoesAdicionais;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl InformacoesAdicionais1;
         
         /// <summary>
         /// TituloGridTempo control.
@@ -211,6 +211,15 @@ namespace PrjIC {
         protected global::System.Web.UI.WebControls.GridView dgvvw_Tempo;
         
         /// <summary>
+        /// InformacoesAdicionais2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl InformacoesAdicionais2;
+        
+        /// <summary>
         /// TituloGridEgresso control.
         /// </summary>
         /// <remarks>
@@ -236,6 +245,15 @@ namespace PrjIC {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView dgvvw_Egresso;
+        
+        /// <summary>
+        /// InformacoesAdicionais3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl InformacoesAdicionais3;
         
         /// <summary>
         /// TituloGridPublicacoes control.

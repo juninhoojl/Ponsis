@@ -89,7 +89,7 @@ namespace ProjetoIC
                         this.GravaDado(conn, 24, int.Parse(this.q24.Value));
                         this.GravaDado(conn, 25, int.Parse(this.q25.Value));
                         this.GravaDado(conn, 26, int.Parse(this.q26.Value));
-                        this.GravaDado(conn, 27, this.q16.Text as string);
+                        this.GravaDado(conn, 27, this.q27.Text as string);
 
                         Response.Redirect("Respondido.aspx");
                     }

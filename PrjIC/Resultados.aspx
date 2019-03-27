@@ -4,7 +4,7 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div class="panel center">
                     <div class="panel-heading">
                         <div class="titulo-painel text-center">
@@ -125,13 +125,12 @@
             </div>
         </div>
 
-
         <div class="row" runat="server" id="DivInformacoes">
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="Div2" runat="server" class="sessoes text-center">Informações</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="painelSobreColeta">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="painelSobreColeta">
                 <div class="panel center">
                     <div class="panel-heading">
                         <div class="titulo-painel text-left">
@@ -152,15 +151,14 @@
             </div>
         </div>
 
-        <div runat="server" id="InformacoesAdicionais">
 
-            <div class="row">
+            <div runat="server" class="row" id="InformacoesAdicionais1">
 
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                     <div id="TituloGridTempo" runat="server" class="sessoes text-center">Tempo na Pós-Graduação</div>
                 </div>
 
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridTempo">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridTempo">
                     <div class="table-responsive">
                         <asp:GridView CssClass="gridview" ID="dgvvw_Tempo" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
 
@@ -211,12 +209,12 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div runat="server" class="row" id="InformacoesAdicionais2">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                     <div id="TituloGridEgresso" runat="server" class="sessoes text-center">Egressão</div>
                 </div>
 
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridEgresso">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridEgresso">
                     <div class="table-responsive">
                         <asp:GridView CssClass="gridview" ID="dgvvw_Egresso" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
                             <Columns>
@@ -246,12 +244,12 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div runat="server" class="row" id="InformacoesAdicionais3">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                     <div id="TituloGridPublicacoes" runat="server" class="sessoes text-center">Publicações</div>
                 </div>
 
-                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridPublicacoes">
+                <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridPublicacoes">
                     <div class="table-responsive">
                         <asp:GridView CssClass="gridview" ID="dgvvw_Publicacoes" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
                             <Columns>
@@ -305,14 +303,13 @@
                 </div>
             </div>
 
-        </div>
 
         <div class="row">
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="TituloGridDP" runat="server" class="sessoes text-center">Disciplinas</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosDP">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridResultadosDP">
                 <div class="table-responsive">
                     <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_DP" runat="server" AutoGenerateColumns="false"
                         ShowFooter="false" DataKeyNames="Ano">
@@ -373,11 +370,11 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="TituloGridOA" runat="server" class="sessoes text-center">Organização de Apoio do PPG</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosOA">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridResultadosOA">
                 <div class="table-responsive">
                     <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_OA" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
                         <Columns>
@@ -437,11 +434,11 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="TituloGridPP" runat="server" class="sessoes text-center">Pró Reitoria de Pós-graduação</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosPP">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridResultadosPP">
                 <div class="table-responsive">
                     <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_PP" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
                         <Columns>
@@ -503,11 +500,11 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="TituloGridSI" runat="server" class="sessoes text-center">Sistemas de Informação</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosSI">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridResultadosSI">
                 <div class="table-responsive">
 
                     <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_SI" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
@@ -573,11 +570,11 @@
 
         <div class="row">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="TituloGridBI" runat="server" class="sessoes text-center">Biblioteca</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="gridResultadosBI">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="gridResultadosBI">
                 <div class="table-responsive">
 
                     <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_BI" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="Ano">
@@ -643,16 +640,16 @@
 
         <div class="row" runat="server" id="DivAbertas">
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10">
                 <div id="Div3" runat="server" class="sessoes text-center titulo-abertas">Abertas</div>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1 combo-periodos">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 combo-periodos">
                 <asp:DropDownList runat="server" CssClass="form-control" ID="cmbQuestao" AutoPostBack="true" OnSelectedIndexChanged="cmbQuestao_SelectedIndexChanged">
                 </asp:DropDownList>
             </div>
 
-            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10 offset-lg-1" runat="server" id="Div4">
+            <div class="col-sm-12 col-md-12 offset-lg-1 col-lg-10" runat="server" id="Div4">
                 <div class="table-responsive">
                     <asp:GridView CssClass="gridview" ID="dgvvw_Resultado_Ano_Curso_Aberto" runat="server" AutoGenerateColumns="false" ShowFooter="false" DataKeyNames="id_Questao">
                         <Columns>

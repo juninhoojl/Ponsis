@@ -20,6 +20,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: 'palanquin';
+  padding: 0;
 }
 
 
@@ -418,8 +419,7 @@ input.form-control {
     width: 100%;
     /*this will be the color of the odd row*/
     background-color: #BDC2CC;
-
-
+    margin: 0;
     -moz-border-radius: 1em;
     border-radius: 15em;
     border: solid 1px #BDC2CC;
@@ -565,7 +565,7 @@ hr.hr-opcoes {
     border-color: transparent;
     border-radius: 0.2em;
     background-color: #BEC2CB;
-    margin: 0 0.5em 0.5em 0.5em;
+    margin: 0 0 0.5em 0.5em;
 }
 
 .lista-opcoes{
@@ -578,7 +578,7 @@ hr.hr-opcoes {
 }
 
 .titulo-abertas{
-    margin-bottom: 0.6em;
+    margin: 0 0 0.6em 0;
 }
 
 #BotaoOpcoesVisu {

@@ -77,7 +77,6 @@
     <Content Include="css\normalize.css" />
     <Content Include="css\avaliacao.css" />
     <Content Include="css\informacao.css" />
-    <Content Include="css\resultados.css" />
     <Content Include="css\sobre.css" />
     <Content Include="email.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

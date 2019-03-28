@@ -160,7 +160,8 @@ body {
 
 
 .sessoes {
-    margin-top: 1.5em;
+
+    margin: 1.5em 0 0 0;
     font-family: 'palanquin-bold';
     font-size: 1.75em;
     color: #AF9CED;

@@ -4,6 +4,7 @@
 <html lang="pt-br">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head runat="server">
+
         <!-- Normalize stylesheet-->
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <!-- Bootstrap stylesheet -->

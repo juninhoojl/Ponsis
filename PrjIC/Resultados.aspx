@@ -200,8 +200,6 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-
-
                             </Columns>
 
                         </asp:GridView>
@@ -230,12 +228,6 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Não">
-                                    <ItemTemplate>
-                                        <asp:Label Text='<%# Eval("Nao") %>' runat="server" />
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-
 
                             </Columns>
 
@@ -256,12 +248,6 @@
                                 <asp:TemplateField HeaderText="Questão">
                                     <ItemTemplate>
                                         <asp:Label Text='<%# Eval("Questao") %>' runat="server" />
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-
-                                <asp:TemplateField HeaderText="Total">
-                                    <ItemTemplate>
-                                        <asp:Label Text='<%# Eval("Total") %>' runat="server" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
